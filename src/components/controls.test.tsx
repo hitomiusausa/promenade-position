@@ -39,4 +39,18 @@ describe('PlaybackBar', () => {
     fireEvent.click(screen.getByRole('button', { name: '再生' }))
     expect(anim.play).toHaveBeenCalled()
   })
+  it('スライダーで seek が呼ばれる', () => {
+    const anim = { t: 0, playing: false, speed: 1, play: vi.fn(), pause: vi.fn(), seek: vi.fn(), setSpeed: vi.fn() }
+    withLocale(<PlaybackBar anim={anim} total={6} />)
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '3' } })
+    expect(anim.seek).toHaveBeenCalledWith(3)
+  })
+  it('速度ボタンで setSpeed が呼ばれ、再生中は一時停止ラベルになる', () => {
+    const anim = { t: 1, playing: true, speed: 1, play: vi.fn(), pause: vi.fn(), seek: vi.fn(), setSpeed: vi.fn() }
+    withLocale(<PlaybackBar anim={anim} total={6} />)
+    fireEvent.click(screen.getByRole('button', { name: '0.5x' }))
+    expect(anim.setSpeed).toHaveBeenCalledWith(0.5)
+    fireEvent.click(screen.getByRole('button', { name: '一時停止' }))
+    expect(anim.pause).toHaveBeenCalled()
+  })
 })

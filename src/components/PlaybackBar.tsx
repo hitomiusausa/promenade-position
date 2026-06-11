@@ -20,12 +20,12 @@ export function PlaybackBar({ anim, total }: { anim: Animation; total: number })
         max={total}
         step={0.01}
         value={anim.t}
-        aria-label={dict.ui.step}
+        aria-label={dict.ui.playbackPosition}
         onChange={(e) => anim.seek(Number(e.target.value))}
       />
       <span className="speeds">
         {SPEEDS.map((s) => (
-          <button key={s} className={anim.speed === s ? 'active' : ''} onClick={() => anim.setSpeed(s)}>
+          <button key={s} aria-pressed={anim.speed === s} className={anim.speed === s ? 'active' : ''} onClick={() => anim.setSpeed(s)}>
             {s}x
           </button>
         ))}

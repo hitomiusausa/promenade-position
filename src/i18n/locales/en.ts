@@ -10,7 +10,7 @@ export const en: Dictionary = {
     sway: 'Sway', cbm: 'CBM', yes: 'Yes', no: 'No', note: 'Note',
     back: 'Back', loading: 'Loading…', loadError: 'Failed to load data',
     retry: 'Retry', comingSoon: 'Coming soon', steps: 'steps', language: 'Language',
-    startPosition: 'Start position',
+    startPosition: 'Start position', viewRole: 'Role view', playbackPosition: 'Playback position',
     modOpen: ' (', modClose: ')',
   },
   dance: {
