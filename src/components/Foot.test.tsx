@@ -24,4 +24,17 @@ describe('Foot', () => {
     fireEvent.click(screen.getByTestId('foot-L'))
     expect(onClick).toHaveBeenCalled()
   })
+  it('ghost で半透明になる', () => {
+    renderFoot(<Foot side="L" position={{ x: 0, y: 0, angle: 0 }} footwork="none" ghost />)
+    expect(screen.getByTestId('foot-L').getAttribute('opacity')).toBe('0.3')
+  })
+  it('selected でリングを表示する', () => {
+    renderFoot(<Foot side="L" position={{ x: 0, y: 0, angle: 0 }} footwork="T" selected />)
+    expect(screen.getByTestId('selected-ring')).toBeInTheDocument()
+  })
+  it('footwork=none で点線になる', () => {
+    renderFoot(<Foot side="L" position={{ x: 0, y: 0, angle: 0 }} footwork="none" />)
+    const paths = screen.getByTestId('foot-L').querySelectorAll('path')
+    expect(paths[0].getAttribute('stroke-dasharray')).toBe('4 3')
+  })
 })

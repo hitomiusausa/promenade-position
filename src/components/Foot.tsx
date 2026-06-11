@@ -44,6 +44,7 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
           {side}
         </text>
       </g>
+      {/* 歩番号は逆回転で常に画面上方に表示（つま先側に置くとLOD方向の歩で隣の歩番号と重なるため） */}
       {label && (
         <g transform={`rotate(${-position.angle})`}>
           <circle cy={-32} r={8} fill="#fff" stroke="#adb5bd" strokeWidth={1} />
@@ -52,7 +53,7 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
           </text>
         </g>
       )}
-      {selected && <circle r={22} fill="none" stroke="#e76f51" strokeWidth={2} strokeDasharray="5 3" />}
+      {selected && <circle data-testid="selected-ring" r={22} fill="none" stroke="#e76f51" strokeWidth={2} strokeDasharray="5 3" />}
     </g>
   )
 }
