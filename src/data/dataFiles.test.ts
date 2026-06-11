@@ -24,13 +24,18 @@ describe('public/data の全ファイル検証', () => {
   })
 
   it('figures.json の各エントリに対応するファイルがあり、歩数が一致する', () => {
+    expect(Object.keys(indexJsons).length).toBeGreaterThan(0)
+    const beats = (steps: { beats: number }[]) => steps.reduce((sum, s) => sum + s.beats, 0)
     for (const [indexPath, indexData] of Object.entries(indexJsons)) {
       const dir = indexPath.replace(/figures\.json$/, '')
       for (const entry of validateFigureIndex(indexData)) {
         const figPath = `${dir}${entry.id}.json`
         const fig = figureJsons[figPath]
         if (!fig) throw new Error(`${figPath} が存在しない（${indexPath} に記載あり）`)
-        expect(validateFigure(fig).parts.man.steps.length).toBe(entry.stepCount)
+        const validated = validateFigure(fig)
+        expect(validated.parts.man.steps.length).toBe(entry.stepCount)
+        expect(validated.parts.lady.steps.length).toBe(entry.stepCount)
+        expect(beats(validated.parts.man.steps)).toBe(beats(validated.parts.lady.steps))
       }
     }
   })
