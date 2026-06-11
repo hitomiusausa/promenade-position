@@ -45,6 +45,12 @@ main { max-width: 1080px; margin: 0 auto; padding: 16px; }
 
 .floor-diagram { width: 100%; height: auto; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; }
 
+.both-legend { display: flex; align-items: center; gap: 6px; margin: 0 0 6px; font-size: 13px; color: #555; }
+.legend-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
+.legend-dot + span, .legend-lady { margin-left: 10px; }
+.legend-man { background: var(--ink); }
+.legend-lady { background: #f4b8a8; border: 1px solid #adb5bd; }
+
 .playback-bar { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
 .playback-bar input[type='range'] { flex: 1; accent-color: var(--toe); }
 .play-button { font-size: 18px; border: 1px solid #ccc; background: #fff; border-radius: 8px; padding: 4px 14px; cursor: pointer; }

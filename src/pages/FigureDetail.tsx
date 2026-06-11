@@ -65,6 +65,12 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
       </div>
       <div className="detail-grid">
         <div>
+          {view === 'both' && (
+            <p className="both-legend">
+              <span className="legend-dot legend-man" aria-hidden="true" /> {dict.ui.man}
+              <span className="legend-dot legend-lady" aria-hidden="true" /> {dict.ui.lady}
+            </p>
+          )}
           <FloorDiagram
             parts={[...parts]}
             selectedStep={animActive ? null : selectedStep}

@@ -1,5 +1,5 @@
 import type { Footwork, FootSide, StepPosition } from '../types'
-import { footworkColors } from './footworkColors'
+import { footworkColors, type FootVariant } from './footworkColors'
 
 // 左足を上向きに描いたパス。前部（ボール＋トー、親指側=右がふくらむ）と
 // 後部（土踏まず=右がくびれる＋ヒール）に分割し、重心色を別々に塗る。
@@ -15,11 +15,15 @@ export interface FootProps {
   label?: string
   ghost?: boolean
   selected?: boolean
+  /** 重心色のパレット。両方表示で女性パートは 'light'（淡色） */
+  variant?: FootVariant
+  /** 歩番号バッジ。両方表示で男性=ink（塗りつぶし）/女性=outline（白抜き） */
+  badgeStyle?: 'ink' | 'outline'
   onClick?: () => void
 }
 
-export function Foot({ side, position, footwork, label, ghost = false, selected = false, onClick }: FootProps) {
-  const colors = footworkColors(footwork)
+export function Foot({ side, position, footwork, label, ghost = false, selected = false, variant = 'strong', badgeStyle = 'outline', onClick }: FootProps) {
+  const colors = footworkColors(footwork, variant)
   const dash = colors.dashed ? '4 3' : undefined
   return (
     <g
@@ -47,8 +51,21 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
       {/* 歩番号は逆回転で常に画面上方に表示（つま先側に置くとLOD方向の歩で隣の歩番号と重なるため） */}
       {label && (
         <g transform={`rotate(${-position.angle})`}>
-          <circle cy={-24} r={8} fill="#fff" stroke="#adb5bd" strokeWidth={1} />
-          <text y={-21} textAnchor="middle" fontSize={9} fontWeight="bold" fill="#333" style={{ userSelect: 'none' }}>
+          <circle
+            cy={-20}
+            r={6.5}
+            fill={badgeStyle === 'ink' ? '#343a40' : '#fff'}
+            stroke={badgeStyle === 'ink' ? '#343a40' : '#adb5bd'}
+            strokeWidth={1}
+          />
+          <text
+            y={-17.4}
+            textAnchor="middle"
+            fontSize={7.5}
+            fontWeight="bold"
+            fill={badgeStyle === 'ink' ? '#fff' : '#333'}
+            style={{ userSelect: 'none' }}
+          >
             {label}
           </text>
         </g>

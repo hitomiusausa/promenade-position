@@ -49,21 +49,24 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
         <text x={b.minX + 10} y={b.maxY - 18} fontSize={9} fill="#adb5bd">LOD</text>
       </g>
       {parts.map(({ role, part }) => {
-        const dim = parts.length > 1 && role === 'lady' ? 0.55 : 1
+        // 両方表示では女性=淡色パレット・白抜きバッジ、男性=通常色・塗りつぶしバッジで区別
+        const both = parts.length > 1
+        const variant = both && role === 'lady' ? ('light' as const) : ('strong' as const)
+        const badgeStyle = both && role === 'man' ? ('ink' as const) : ('outline' as const)
         if (animTime !== null) {
           const feet = feetAt(part, animTime)
           const fw = (side: 'L' | 'R') => (feet.movingFoot === side ? 'none' : 'flat')
           return (
-            <g key={role} opacity={dim}>
-              <Foot side="L" position={feet.L} footwork={fw('L')} />
-              <Foot side="R" position={feet.R} footwork={fw('R')} />
+            <g key={role}>
+              <Foot side="L" position={feet.L} footwork={fw('L')} variant={variant} />
+              <Foot side="R" position={feet.R} footwork={fw('R')} variant={variant} />
             </g>
           )
         }
         return (
-          <g key={role} opacity={dim}>
-            <Foot side="L" position={part.startPositions.L} footwork="none" ghost />
-            <Foot side="R" position={part.startPositions.R} footwork="none" ghost />
+          <g key={role}>
+            <Foot side="L" position={part.startPositions.L} footwork="none" ghost variant={variant} />
+            <Foot side="R" position={part.startPositions.R} footwork="none" ghost variant={variant} />
             {part.steps.map((s) => (
               <Foot
                 key={s.stepNo}
@@ -72,6 +75,8 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
                 footwork={s.footwork}
                 label={String(s.stepNo)}
                 selected={selectedStep === s.stepNo}
+                variant={variant}
+                badgeStyle={badgeStyle}
                 onClick={() => onSelectStep(s.stepNo)}
               />
             ))}
