@@ -1,0 +1,80 @@
+{
+  "id": "natural-spin-turn",
+  "name": { "ja": "ナチュラルスピンターン", "en": "Natural Spin Turn" },
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "startPositions": {
+        "L": { "x": 0, "y": 80, "angle": 45 },
+        "R": { "x": 12, "y": 88, "angle": 45 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 32, "y": 64, "angle": 45 } },
+        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "right", "amount": "1/4", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false, "position": { "x": 58, "y": 50, "angle": 315 } },
+        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "right", "amount": "1/8", "between": [2, 3] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false, "position": { "x": 60, "y": 38, "angle": 270 } },
+        { "stepNo": 4, "foot": "L", "stepDescription": { "move": "back", "modifier": "small_step" }, "count": "1", "beats": 1,
+          "footwork": "THT", "alignment": { "relation": "backing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": true, "position": { "x": 78, "y": 44, "angle": 270 },
+          "note": { "ja": "ピボット。左足のつま先をやや内側に向けて後退し、右回転の軸にする", "en": "Pivot. LF back with toe turned slightly in, pivoting to R" } },
+        { "stepNo": 5, "foot": "R", "stepDescription": { "move": "forward" }, "count": "2", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "right", "amount": "1/2", "between": [4, 5] }, "riseAndFall": "commence_rise_eo_2",
+          "sway": "straight", "cbm": true, "position": { "x": 102, "y": 46, "angle": 90 },
+          "note": { "ja": "CBMPで女性の両足の間に前進。回転を継続", "en": "Forward in CBMP between lady's feet, continuing to turn" } },
+        { "stepNo": 6, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_back" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "right", "amount": "3/8", "between": [5, 6] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false, "position": { "x": 116, "y": 56, "angle": 315 },
+          "note": { "ja": "ボディの回転は少なめ。中央斜めに背面して終わる", "en": "Body turns less. Finish backing DC" } }
+      ]
+    },
+    "lady": {
+      "startPositions": {
+        "L": { "x": 24, "y": 70, "angle": 225 },
+        "R": { "x": 12, "y": 62, "angle": 225 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 44, "y": 46, "angle": 225 } },
+        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "pointing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "right", "amount": "3/8", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false, "position": { "x": 64, "y": 58, "angle": 90 },
+          "note": { "ja": "ボディの回転は少なめ", "en": "Body turns less" } },
+        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false, "position": { "x": 62, "y": 70, "angle": 90 },
+          "note": { "ja": "ボディの回転を完了する", "en": "Body completes turn" } },
+        { "stepNo": 4, "foot": "R", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": true, "position": { "x": 88, "y": 62, "angle": 90 },
+          "note": { "ja": "ピボット。男性の両足の間に前進し右回転", "en": "Pivot. Forward between man's feet, pivoting to R" } },
+        { "stepNo": 5, "foot": "L", "stepDescription": { "move": "back" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "right", "amount": "1/2", "between": [4, 5] }, "riseAndFall": "commence_rise_eo_2",
+          "sway": "straight", "cbm": false, "position": { "x": 106, "y": 58, "angle": 270 },
+          "note": { "ja": "左足後退・やや横へ。続いて右足を左足にブラシ", "en": "LF back and slightly to side, then brush RF to LF" } },
+        { "stepNo": 6, "foot": "R", "stepDescription": { "move": "diag_forward" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "right", "amount": "3/8", "between": [5, 6] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false, "position": { "x": 122, "y": 70, "angle": 135 },
+          "note": { "ja": "ブラシの後、斜め前へ。中央斜めに面して終わる", "en": "After brushing, diagonally forward. Finish facing DC" } }
+      ]
+    }
+  }
+}

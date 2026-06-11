@@ -1,0 +1,50 @@
+{
+  "id": "closed-change-natural",
+  "name": { "ja": "クローズドチェンジ（ナチュラルからリバース）", "en": "Closed Change (Natural to Reverse)" },
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "startPositions": {
+        "L": { "x": 10, "y": 18, "angle": 135 },
+        "R": { "x": 0, "y": 28, "angle": 135 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false, "position": { "x": 32, "y": 50, "angle": 135 },
+          "note": { "ja": "ナチュラルターンの後、中央斜めに面して開始", "en": "Commences facing DC after a Natural Turn" } },
+        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_forward" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false, "position": { "x": 53, "y": 43, "angle": 135 } },
+        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false, "position": { "x": 43, "y": 53, "angle": 135 },
+          "note": { "ja": "回転なし。続くリバースターンへ", "en": "No turn. Followed by a Reverse Turn" } }
+      ]
+    },
+    "lady": {
+      "startPositions": {
+        "L": { "x": 20, "y": 32, "angle": 315 },
+        "R": { "x": 30, "y": 22, "angle": 315 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false, "position": { "x": 45, "y": 57, "angle": 315 } },
+        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side", "modifier": "slightly_back" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false, "position": { "x": 65, "y": 49, "angle": 315 } },
+        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false, "position": { "x": 55, "y": 59, "angle": 315 } }
+      ]
+    }
+  }
+}

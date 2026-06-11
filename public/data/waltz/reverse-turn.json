@@ -1,0 +1,76 @@
+{
+  "id": "reverse-turn",
+  "name": { "ja": "リバースターン", "en": "Reverse Turn" },
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "startPositions": {
+        "L": { "x": 12, "y": 30, "angle": 135 },
+        "R": { "x": 0, "y": 38, "angle": 135 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 32, "y": 54, "angle": 135 } },
+        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "left", "amount": "1/4", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false, "position": { "x": 58, "y": 68, "angle": 225 } },
+        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "left", "amount": "1/8", "between": [2, 3] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false, "position": { "x": 60, "y": 80, "angle": 270 } },
+        { "stepNo": 4, "foot": "R", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 84, "y": 76, "angle": 270 } },
+        { "stepNo": 5, "foot": "L", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "pointing", "direction": "DW" },
+          "amountOfTurn": { "direction": "left", "amount": "3/8", "between": [4, 5] }, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false, "position": { "x": 102, "y": 88, "angle": 45 },
+          "note": { "ja": "ボディの回転は少なめ", "en": "Body turns less" } },
+        { "stepNo": 6, "foot": "R", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false, "position": { "x": 92, "y": 82, "angle": 45 },
+          "note": { "ja": "ボディの回転を完了する", "en": "Body completes turn" } }
+      ]
+    },
+    "lady": {
+      "startPositions": {
+        "L": { "x": 12, "y": 56, "angle": 315 },
+        "R": { "x": 24, "y": 48, "angle": 315 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 44, "y": 72, "angle": 315 } },
+        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "pointing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "left", "amount": "3/8", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false, "position": { "x": 64, "y": 60, "angle": 90 },
+          "note": { "ja": "ボディの回転は少なめ", "en": "Body turns less" } },
+        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false, "position": { "x": 62, "y": 48, "angle": 90 },
+          "note": { "ja": "ボディの回転を完了する", "en": "Body completes turn" } },
+        { "stepNo": 4, "foot": "L", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "LOD" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 88, "y": 56, "angle": 90 } },
+        { "stepNo": 5, "foot": "R", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "wall" },
+          "amountOfTurn": { "direction": "left", "amount": "1/4", "between": [4, 5] }, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false, "position": { "x": 106, "y": 44, "angle": 180 } },
+        { "stepNo": 6, "foot": "L", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "left", "amount": "1/8", "between": [5, 6] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false, "position": { "x": 116, "y": 54, "angle": 225 } }
+      ]
+    }
+  }
+}

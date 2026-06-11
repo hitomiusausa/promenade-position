@@ -1,0 +1,53 @@
+{
+  "id": "outside-change",
+  "name": { "ja": "アウトサイドチェンジ", "en": "Outside Change" },
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "startPositions": {
+        "L": { "x": 0, "y": 28, "angle": 315 },
+        "R": { "x": 10, "y": 18, "angle": 315 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false, "position": { "x": 26, "y": 50, "angle": 315 },
+          "note": { "ja": "ナチュラルターン1〜3の後など、中央斜めに背面して開始", "en": "Commences backing DC, e.g. after steps 1-3 of a Natural Turn" } },
+        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "back" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": true, "position": { "x": 48, "y": 44, "angle": 315 },
+          "note": { "ja": "左回転を開始する", "en": "Commence to turn left" } },
+        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_forward" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "pointing", "direction": "DW" },
+          "amountOfTurn": { "direction": "left", "amount": "1/4", "between": [2, 3] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false, "position": { "x": 70, "y": 34, "angle": 45 },
+          "note": { "ja": "ボディの回転は少なめ。次の歩は女性の外側（OP）に右足前進", "en": "Body turns less. Next step is RF forward in CBMP, outside partner (OP)" } }
+      ]
+    },
+    "lady": {
+      "startPositions": {
+        "L": { "x": 22, "y": 40, "angle": 135 },
+        "R": { "x": 12, "y": 50, "angle": 135 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false, "position": { "x": 34, "y": 70, "angle": 135 } },
+        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "forward" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": true, "position": { "x": 56, "y": 84, "angle": 135 },
+          "note": { "ja": "左回転を開始する", "en": "Commence to turn left" } },
+        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "side", "modifier": "slightly_back" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "left", "amount": "1/4", "between": [2, 3] }, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false, "position": { "x": 78, "y": 76, "angle": 225 },
+          "note": { "ja": "ボディの回転は少なめ。次の歩は左足後退（男性が外側）", "en": "Body turns less. Next step is LF back in CBMP, man outside" } }
+      ]
+    }
+  }
+}

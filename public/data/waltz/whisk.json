@@ -1,0 +1,52 @@
+{
+  "id": "whisk",
+  "name": { "ja": "ウィスク", "en": "Whisk" },
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "startPositions": {
+        "L": { "x": 0, "y": 80, "angle": 45 },
+        "R": { "x": 12, "y": 88, "angle": 45 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 23, "y": 57, "angle": 45 },
+          "note": { "ja": "わずかなCBM", "en": "Slight CBM" } },
+        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side", "modifier": "slightly_forward" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false, "position": { "x": 43, "y": 65, "angle": 45 } },
+        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "cross_behind" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false, "position": { "x": 38, "y": 73, "angle": 45 },
+          "note": { "ja": "左足を右足の後ろにクロスし、PP（プロムナードポジション）で終わる", "en": "LF crosses behind RF, finishing in Promenade Position (PP)" } }
+      ]
+    },
+    "lady": {
+      "startPositions": {
+        "L": { "x": 24, "y": 70, "angle": 225 },
+        "R": { "x": 12, "y": 62, "angle": 225 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 35, "y": 39, "angle": 225 },
+          "note": { "ja": "わずかなCBM", "en": "Slight CBM" } },
+        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_back" }, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": { "relation": "pointing", "direction": "DC" },
+          "amountOfTurn": { "direction": "right", "amount": "1/4", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false, "position": { "x": 52, "y": 48, "angle": 135 } },
+        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "cross_behind" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false, "position": { "x": 44, "y": 40, "angle": 135 },
+          "note": { "ja": "右足を左足の後ろにクロスし、PP（プロムナードポジション）で終わる", "en": "RF crosses behind LF, finishing in Promenade Position (PP)" } }
+      ]
+    }
+  }
+}

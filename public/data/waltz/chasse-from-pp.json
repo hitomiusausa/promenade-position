@@ -1,0 +1,61 @@
+{
+  "id": "chasse-from-pp",
+  "name": { "ja": "シャッセ フロム PP", "en": "Chasse from PP" },
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "startPositions": {
+        "L": { "x": 0, "y": 70, "angle": 45 },
+        "R": { "x": 12, "y": 78, "angle": 45 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "forward_PP" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 38, "y": 70, "angle": 45 },
+          "note": { "ja": "PPでCBMPに前進・横切る。LOD方向へ進む。わずかなCBM", "en": "Forward and across in PP and CBMP, moving along LOD. Slight CBM" } },
+        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_forward" }, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false, "position": { "x": 58, "y": 60, "angle": 45 } },
+        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "close" }, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false, "position": { "x": 50, "y": 66, "angle": 45 } },
+        { "stepNo": 4, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_forward" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false, "position": { "x": 74, "y": 54, "angle": 45 },
+          "note": { "ja": "クローズドポジションに戻って終わる。次はナチュラルターンなど", "en": "Finish in Closed Position, e.g. into a Natural Turn" } }
+      ]
+    },
+    "lady": {
+      "startPositions": {
+        "L": { "x": 18, "y": 52, "angle": 135 },
+        "R": { "x": 8, "y": 62, "angle": 135 }
+      },
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "forward_PP" }, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DC" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true, "position": { "x": 44, "y": 54, "angle": 135 },
+          "note": { "ja": "PPでCBMPに前進・横切る。LOD方向へ進む。わずかなCBM", "en": "Forward and across in PP and CBMP, moving along LOD. Slight CBM" } },
+        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side" }, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "wall" },
+          "amountOfTurn": { "direction": "left", "amount": "1/8", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false, "position": { "x": 62, "y": 62, "angle": 180 },
+          "note": { "ja": "左へ回転しながらクローズドポジションへ閉じ始める", "en": "Turning left, beginning to close to Closed Position" } },
+        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "close" }, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "left", "amount": "1/8", "between": [2, 3] }, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false, "position": { "x": 54, "y": 68, "angle": 225 } },
+        { "stepNo": 4, "foot": "R", "stepDescription": { "move": "side", "modifier": "slightly_back" }, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DW" },
+          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false, "position": { "x": 76, "y": 74, "angle": 225 },
+          "note": { "ja": "クローズドポジションで終わる", "en": "Finish in Closed Position" } }
+      ]
+    }
+  }
+}

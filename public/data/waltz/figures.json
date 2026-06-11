@@ -1,3 +1,12 @@
 [
-  { "id": "natural-turn", "name": { "ja": "ナチュラルターン", "en": "Natural Turn" }, "level": "beginner", "stepCount": 6 }
+  { "id": "closed-change-natural", "name": { "ja": "クローズドチェンジ（ナチュラルからリバース）", "en": "Closed Change (Natural to Reverse)" }, "level": "beginner", "stepCount": 3 },
+  { "id": "closed-change-reverse", "name": { "ja": "クローズドチェンジ（リバースからナチュラル）", "en": "Closed Change (Reverse to Natural)" }, "level": "beginner", "stepCount": 3 },
+  { "id": "natural-turn", "name": { "ja": "ナチュラルターン", "en": "Natural Turn" }, "level": "beginner", "stepCount": 6 },
+  { "id": "reverse-turn", "name": { "ja": "リバースターン", "en": "Reverse Turn" }, "level": "beginner", "stepCount": 6 },
+  { "id": "natural-spin-turn", "name": { "ja": "ナチュラルスピンターン", "en": "Natural Spin Turn" }, "level": "beginner", "stepCount": 6 },
+  { "id": "whisk", "name": { "ja": "ウィスク", "en": "Whisk" }, "level": "beginner", "stepCount": 3 },
+  { "id": "chasse-from-pp", "name": { "ja": "シャッセ フロム PP", "en": "Chasse from PP" }, "level": "beginner", "stepCount": 4 },
+  { "id": "hesitation-change", "name": { "ja": "ヘジテーションチェンジ", "en": "Hesitation Change" }, "level": "beginner", "stepCount": 6 },
+  { "id": "outside-change", "name": { "ja": "アウトサイドチェンジ", "en": "Outside Change" }, "level": "beginner", "stepCount": 3 },
+  { "id": "reverse-corte", "name": { "ja": "リバースコルテ", "en": "Reverse Corte" }, "level": "intermediate", "stepCount": 3 }
 ]
