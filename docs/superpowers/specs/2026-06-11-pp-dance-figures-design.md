@@ -20,6 +20,14 @@
 - **配布**: `vite build`（`base: './'` の相対パス設定）で生成した静的ファイル一式を、任意のサイトのサブディレクトリに置くだけで動作する
 - **ルーティング**: ハッシュ形式（`#/waltz/natural-turn`）。サーバー側のリライト設定が不要なため
 - **対応デバイス**: スマホ・PC両対応のレスポンシブ
+- **多言語対応（i18n）**: 全10言語に切替可能な設計。日本語・英語・韓国語・タガログ語・簡体字中国語・繁体字中国語（台湾）・ポルトガル語・スペイン語・イタリア語・フランス語
+
+### 多言語化の仕組み
+
+- **UI文言**: 言語ごとの辞書JSON（`src/locales/ja.json`, `en.json`…）。ヘッダーの言語スイッチャーで切替、選択はlocalStorageに保存
+- **ISTD用語はコード値で保持**: アライメント・フットワーク・ライズ&フォール・スウェイ・足の位置などは決まった語彙の組み合わせなので、フィガーデータにはコード値（例: `facing_DW`）を格納し、表示時に言語辞書で変換する。これによりフィガーデータは1セットのまま全言語に対応できる
+- **フィガー名**: 言語別オブジェクト（`"name": { "ja": "ナチュラルターン", "en": "Natural Turn", ... }`）。未翻訳の言語は英語にフォールバック（ISTD用語の原語は英語のため）
+- **自由記述の`note`**: 言語別オブジェクト。存在しない言語は英語→日本語の順でフォールバック
 
 ## 3. 画面構成（3画面）
 
@@ -61,8 +69,7 @@ public/data/
 ```json
 {
   "id": "natural-turn",
-  "name": "ナチュラルターン",
-  "nameEn": "Natural Turn",
+  "name": { "ja": "ナチュラルターン", "en": "Natural Turn" },
   "dance": "waltz",
   "timeSignature": "3/4",
   "parts": {
@@ -74,24 +81,27 @@ public/data/
 
 ### 1歩分（ISTDチャートの全項目＋描画用座標）
 
+ISTD項目はすべてコード値で保持し、表示時に言語辞書で各言語の文言に変換する（§2 多言語化の仕組み参照）。
+
 ```json
 {
   "stepNo": 2,
   "foot": "L",
-  "stepDescription": "左足横少し後ろへ",
+  "stepDescription": { "move": "side", "modifier": "slightly_back" },
   "count": "2",
   "footwork": "T",
-  "alignment": "壁斜めに背面して",
-  "amountOfTurn": "右へ1/4（1-2歩間）",
-  "riseAndFall": "ライズ継続",
-  "sway": "右",
+  "alignment": { "relation": "backing", "direction": "DW" },
+  "amountOfTurn": { "direction": "right", "amount": "1/4", "between": [1, 2] },
+  "riseAndFall": "continue_rise",
+  "sway": "R",
   "cbm": false,
   "position": { "x": 40, "y": 55, "angle": 135 },
-  "note": ""
+  "note": {}
 }
 ```
 
 - `footwork` が重心色の源。`H`/`T`/`TH`/`HT` 等を解析して前部・後部を塗り分け、順序（T→H等）は詳細パネルに表示
+- `alignment` は関係（facing/backing/pointing）＋方向（LOD/DW/DC/壁/中央 等）の組み合わせコード。`stepDescription`・`riseAndFall`・`sway` も同様に定義済みコードのみ許可し、検証スクリプトでチェックする
 - `position` はフロア共通座標（x, y）と足の向き（angle, 度）。男性・女性は同一座標系のため重ね表示がそのまま成立する
 - アニメーションは歩ごとの座標列をカウントのタイミングで補間して自動生成（アニメ専用データは持たない）
 - 未知の記号・欠損値はビルド前の検証スクリプトで検出する
@@ -100,8 +110,12 @@ public/data/
 
 ```
 src/
-├── types.ts              # フィガー/ステップの型定義
+├── types.ts              # フィガー/ステップの型定義（ISTDコード値の列挙型を含む）
 ├── data/loader.ts        # JSON読み込み＋形式チェック
+├── i18n/                 # 言語辞書と変換ロジック
+│   ├── index.ts          # useTranslation相当のフック・コード値→文言変換
+│   └── locales/          # ja.json, en.json, ko.json, tl.json, zh-CN.json,
+│                         #   zh-TW.json, pt.json, es.json, it.json, fr.json
 ├── hooks/useAnimation.ts # 再生・一時停止・速度・補間
 ├── pages/
 │   ├── DanceList.tsx
@@ -111,10 +125,13 @@ src/
     ├── FloorDiagram.tsx  # SVGフロア図
     ├── Foot.tsx          # 足1つ（非対称形・重心色・L/R・角度）
     ├── RoleToggle.tsx
+    ├── LanguageSwitcher.tsx # 言語切替（選択をlocalStorageに保存）
     ├── PlaybackBar.tsx
     ├── StepTable.tsx     # PC=ISTD表 / スマホ=歩チップ
     └── StepDetailPanel.tsx
 ```
+
+i18nライブラリは導入せず、軽量な自前実装とする（辞書JSON＋Reactコンテキスト）。理由: 必要なのは「キー→文言」と「コード値→文言」の変換のみで、複数形処理などの高度な機能は不要なため。
 
 ## 6. エラー処理
 
@@ -143,9 +160,11 @@ src/
   10. リバースコルテ
 - 画面3つ＋足型図表示＋詳細パネル＋アニメ再生＋役割切替
 - レスポンシブ対応
+- i18nの仕組み一式＋言語辞書は**日本語・英語の2言語分**を用意（英語はISTD原語のため翻訳コストが低く、仕組みの検証に最適）。残り8言語は辞書ファイルの追加のみで対応できる状態にする
 
 ### 将来拡張（v1には含めない）
 
+- 残り8言語の辞書追加（韓国語・タガログ語・簡体字中国語・繁体字中国語・ポルトガル語・スペイン語・イタリア語・フランス語）
 - 他種目の追加（スタンダード残り→ラテン）
 - クイズ・暗記カード機能
 - スウェイ等の図示
