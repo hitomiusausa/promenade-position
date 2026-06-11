@@ -3,14 +3,14 @@ import { formatAlignment, formatFootwork, formatStepDescription, formatTurn, loc
 
 export function StepDetailPanel({ step }: { step: FigureStep }) {
   const { dict, locale } = useI18n()
-  const rows: Array<[string, string]> = [
-    [dict.ui.count, step.count],
-    [dict.ui.footwork, formatFootwork(step.footwork, dict)],
-    [dict.ui.alignment, formatAlignment(step.alignment, dict)],
-    [dict.ui.amountOfTurn, formatTurn(step.amountOfTurn, dict)],
-    [dict.ui.riseAndFall, dict.riseFall[step.riseAndFall]],
-    [dict.ui.sway, dict.sway[step.sway]],
-    [dict.ui.cbm, step.cbm ? dict.ui.yes : dict.ui.no],
+  const rows: Array<[string, string, string]> = [
+    ['count', dict.ui.count, step.count],
+    ['footwork', dict.ui.footwork, formatFootwork(step.footwork, dict)],
+    ['alignment', dict.ui.alignment, formatAlignment(step.alignment, dict)],
+    ['amountOfTurn', dict.ui.amountOfTurn, formatTurn(step.amountOfTurn, dict)],
+    ['riseAndFall', dict.ui.riseAndFall, dict.riseFall[step.riseAndFall]],
+    ['sway', dict.ui.sway, dict.sway[step.sway]],
+    ['cbm', dict.ui.cbm, step.cbm ? dict.ui.yes : dict.ui.no],
   ]
   const note = step.note ? localized(step.note, locale) : ''
   return (
@@ -19,8 +19,8 @@ export function StepDetailPanel({ step }: { step: FigureStep }) {
         {dict.ui.step} {step.stepNo} — {formatStepDescription(step.foot, step.stepDescription, dict)}
       </h3>
       <dl>
-        {rows.map(([k, v]) => (
-          <div key={k} className="detail-row">
+        {rows.map(([id, k, v]) => (
+          <div key={id} className="detail-row">
             <dt>{k}</dt>
             <dd>{v}</dd>
           </div>

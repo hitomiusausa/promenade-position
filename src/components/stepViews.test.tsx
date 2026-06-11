@@ -14,14 +14,25 @@ const step: FigureStep = {
 }
 
 describe('StepTable', () => {
-  it('行クリックで onSelect が呼ばれる', () => {
+  it('チップクリックで onSelect が呼ばれる', () => {
     const onSelect = vi.fn()
     render(
       <LocaleProvider>
         <StepTable steps={[step]} selectedStep={null} onSelect={onSelect} />
       </LocaleProvider>,
     )
-    fireEvent.click(screen.getAllByText('2')[0])
+    fireEvent.click(document.querySelector('.step-chips button')!)
+    expect(onSelect).toHaveBeenCalledWith(2)
+  })
+  it('表の行はキーボードでも選択できる', () => {
+    const onSelect = vi.fn()
+    render(
+      <LocaleProvider>
+        <StepTable steps={[step]} selectedStep={null} onSelect={onSelect} />
+      </LocaleProvider>,
+    )
+    const row = document.querySelector('.step-table tbody tr')!
+    fireEvent.keyDown(row, { key: 'Enter' })
     expect(onSelect).toHaveBeenCalledWith(2)
   })
 })

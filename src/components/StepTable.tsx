@@ -40,8 +40,16 @@ export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
           {steps.map((s) => (
             <tr
               key={s.stepNo}
+              role="button"
+              tabIndex={0}
               className={selectedStep === s.stepNo ? 'selected' : ''}
               onClick={() => onSelect(s.stepNo)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  onSelect(s.stepNo)
+                }
+              }}
             >
               <td>{s.stepNo}</td>
               <td>{formatStepDescription(s.foot, s.stepDescription, dict)}</td>
