@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react'
+import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react'
 import type {
   AlignmentRelation, DanceId, Direction, FigureStep, FootSide, Footwork,
   Level, LocaleId, LocalizedText, Modifier, Move, RiseFall, Sway,
@@ -11,7 +11,7 @@ export type UiKey =
   | 'man' | 'lady' | 'both' | 'step' | 'footColumn' | 'count' | 'footwork'
   | 'alignment' | 'amountOfTurn' | 'riseAndFall' | 'sway' | 'cbm' | 'yes' | 'no'
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
-  | 'language' | 'startPosition'
+  | 'language' | 'startPosition' | 'modOpen' | 'modClose'
 
 export interface Dictionary {
   ui: Record<UiKey, string>
@@ -47,7 +47,7 @@ export function formatAlignment(a: FigureStep['alignment'], d: Dictionary): stri
 
 export function formatStepDescription(foot: FootSide, sd: FigureStep['stepDescription'], d: Dictionary): string {
   const base = d.move[sd.move].replace('{foot}', d.foot[foot])
-  return sd.modifier ? `${base}（${d.modifier[sd.modifier]}）` : base
+  return sd.modifier ? `${base}${d.ui.modOpen}${d.modifier[sd.modifier]}${d.ui.modClose}` : base
 }
 
 export function formatTurn(t: FigureStep['amountOfTurn'], d: Dictionary): string {
@@ -74,15 +74,20 @@ const LocaleContext = createContext<{
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<LocaleId>(() => {
-    const saved = localStorage.getItem('pp-locale')
-    return saved && saved in LOCALE_NAMES ? (saved as LocaleId) : 'ja'
+    try {
+      const saved = localStorage.getItem('pp-locale')
+      return saved && Object.hasOwn(LOCALE_NAMES, saved) ? (saved as LocaleId) : 'ja'
+    } catch {
+      return 'ja'
+    }
   })
-  const setLocale = (l: LocaleId) => {
+  const setLocale = useCallback((l: LocaleId) => {
     localStorage.setItem('pp-locale', l)
     setLocaleState(l)
-  }
+  }, [])
   const dict = DICTIONARIES[locale] ?? en
-  return <LocaleContext.Provider value={{ locale, setLocale, dict }}>{children}</LocaleContext.Provider>
+  const value = useMemo(() => ({ locale, setLocale, dict }), [locale, setLocale, dict])
+  return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
 }
 
 export function useI18n() {

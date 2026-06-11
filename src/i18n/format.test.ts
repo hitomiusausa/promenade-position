@@ -30,4 +30,10 @@ describe('i18n formatters', () => {
     expect(localized({ ja: 'ワルツ', en: 'Waltz' }, 'ja')).toBe('ワルツ')
     expect(localized({ en: 'Waltz' }, 'ko')).toBe('Waltz')
   })
+  it('足の位置: en（修飾語つき・ASCII括弧）', () => {
+    expect(formatStepDescription('R', { move: 'side', modifier: 'small_step' }, en)).toBe('RF to side (small step)')
+  })
+  it('回転量: 区間なし', () => {
+    expect(formatTurn({ direction: 'left', amount: '1/8' }, ja)).toBe('左へ1/8')
+  })
 })

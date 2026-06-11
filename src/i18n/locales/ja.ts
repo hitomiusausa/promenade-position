@@ -11,6 +11,7 @@ export const ja: Dictionary = {
     back: '戻る', loading: '読み込み中…', loadError: 'データを読み込めませんでした',
     retry: '再試行', comingSoon: '準備中', steps: '歩', language: '言語',
     startPosition: '開始位置',
+    modOpen: '（', modClose: '）',
   },
   dance: {
     waltz: 'ワルツ', tango: 'タンゴ', slow_foxtrot: 'スローフォックストロット',

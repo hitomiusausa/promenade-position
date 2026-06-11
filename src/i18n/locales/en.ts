@@ -11,6 +11,7 @@ export const en: Dictionary = {
     back: 'Back', loading: 'Loading…', loadError: 'Failed to load data',
     retry: 'Retry', comingSoon: 'Coming soon', steps: 'steps', language: 'Language',
     startPosition: 'Start position',
+    modOpen: ' (', modClose: ')',
   },
   dance: {
     waltz: 'Waltz', tango: 'Tango', slow_foxtrot: 'Slow Foxtrot',
