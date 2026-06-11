@@ -37,4 +37,27 @@ describe('FloorDiagram', () => {
     render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={2} onSelectStep={() => {}} animTime={null} />)
     expect(screen.getByTestId('body-direction')).toBeInTheDocument()
   })
+  it('both表示: 2役割で10足を描画し、女性側が淡色になる', () => {
+    render(
+      <FloorDiagram
+        parts={[{ role: 'man', part }, { role: 'lady', part }]}
+        selectedStep={null}
+        onSelectStep={() => {}}
+        animTime={null}
+      />,
+    )
+    expect(screen.getAllByTestId(/^foot-/)).toHaveLength(10)
+    const groups = document.querySelectorAll('svg > g[opacity]')
+    const opacities = Array.from(groups).map((g) => g.getAttribute('opacity'))
+    expect(opacities).toContain('0.55')
+  })
+  it('総拍数を超えたanimTimeでも落ちない（全足フラット）', () => {
+    render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={null} onSelectStep={() => {}} animTime={999} />)
+    expect(screen.getAllByTestId(/^foot-/)).toHaveLength(2)
+  })
+  it('partsが空でも不正なviewBoxにならない', () => {
+    render(<FloorDiagram parts={[]} selectedStep={null} onSelectStep={() => {}} animTime={null} />)
+    const svg = document.querySelector('svg.floor-diagram')!
+    expect(svg.getAttribute('viewBox')).toBe('-45 -45 90 90')
+  })
 })

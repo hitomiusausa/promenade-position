@@ -17,6 +17,7 @@ function bounds(parts: FloorDiagramProps['parts']) {
   const ps: StepPosition[] = parts.flatMap(({ part }) => [
     part.startPositions.L, part.startPositions.R, ...part.steps.map((s) => s.position),
   ])
+  if (ps.length === 0) return { minX: -PAD, maxX: PAD, minY: -PAD, maxY: PAD }
   const xs = ps.map((p) => p.x)
   const ys = ps.map((p) => p.y)
   return {
