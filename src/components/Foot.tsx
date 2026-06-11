@@ -29,7 +29,7 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
       style={onClick ? { cursor: 'pointer' } : undefined}
       data-testid={`foot-${side}`}
     >
-      <g transform={side === 'R' ? 'scale(-1,1)' : undefined}>
+      <g transform={side === 'R' ? 'scale(-0.6,0.6)' : 'scale(0.6,0.6)'}>
         <path d={FRONT_PATH} fill={colors.toe} stroke={OUTLINE[side]} strokeWidth={1.5} strokeDasharray={dash} />
         <path d={BACK_PATH} fill={colors.heel} stroke={OUTLINE[side]} strokeWidth={1.5} strokeDasharray={dash} />
         <text
@@ -47,13 +47,13 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
       {/* 歩番号は逆回転で常に画面上方に表示（つま先側に置くとLOD方向の歩で隣の歩番号と重なるため） */}
       {label && (
         <g transform={`rotate(${-position.angle})`}>
-          <circle cy={-32} r={8} fill="#fff" stroke="#adb5bd" strokeWidth={1} />
-          <text y={-29} textAnchor="middle" fontSize={9} fontWeight="bold" fill="#333" style={{ userSelect: 'none' }}>
+          <circle cy={-24} r={8} fill="#fff" stroke="#adb5bd" strokeWidth={1} />
+          <text y={-21} textAnchor="middle" fontSize={9} fontWeight="bold" fill="#333" style={{ userSelect: 'none' }}>
             {label}
           </text>
         </g>
       )}
-      {selected && <circle data-testid="selected-ring" r={22} fill="none" stroke="#e76f51" strokeWidth={2} strokeDasharray="5 3" />}
+      {selected && <circle data-testid="selected-ring" r={15} fill="none" stroke="#e76f51" strokeWidth={2} strokeDasharray="5 3" />}
     </g>
   )
 }
