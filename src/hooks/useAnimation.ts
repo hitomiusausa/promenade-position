@@ -11,10 +11,16 @@ export interface Animation {
 }
 
 export function useAnimation(total: number, beatsPerSec: number): Animation {
-  const [t, setT] = useState(0)
+  const [t, setTState] = useState(0)
+  const tRef = useRef(0)
   const [playing, setPlaying] = useState(false)
   const [speed, setSpeed] = useState(1)
   const rafRef = useRef(0)
+
+  const setT = (v: number) => {
+    tRef.current = v
+    setTState(v)
+  }
 
   useEffect(() => {
     if (!playing) return
@@ -22,14 +28,13 @@ export function useAnimation(total: number, beatsPerSec: number): Animation {
     const tick = (now: number) => {
       const dt = (now - last) / 1000
       last = now
-      setT((prev) => {
-        const next = prev + dt * beatsPerSec * speed
-        if (next >= total) {
-          setPlaying(false)
-          return total
-        }
-        return next
-      })
+      const next = tRef.current + dt * beatsPerSec * speed
+      if (next >= total) {
+        setT(total)
+        setPlaying(false)
+        return
+      }
+      setT(next)
       rafRef.current = requestAnimationFrame(tick)
     }
     rafRef.current = requestAnimationFrame(tick)
@@ -39,7 +44,7 @@ export function useAnimation(total: number, beatsPerSec: number): Animation {
   return {
     t, playing, speed,
     play: () => {
-      setT((prev) => (prev >= total ? 0 : prev))
+      if (tRef.current >= total) setT(0)
       setPlaying(true)
     },
     pause: () => setPlaying(false),

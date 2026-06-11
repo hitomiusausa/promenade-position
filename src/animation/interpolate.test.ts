@@ -41,10 +41,29 @@ describe('feetAt', () => {
     expect(f.L.x).toBe(50)
     expect(f.movingFoot).toBeNull()
   })
+  it('currentStepNo が再生中の歩番号を返す', () => {
+    expect(feetAt(part, 0.5).currentStepNo).toBe(1)
+    expect(feetAt(part, 1.5).currentStepNo).toBe(2)
+    expect(feetAt(part, 2).currentStepNo).toBeNull()
+  })
+  it('beats=0.5 の歩（シャッセ系）でも正しく補間する', () => {
+    const halfPart: FigurePart = {
+      startPositions: { L: { x: 0, y: 0, angle: 90 }, R: { x: 10, y: 0, angle: 90 } },
+      steps: [makeStep(1, 'R', 30, 0, 90, 0.5), makeStep(2, 'L', 50, 0, 90, 0.5)],
+    }
+    const f = feetAt(halfPart, 0.25)
+    expect(f.movingFoot).toBe('R')
+    expect(f.R.x).toBeGreaterThan(10)
+    expect(f.R.x).toBeLessThan(30)
+    expect(feetAt(halfPart, 1).movingFoot).toBeNull()
+  })
 })
 
 describe('lerpAngle', () => {
   it('最短経路で補間する（350°→10°は0°経由）', () => {
     expect(lerpAngle(350, 10, 0.5)).toBeCloseTo(0)
+  })
+  it('逆方向（10°→350°）も最短経路', () => {
+    expect(lerpAngle(10, 350, 0.5)).toBeCloseTo(0)
   })
 })
