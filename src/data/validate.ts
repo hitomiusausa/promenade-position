@@ -1,7 +1,7 @@
 import {
-  ALIGNMENT_RELATIONS, DANCES, DIRECTIONS, FOOTWORKS, MODIFIERS, MOVES,
+  ALIGNMENT_RELATIONS, DANCES, DIRECTIONS, FOOTWORKS, LOCALES, MODIFIERS, MOVES,
   RISE_FALLS, SWAYS, TURN_AMOUNTS, TURN_DIRECTIONS,
-  type DanceInfo, type Figure, type FigureIndexEntry,
+  type DanceInfo, type Figure, type FigureIndexEntry, type LocalizedText,
 } from '../types'
 
 function fail(path: string, msg: string): never {
@@ -14,7 +14,7 @@ function obj(v: unknown, path: string): Record<string, unknown> {
 }
 
 function str(v: unknown, path: string): string {
-  if (typeof v !== 'string') fail(path, '文字列が必要')
+  if (typeof v !== 'string' || v === '') fail(path, '空でない文字列が必要')
   return v
 }
 
@@ -27,6 +27,15 @@ function oneOf<T extends string>(v: unknown, allowed: readonly T[], path: string
   if (typeof v !== 'string' || !(allowed as readonly string[]).includes(v))
     fail(path, `次のいずれかが必要: ${allowed.join(', ')}（実際: ${JSON.stringify(v)}）`)
   return v as T
+}
+
+function localizedText(v: unknown, path: string): LocalizedText {
+  const o = obj(v, path)
+  for (const key of Object.keys(o)) {
+    if (!(LOCALES as readonly string[]).includes(key)) fail(`${path}.${key}`, `不明な言語コード`)
+    str(o[key], `${path}.${key}`)
+  }
+  return o as LocalizedText
 }
 
 function localizedName(v: unknown, path: string) {
@@ -71,13 +80,18 @@ function step(v: unknown, index: number, path: string) {
     amountOfTurn: {
       direction: oneOf(turn.direction, TURN_DIRECTIONS, `${path}.amountOfTurn.direction`),
       amount: oneOf(turn.amount, TURN_AMOUNTS, `${path}.amountOfTurn.amount`),
-      ...(turn.between !== undefined ? { between: [num(turn.between[0], ''), num(turn.between[1], '')] as [number, number] } : {}),
+      ...(turn.between !== undefined
+        ? { between: [
+            num(turn.between[0], `${path}.amountOfTurn.between[0]`),
+            num(turn.between[1], `${path}.amountOfTurn.between[1]`),
+          ] as [number, number] }
+        : {}),
     },
     riseAndFall: oneOf(o.riseAndFall, RISE_FALLS, `${path}.riseAndFall`),
     sway: oneOf(o.sway, SWAYS, `${path}.sway`),
     cbm: typeof o.cbm === 'boolean' ? o.cbm : fail(`${path}.cbm`, 'booleanが必要'),
     position: position(o.position, `${path}.position`),
-    ...(o.note !== undefined ? { note: obj(o.note, `${path}.note`) as Figure['name'] } : {}),
+    ...(o.note !== undefined ? { note: localizedText(o.note, `${path}.note`) } : {}),
   }
 }
 
@@ -124,7 +138,11 @@ export function validateFigureIndex(data: unknown): FigureIndexEntry[] {
       id: str(o.id, `figures[${i}].id`),
       name: localizedName(o.name, `figures[${i}].name`),
       level: oneOf(o.level, ['beginner', 'intermediate', 'advanced'] as const, `figures[${i}].level`),
-      stepCount: num(o.stepCount, `figures[${i}].stepCount`),
+      stepCount: (() => {
+        const stepCount = num(o.stepCount, `figures[${i}].stepCount`)
+        if (!Number.isInteger(stepCount) || stepCount < 1) fail(`figures[${i}].stepCount`, '1以上の整数が必要')
+        return stepCount
+      })(),
     }
   })
 }
