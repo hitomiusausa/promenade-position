@@ -39,7 +39,10 @@ export function FigureList({ dance }: { dance: string }) {
         {figures.map((f) => (
           <li key={f.id}>
             <button className="card-button" onClick={() => navigate(`/figure/${dance}/${f.id}`)}>
-              <span className="card-title">{localized(f.name, locale)}</span>
+              <span className="card-title">
+                {localized(f.name, locale)}
+                {localized(f.name, locale) !== f.name.en && <span className="card-subtitle">{f.name.en}</span>}
+              </span>
               <span className="badge">{dict.level[f.level]} / {f.stepCount}{dict.ui.steps}</span>
             </button>
           </li>

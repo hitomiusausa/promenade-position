@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import type {
   AlignmentRelation, DanceId, Direction, FigureStep, FootSide, Footwork,
   Level, LocaleId, LocalizedText, Modifier, Move, RiseFall, Sway,
@@ -11,7 +11,7 @@ export type UiKey =
   | 'man' | 'lady' | 'both' | 'step' | 'footColumn' | 'count' | 'footwork'
   | 'alignment' | 'amountOfTurn' | 'riseAndFall' | 'sway' | 'cbm' | 'yes' | 'no'
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
-  | 'language' | 'startPosition' | 'modOpen' | 'modClose' | 'viewRole' | 'playbackPosition'
+  | 'language' | 'modOpen' | 'modClose' | 'viewRole' | 'playbackPosition'
 
 export interface Dictionary {
   ui: Record<UiKey, string>
@@ -85,6 +85,9 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('pp-locale', l)
     setLocaleState(l)
   }, [])
+  useEffect(() => {
+    document.documentElement.lang = locale
+  }, [locale])
   const dict = DICTIONARIES[locale] ?? en
   const value = useMemo(() => ({ locale, setLocale, dict }), [locale, setLocale, dict])
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>

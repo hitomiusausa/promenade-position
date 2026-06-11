@@ -8,6 +8,7 @@ export interface FloorDiagramProps {
   onSelectStep: (stepNo: number) => void
   /** null=静止表示、数値=その拍時点のアニメ表示 */
   animTime: number | null
+  label?: string
 }
 
 const PAD = 45
@@ -26,7 +27,7 @@ function bounds(parts: FloorDiagramProps['parts']) {
   }
 }
 
-export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime }: FloorDiagramProps) {
+export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, label }: FloorDiagramProps) {
   const b = bounds(parts)
   const w = b.maxX - b.minX
   const h = b.maxY - b.minY
@@ -36,7 +37,7 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime }: Fl
   for (let y = Math.ceil(b.minY / GRID) * GRID; y < b.maxY; y += GRID) gridY.push(y)
 
   return (
-    <svg viewBox={`${b.minX} ${b.minY} ${w} ${h}`} className="floor-diagram" role="img">
+    <svg viewBox={`${b.minX} ${b.minY} ${w} ${h}`} className="floor-diagram" role="img" aria-label={label}>
       <g stroke="#eef0f2" strokeWidth={1}>
         {gridX.map((x) => <line key={`x${x}`} x1={x} y1={b.minY} x2={x} y2={b.maxY} />)}
         {gridY.map((y) => <line key={`y${y}`} x1={b.minX} y1={y} x2={b.maxX} y2={y} />)}

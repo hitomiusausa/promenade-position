@@ -8,7 +8,8 @@
     "build": "vitest run --passWithNoTests && tsc && vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "validate-data": "vitest run src/data/dataFiles.test.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

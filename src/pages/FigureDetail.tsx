@@ -70,6 +70,7 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
             selectedStep={animActive ? null : selectedStep}
             onSelectStep={(n) => setSelectedStep((cur) => (cur === n ? null : n))}
             animTime={animActive ? anim.t : null}
+            label={localized(figure.name, locale)}
           />
           <PlaybackBar anim={anim} total={total} />
         </div>

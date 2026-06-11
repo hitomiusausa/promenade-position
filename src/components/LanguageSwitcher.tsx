@@ -1,5 +1,5 @@
 import { LOCALES, type LocaleId } from '../types'
-import { LOCALE_NAMES, useI18n } from '../i18n'
+import { DICTIONARIES, LOCALE_NAMES, useI18n } from '../i18n'
 
 export function LanguageSwitcher() {
   const { locale, setLocale, dict } = useI18n()
@@ -11,7 +11,7 @@ export function LanguageSwitcher() {
       onChange={(e) => setLocale(e.target.value as LocaleId)}
     >
       {LOCALES.map((l) => (
-        <option key={l} value={l}>{LOCALE_NAMES[l]}</option>
+        <option key={l} value={l}>{LOCALE_NAMES[l]}{!(l in DICTIONARIES) ? ' (English)' : ''}</option>
       ))}
     </select>
   )

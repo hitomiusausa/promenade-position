@@ -10,7 +10,7 @@ export const ja: Dictionary = {
     sway: 'スウェイ', cbm: 'CBM', yes: 'あり', no: 'なし', note: 'メモ',
     back: '戻る', loading: '読み込み中…', loadError: 'データを読み込めませんでした',
     retry: '再試行', comingSoon: '準備中', steps: '歩', language: '言語',
-    startPosition: '開始位置', viewRole: '表示パート', playbackPosition: '再生位置',
+    viewRole: '表示パート', playbackPosition: '再生位置',
     modOpen: '（', modClose: '）',
   },
   dance: {

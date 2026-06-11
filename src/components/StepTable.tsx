@@ -34,6 +34,9 @@ export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
             <th>FW</th>
             <th>{dict.ui.alignment}</th>
             <th>{dict.ui.amountOfTurn}</th>
+            <th>{dict.ui.riseAndFall}</th>
+            <th>{dict.ui.sway}</th>
+            <th>{dict.ui.cbm}</th>
           </tr>
         </thead>
         <tbody>
@@ -57,6 +60,9 @@ export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
               <td className={`fw fw-${s.footwork}`}>{s.footwork === 'flat' || s.footwork === 'none' ? '—' : s.footwork}</td>
               <td>{formatAlignment(s.alignment, dict)}</td>
               <td>{formatTurn(s.amountOfTurn, dict)}</td>
+              <td>{dict.riseFall[s.riseAndFall]}</td>
+              <td>{dict.sway[s.sway]}</td>
+              <td>{s.cbm ? dict.ui.yes : dict.ui.no}</td>
             </tr>
           ))}
         </tbody>
