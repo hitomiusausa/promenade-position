@@ -1,0 +1,12 @@
+[
+  { "id": "waltz", "name": { "ja": "ワルツ", "en": "Waltz" }, "category": "standard", "available": true },
+  { "id": "tango", "name": { "ja": "タンゴ", "en": "Tango" }, "category": "standard", "available": false },
+  { "id": "slow_foxtrot", "name": { "ja": "スローフォックストロット", "en": "Slow Foxtrot" }, "category": "standard", "available": false },
+  { "id": "quickstep", "name": { "ja": "クイックステップ", "en": "Quickstep" }, "category": "standard", "available": false },
+  { "id": "viennese_waltz", "name": { "ja": "ヴェニーズワルツ", "en": "Viennese Waltz" }, "category": "standard", "available": false },
+  { "id": "cha_cha_cha", "name": { "ja": "チャチャチャ", "en": "Cha Cha Cha" }, "category": "latin", "available": false },
+  { "id": "rumba", "name": { "ja": "ルンバ", "en": "Rumba" }, "category": "latin", "available": false },
+  { "id": "samba", "name": { "ja": "サンバ", "en": "Samba" }, "category": "latin", "available": false },
+  { "id": "paso_doble", "name": { "ja": "パソドブレ", "en": "Paso Doble" }, "category": "latin", "available": false },
+  { "id": "jive", "name": { "ja": "ジャイブ", "en": "Jive" }, "category": "latin", "available": false }
+]
