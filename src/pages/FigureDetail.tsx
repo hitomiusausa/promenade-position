@@ -49,7 +49,8 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
   const steps = figure.parts[primaryRole].steps
   const total = totalBeats(steps)
   const anim = useAnimation(total, DANCE_BPM[figure.dance] / 60)
-  const animActive = anim.playing || (anim.t > 0 && anim.t < total)
+  // 再生終了後も最終フレームを保持して確認できるようにする（俯瞰図へは⏮で戻る）
+  const animActive = anim.playing || anim.t > 0
   const parts =
     view === 'both'
       ? ([{ role: 'man', part: figure.parts.man }, { role: 'lady', part: figure.parts.lady }] as const)

@@ -6,7 +6,11 @@ import { footworkColors, type FootVariant } from './footworkColors'
 const FRONT_PATH = 'M -10,-3 C -12,-13 -9,-22 -3,-25 C 4,-27 10,-21 9,-11 C 8.7,-8 8,-5 7,-3 Z'
 const BACK_PATH = 'M -10,-3 C -10,5 -9,11 -4,15 C 1,18 6,13 6,7 C 6,3 6.5,0 7,-3 Z'
 
-const OUTLINE: Record<FootSide, string> = { L: '#5b8aa6', R: '#a6685b' }
+// 輪郭色は役割の色系統×左右で塗り分ける（男性=青系/赤茶系、女性=バイオレット系/マゼンタ系）
+const OUTLINE: Record<FootVariant, Record<FootSide, string>> = {
+  man: { L: '#5b8aa6', R: '#a6685b' },
+  lady: { L: '#8a63c0', R: '#c2588c' },
+}
 
 export interface FootProps {
   side: FootSide
@@ -36,8 +40,8 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
       data-testid={`foot-${side}`}
     >
       <g transform={side === 'R' ? 'scale(-0.6,0.6)' : 'scale(0.6,0.6)'}>
-        <path d={FRONT_PATH} fill={colors.toe} stroke={OUTLINE[side]} strokeWidth={1.5} strokeDasharray={dash} />
-        <path d={BACK_PATH} fill={colors.heel} stroke={OUTLINE[side]} strokeWidth={1.5} strokeDasharray={dash} />
+        <path d={FRONT_PATH} fill={colors.toe} stroke={OUTLINE[variant][side]} strokeWidth={1.5} strokeDasharray={dash} />
+        <path d={BACK_PATH} fill={colors.heel} stroke={OUTLINE[variant][side]} strokeWidth={1.5} strokeDasharray={dash} />
         <text
           y={10}
           textAnchor="middle"

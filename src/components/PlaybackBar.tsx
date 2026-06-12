@@ -9,6 +9,16 @@ export function PlaybackBar({ anim, total }: { anim: Animation; total: number })
     <div className="playback-bar">
       <button
         className="play-button"
+        aria-label={dict.ui.reset}
+        onClick={() => {
+          anim.pause()
+          anim.seek(0)
+        }}
+      >
+        ⏮
+      </button>
+      <button
+        className="play-button"
         aria-label={anim.playing ? dict.ui.pause : dict.ui.play}
         onClick={anim.playing ? anim.pause : anim.play}
       >

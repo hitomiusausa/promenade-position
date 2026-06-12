@@ -73,10 +73,11 @@ describe('FloorDiagram', () => {
     expect(fills).toContain(WEIGHT_COLORS_LADY.toe)
     expect(fills).not.toContain(WEIGHT_COLORS.toe)
   })
-  it('女性ビューのアニメ中も女性パレット（フラット色）で描画する', () => {
+  it('アニメ開始直後の未着地の足は点線（フラット色は使わない）', () => {
     render(<FloorDiagram parts={[{ role: 'lady', part }]} selectedStep={null} onSelectStep={() => {}} animTime={0.5} />)
-    const fills = Array.from(document.querySelectorAll('svg path')).map((p) => p.getAttribute('fill'))
-    expect(fills).toContain(WEIGHT_COLORS_LADY.flat)
+    const paths = Array.from(document.querySelectorAll('svg path'))
+    expect(paths.map((p) => p.getAttribute('fill'))).not.toContain(WEIGHT_COLORS_LADY.flat)
+    expect(paths.map((p) => p.getAttribute('stroke-dasharray'))).toContain('4 3')
   })
   it('アニメ中の着地済みの足は直近の歩のフットワーク色になる', () => {
     // t=1.5: 第1歩(R, HT)着地済み → 女性パレットのトー＋ヒール色が出る

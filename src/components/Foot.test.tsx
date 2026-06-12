@@ -37,4 +37,12 @@ describe('Foot', () => {
     const paths = screen.getByTestId('foot-L').querySelectorAll('path')
     expect(paths[0].getAttribute('stroke-dasharray')).toBe('4 3')
   })
+  it('lady バリアントでは輪郭も女性系の色になる', () => {
+    renderFoot(<Foot side="L" position={{ x: 0, y: 0, angle: 0 }} footwork="none" variant="lady" />)
+    const path = screen.getByTestId('foot-L').querySelector('path')!
+    expect(path.getAttribute('stroke')).toBe('#8a63c0')
+    renderFoot(<Foot side="R" position={{ x: 0, y: 0, angle: 0 }} footwork="none" variant="lady" />)
+    const pathR = screen.getByTestId('foot-R').querySelector('path')!
+    expect(pathR.getAttribute('stroke')).toBe('#c2588c')
+  })
 })

@@ -11,7 +11,7 @@ export type UiKey =
   | 'man' | 'lady' | 'both' | 'step' | 'footColumn' | 'count' | 'footwork'
   | 'alignment' | 'amountOfTurn' | 'riseAndFall' | 'sway' | 'cbm' | 'yes' | 'no'
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
-  | 'language' | 'modOpen' | 'modClose' | 'viewRole' | 'playbackPosition'
+  | 'language' | 'modOpen' | 'modClose' | 'viewRole' | 'playbackPosition' | 'reset'
 
 export interface Dictionary {
   ui: Record<UiKey, string>
