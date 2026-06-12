@@ -64,6 +64,13 @@ describe('FloorDiagram', () => {
     const fills = Array.from(document.querySelectorAll('svg path')).map((p) => p.getAttribute('fill'))
     expect(fills).toContain(WEIGHT_COLORS_LADY.flat)
   })
+  it('アニメ中の着地済みの足は直近の歩のフットワーク色になる', () => {
+    // t=1.5: 第1歩(R, HT)着地済み → 女性パレットのトー＋ヒール色が出る
+    render(<FloorDiagram parts={[{ role: 'lady', part }]} selectedStep={null} onSelectStep={() => {}} animTime={1.5} />)
+    const fills = Array.from(document.querySelectorAll('svg path')).map((p) => p.getAttribute('fill'))
+    expect(fills).toContain(WEIGHT_COLORS_LADY.toe)
+    expect(fills).toContain(WEIGHT_COLORS_LADY.heel)
+  })
   it('総拍数を超えたanimTimeでも落ちない（全足フラット）', () => {
     render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={null} onSelectStep={() => {}} animTime={999} />)
     expect(screen.getAllByTestId(/^foot-/)).toHaveLength(2)

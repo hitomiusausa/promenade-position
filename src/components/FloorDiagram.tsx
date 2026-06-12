@@ -55,7 +55,9 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
         const badgeStyle = parts.length > 1 && role === 'man' ? ('ink' as const) : ('outline' as const)
         if (animTime !== null) {
           const feet = feetAt(part, animTime)
-          const fw = (side: 'L' | 'R') => (feet.movingFoot === side ? 'none' : 'flat')
+          // 移動中=体重なし（点線）、着地済み=直近に踏んだ歩のフットワーク色、未着地=フラット
+          const fw = (side: 'L' | 'R') =>
+            feet.movingFoot === side ? 'none' : (feet.landedFootwork[side] ?? 'flat')
           return (
             <g key={role}>
               <Foot side="L" position={feet.L} footwork={fw('L')} variant={variant} />

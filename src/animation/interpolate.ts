@@ -1,4 +1,4 @@
-import type { FigurePart, FigureStep, FootSide, StepPosition } from '../types'
+import type { FigurePart, FigureStep, FootSide, Footwork, StepPosition } from '../types'
 
 export function totalBeats(steps: FigureStep[]): number {
   return steps.reduce((sum, s) => sum + s.beats, 0)
@@ -24,15 +24,19 @@ export interface FeetState {
   movingFoot: FootSide | null
   /** いま再生中の歩（1始まり）。開始前・終了後は null */
   currentStepNo: number | null
+  /** 各足が直近に完了した歩のフットワーク。まだ踏んでいない足は null */
+  landedFootwork: Record<FootSide, Footwork | null>
 }
 
 export function feetAt(part: FigurePart, tBeats: number): FeetState {
   const pos: Record<FootSide, StepPosition> = { L: part.startPositions.L, R: part.startPositions.R }
+  const landed: Record<FootSide, Footwork | null> = { L: null, R: null }
   let cursor = 0
   for (const step of part.steps) {
     const end = cursor + step.beats
     if (tBeats >= end) {
       pos[step.foot] = step.position
+      landed[step.foot] = step.footwork
       cursor = end
       continue
     }
@@ -43,9 +47,10 @@ export function feetAt(part: FigurePart, tBeats: number): FeetState {
         [step.foot]: lerpPos(pos[step.foot], step.position, progress),
         movingFoot: step.foot,
         currentStepNo: step.stepNo,
+        landedFootwork: landed,
       } as FeetState
     }
     break
   }
-  return { ...pos, movingFoot: null, currentStepNo: null }
+  return { ...pos, movingFoot: null, currentStepNo: null, landedFootwork: landed }
 }

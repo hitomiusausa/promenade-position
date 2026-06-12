@@ -41,6 +41,14 @@ describe('feetAt', () => {
     expect(f.L.x).toBe(50)
     expect(f.movingFoot).toBeNull()
   })
+  it('landedFootwork が各足の直近に踏んだ歩のフットワークを返す', () => {
+    // t=0.5: 第1歩(R)が移動中 → どちらもまだ着地なし
+    expect(feetAt(part, 0.5).landedFootwork).toEqual({ L: null, R: null })
+    // t=1.5: 第1歩(R, HT)完了・第2歩(L)移動中 → RはHT
+    expect(feetAt(part, 1.5).landedFootwork).toEqual({ L: null, R: 'HT' })
+    // t=2: 両歩完了
+    expect(feetAt(part, 2).landedFootwork).toEqual({ L: 'HT', R: 'HT' })
+  })
   it('currentStepNo が再生中の歩番号を返す', () => {
     expect(feetAt(part, 0.5).currentStepNo).toBe(1)
     expect(feetAt(part, 1.5).currentStepNo).toBe(2)
