@@ -49,9 +49,9 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
         <text x={b.minX + 10} y={b.maxY - 18} fontSize={9} fill="#adb5bd">LOD</text>
       </g>
       {parts.map(({ role, part }) => {
-        // 両方表示では女性=淡色パレット・白抜きバッジ、男性=通常色・塗りつぶしバッジで区別
+        // 両方表示では女性=対比色パレット・白抜きバッジ、男性=通常色・塗りつぶしバッジで区別
         const both = parts.length > 1
-        const variant = both && role === 'lady' ? ('light' as const) : ('strong' as const)
+        const variant = both && role === 'lady' ? ('lady' as const) : ('man' as const)
         const badgeStyle = both && role === 'man' ? ('ink' as const) : ('outline' as const)
         if (animTime !== null) {
           const feet = feetAt(part, animTime)

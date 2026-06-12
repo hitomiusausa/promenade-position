@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { footworkColors, WEIGHT_COLORS, WEIGHT_COLORS_LIGHT } from './footworkColors'
+import { footworkColors, WEIGHT_COLORS, WEIGHT_COLORS_LADY } from './footworkColors'
 
 describe('footworkColors', () => {
   it('T → トーのみ着色', () => {
@@ -28,12 +28,12 @@ describe('footworkColors', () => {
     expect(c.toe).toBe(WEIGHT_COLORS.neutral)
     expect(c.heel).toBe(WEIGHT_COLORS.neutral)
   })
-  it('light バリアント → 同系統の淡色（女性パート用）', () => {
-    const c = footworkColors('HT', 'light')
-    expect(c.toe).toBe(WEIGHT_COLORS_LIGHT.toe)
-    expect(c.heel).toBe(WEIGHT_COLORS_LIGHT.heel)
-    expect(footworkColors('flat', 'light').toe).toBe(WEIGHT_COLORS_LIGHT.flat)
+  it('lady バリアント → 同じ濃さの対比色パレット（女性パート用）', () => {
+    const c = footworkColors('HT', 'lady')
+    expect(c.toe).toBe(WEIGHT_COLORS_LADY.toe)
+    expect(c.heel).toBe(WEIGHT_COLORS_LADY.heel)
+    expect(footworkColors('flat', 'lady').toe).toBe(WEIGHT_COLORS_LADY.flat)
     // 体重なしはバリアントによらず点線・無色
-    expect(footworkColors('none', 'light').dashed).toBe(true)
+    expect(footworkColors('none', 'lady').dashed).toBe(true)
   })
 })

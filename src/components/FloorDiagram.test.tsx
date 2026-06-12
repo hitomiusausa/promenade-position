@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { FloorDiagram } from './FloorDiagram'
-import { WEIGHT_COLORS, WEIGHT_COLORS_LIGHT } from './footworkColors'
+import { WEIGHT_COLORS, WEIGHT_COLORS_LADY } from './footworkColors'
 import type { FigurePart, FigureStep } from '../types'
 
 function makeStep(stepNo: number, foot: 'L' | 'R', x: number): FigureStep {
@@ -48,10 +48,10 @@ describe('FloorDiagram', () => {
       />,
     )
     expect(screen.getAllByTestId(/^foot-/)).toHaveLength(10)
-    // 女性側は淡色パレットの塗り、男性側は通常パレットの塗りで区別される
+    // 女性側は対比色パレットの塗り、男性側は通常パレットの塗りで区別される
     const fills = Array.from(document.querySelectorAll('svg path')).map((p) => p.getAttribute('fill'))
     expect(fills).toContain(WEIGHT_COLORS.toe)
-    expect(fills).toContain(WEIGHT_COLORS_LIGHT.toe)
+    expect(fills).toContain(WEIGHT_COLORS_LADY.toe)
   })
   it('総拍数を超えたanimTimeでも落ちない（全足フラット）', () => {
     render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={null} onSelectStep={() => {}} animTime={999} />)
