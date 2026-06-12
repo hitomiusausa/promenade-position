@@ -38,6 +38,20 @@ describe('FloorDiagram', () => {
     render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={2} onSelectStep={() => {}} animTime={null} />)
     expect(screen.getByTestId('body-direction')).toBeInTheDocument()
   })
+  it('歩を選択すると他の歩の足が薄くなる（選択歩はフル色）', () => {
+    render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={2} onSelectStep={() => {}} animTime={null} />)
+    const feet = screen.getAllByTestId(/^foot-/)
+    const opacities = feet.map((f) => f.getAttribute('opacity'))
+    // 開始位置ゴースト2足(0.3) + 非選択歩2足(0.25) + 選択歩1足(1)
+    expect(opacities.filter((o) => o === '0.25')).toHaveLength(2)
+    expect(opacities.filter((o) => o === '1')).toHaveLength(1)
+  })
+  it('未選択時はすべての歩がフル色', () => {
+    render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={null} onSelectStep={() => {}} animTime={null} />)
+    const opacities = screen.getAllByTestId(/^foot-/).map((f) => f.getAttribute('opacity'))
+    expect(opacities.filter((o) => o === '1')).toHaveLength(3)
+    expect(opacities.filter((o) => o === '0.25')).toHaveLength(0)
+  })
   it('both表示: 2役割で10足を描画し、女性側が淡色になる', () => {
     render(
       <FloorDiagram

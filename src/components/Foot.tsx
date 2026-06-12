@@ -15,6 +15,8 @@ export interface FootProps {
   label?: string
   ghost?: boolean
   selected?: boolean
+  /** 他の歩が選択されているとき true。色を保ったまま薄く表示する */
+  dimmed?: boolean
   /** 重心色のパレット。両方表示で女性パートは 'lady'（同じ濃さの対比色） */
   variant?: FootVariant
   /** 歩番号バッジ。両方表示で男性=ink（塗りつぶし）/女性=outline（白抜き） */
@@ -22,13 +24,13 @@ export interface FootProps {
   onClick?: () => void
 }
 
-export function Foot({ side, position, footwork, label, ghost = false, selected = false, variant = 'man', badgeStyle = 'outline', onClick }: FootProps) {
+export function Foot({ side, position, footwork, label, ghost = false, selected = false, dimmed = false, variant = 'man', badgeStyle = 'outline', onClick }: FootProps) {
   const colors = footworkColors(footwork, variant)
   const dash = colors.dashed ? '4 3' : undefined
   return (
     <g
       transform={`translate(${position.x},${position.y}) rotate(${position.angle})`}
-      opacity={ghost ? 0.3 : 1}
+      opacity={ghost ? 0.3 : dimmed ? 0.25 : 1}
       onClick={onClick}
       style={onClick ? { cursor: 'pointer' } : undefined}
       data-testid={`foot-${side}`}

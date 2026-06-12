@@ -77,6 +77,7 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
                 footwork={s.footwork}
                 label={String(s.stepNo)}
                 selected={selectedStep === s.stepNo}
+                dimmed={selectedStep !== null && selectedStep !== s.stepNo}
                 variant={variant}
                 badgeStyle={badgeStyle}
                 onClick={() => onSelectStep(s.stepNo)}
