@@ -57,6 +57,13 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
       : ([{ role: primaryRole, part: figure.parts[primaryRole] }] as const)
   const selected = steps.find((s) => s.stepNo === selectedStep) ?? null
 
+  // 歩の選択時はアニメ表示（再生中・終了後の保持を含む）を解除して、俯瞰図のフォーカス表示に戻す
+  const selectStep = (n: number) => {
+    if (anim.playing) anim.pause()
+    if (anim.t > 0) anim.seek(0)
+    setSelectedStep((cur) => (cur === n ? null : n))
+  }
+
   return (
     <section>
       <p><a href={`#/figures/${dance}`}>← {dict.ui.back}</a></p>
@@ -75,14 +82,14 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
           <FloorDiagram
             parts={[...parts]}
             selectedStep={animActive ? null : selectedStep}
-            onSelectStep={(n) => setSelectedStep((cur) => (cur === n ? null : n))}
+            onSelectStep={selectStep}
             animTime={animActive ? anim.t : null}
             label={localized(figure.name, locale)}
           />
           <PlaybackBar anim={anim} total={total} />
         </div>
         <div className={primaryRole === 'lady' ? 'role-lady' : undefined}>
-          <StepTable steps={steps} selectedStep={selectedStep} onSelect={(n) => setSelectedStep((cur) => (cur === n ? null : n))} />
+          <StepTable steps={steps} selectedStep={selectedStep} onSelect={selectStep} />
           {selected && <StepDetailPanel step={selected} />}
         </div>
       </div>
