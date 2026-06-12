@@ -80,7 +80,7 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
           />
           <PlaybackBar anim={anim} total={total} />
         </div>
-        <div>
+        <div className={primaryRole === 'lady' ? 'role-lady' : undefined}>
           <StepTable steps={steps} selectedStep={selectedStep} onSelect={(n) => setSelectedStep((cur) => (cur === n ? null : n))} />
           {selected && <StepDetailPanel step={selected} />}
         </div>

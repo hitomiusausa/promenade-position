@@ -49,10 +49,10 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
         <text x={b.minX + 10} y={b.maxY - 18} fontSize={9} fill="#adb5bd">LOD</text>
       </g>
       {parts.map(({ role, part }) => {
-        // 両方表示では女性=対比色パレット・白抜きバッジ、男性=通常色・塗りつぶしバッジで区別
-        const both = parts.length > 1
-        const variant = both && role === 'lady' ? ('lady' as const) : ('man' as const)
-        const badgeStyle = both && role === 'man' ? ('ink' as const) : ('outline' as const)
+        // 女性パートは単体表示でも常に対比色パレット（役割＝色のアイデンティティ）。
+        // 歩番号バッジの塗り分け（男性=塗りつぶし）は両方表示のときだけ
+        const variant = role === 'lady' ? ('lady' as const) : ('man' as const)
+        const badgeStyle = parts.length > 1 && role === 'man' ? ('ink' as const) : ('outline' as const)
         if (animTime !== null) {
           const feet = feetAt(part, animTime)
           const fw = (side: 'L' | 'R') => (feet.movingFoot === side ? 'none' : 'flat')

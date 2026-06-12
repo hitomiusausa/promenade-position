@@ -70,7 +70,16 @@ export function Foot({ side, position, footwork, label, ghost = false, selected 
           </text>
         </g>
       )}
-      {selected && <circle data-testid="selected-ring" r={15} fill="none" stroke="#e76f51" strokeWidth={2} strokeDasharray="5 3" />}
+      {selected && (
+        <circle
+          data-testid="selected-ring"
+          r={15}
+          fill="none"
+          stroke={variant === 'lady' ? '#d6336c' : '#e76f51'}
+          strokeWidth={2}
+          strokeDasharray="5 3"
+        />
+      )}
     </g>
   )
 }

@@ -53,6 +53,17 @@ describe('FloorDiagram', () => {
     expect(fills).toContain(WEIGHT_COLORS.toe)
     expect(fills).toContain(WEIGHT_COLORS_LADY.toe)
   })
+  it('女性ビュー単体でも女性パレットで描画する', () => {
+    render(<FloorDiagram parts={[{ role: 'lady', part }]} selectedStep={null} onSelectStep={() => {}} animTime={null} />)
+    const fills = Array.from(document.querySelectorAll('svg path')).map((p) => p.getAttribute('fill'))
+    expect(fills).toContain(WEIGHT_COLORS_LADY.toe)
+    expect(fills).not.toContain(WEIGHT_COLORS.toe)
+  })
+  it('女性ビューのアニメ中も女性パレット（フラット色）で描画する', () => {
+    render(<FloorDiagram parts={[{ role: 'lady', part }]} selectedStep={null} onSelectStep={() => {}} animTime={0.5} />)
+    const fills = Array.from(document.querySelectorAll('svg path')).map((p) => p.getAttribute('fill'))
+    expect(fills).toContain(WEIGHT_COLORS_LADY.flat)
+  })
   it('総拍数を超えたanimTimeでも落ちない（全足フラット）', () => {
     render(<FloorDiagram parts={[{ role: 'man', part }]} selectedStep={null} onSelectStep={() => {}} animTime={999} />)
     expect(screen.getAllByTestId(/^foot-/)).toHaveLength(2)

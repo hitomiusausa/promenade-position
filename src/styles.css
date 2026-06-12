@@ -2,6 +2,9 @@
   --toe: #e76f51;
   --heel: #457b9d;
   --flat: #2a9d8f;
+  --toe-lady: #d6336c;
+  --heel-lady: #7048a8;
+  --flat-lady: #8f9d2a;
   --ink: #343a40;
   --paper: #fdfdfb;
   --line: #e9ecef;
@@ -72,6 +75,10 @@ main { max-width: 1080px; margin: 0 auto; padding: 16px; }
 .step-table .fw-T { color: var(--toe); }
 .step-table .fw-H { color: var(--heel); }
 .step-table .fw-TH, .step-table .fw-HT, .step-table .fw-THT { color: var(--flat); }
+/* 女性ビューではFW列の色も女性パレットに合わせる */
+.role-lady .step-table .fw-T { color: var(--toe-lady); }
+.role-lady .step-table .fw-H { color: var(--heel-lady); }
+.role-lady .step-table .fw-TH, .role-lady .step-table .fw-HT, .role-lady .step-table .fw-THT { color: var(--flat-lady); }
 
 @media (min-width: 900px) {
   .step-table { display: table; }
