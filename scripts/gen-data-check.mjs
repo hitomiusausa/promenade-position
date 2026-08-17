@@ -10,7 +10,7 @@ const d = ja
 const today = process.env.DATA_CHECK_DATE ?? new Date().toISOString().slice(0, 10)
 
 const fmtStep = (s) => {
-  const base = d.move[s.stepDescription.move].replace('{foot}', '').replace(/^を/, '')
+  const base = d.move[s.stepDescription.move].replace('{foot}', '').replace(/^を/, '').replace('（）', '')
   const mods = s.stepDescription.modifiers ?? []
   return mods.length ? `${base}（${mods.map((m) => d.modifier[m]).join('・')}）` : base
 }
