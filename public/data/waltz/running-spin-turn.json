@@ -1,6 +1,6 @@
 {
-  "id": "natural-spin-turn",
-  "name": {"ja": "ナチュラルスピンターン", "en": "Natural Spin Turn"},
+  "id": "running-spin-turn",
+  "name": {"ja": "ランニング・スピン・ターン", "en": "Running Spin Turn"},
   "dance": "waltz",
   "timeSignature": "3/4",
   "parts": {
@@ -24,15 +24,20 @@
           "amountOfTurn": {"direction": "right", "amount": "1/2"}, "riseAndFall": "down",
           "sway": "straight", "cbm": true,
           "note": {"ja": "右足をCBMPに保つ（ピボット）。LODへ、Tは内側に向けて、終わりはLODに面して", "en": "RF held in CBMP (pivot). To LOD, toe turned in, ending facing LOD"} },
-        { "stepNo": 5, "foot": "R", "stepDescription": {"move": "forward"}, "count": "2", "beats": 1,
+        { "stepNo": 5, "foot": "R", "stepDescription": {"move": "forward"}, "count": "&", "beats": 0.5,
           "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
           "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down_commence_rise_eo_2",
           "sway": "straight", "cbm": true,
-          "note": {"ja": "5で回転を継続", "en": "Continue to turn on 5"} },
-        { "stepNo": 6, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "3", "beats": 1,
+          "note": {"ja": "5で右回転を継続", "en": "Continue to turn R on 5"} },
+        { "stepNo": 6, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [5, 6]}, "riseAndFall": "up",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 7, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["shoulder_lead"]}, "count": "3", "beats": 1,
           "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC"},
-          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [5, 6]}, "riseAndFall": "up_lower_eo_3",
-          "sway": "straight", "cbm": false }
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "右SL。7で体を少し右に回転", "en": "R shoulder lead. Body turns slightly R on 7"} }
       ]
     },
     "lady": {
@@ -51,21 +56,26 @@
           "footwork": "TH", "alignment": {"relation": "facing", "direction": "LOD"},
           "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise_lower_eo_3",
           "sway": "L", "cbm": false,
-          "note": {"ja": "ボディの回転を完了する", "en": "Body completes turn"} },
+          "note": {"ja": "3で体の回転を完了", "en": "Body completes turn on 3"} },
         { "stepNo": 4, "foot": "R", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
           "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
           "amountOfTurn": {"direction": "right", "amount": "1/2"}, "riseAndFall": "down",
           "sway": "straight", "cbm": true,
           "note": {"ja": "ピボッティング・アクション。終わりはLODに背面して", "en": "Pivoting action. End backing LOD"} },
-        { "stepNo": 5, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["leftward"]}, "count": "2", "beats": 1,
+        { "stepNo": 5, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["leftward"]}, "count": "&", "beats": 0.5,
           "footwork": "T", "alignment": {"relation": "backing", "direction": "LOD"},
           "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down_commence_rise_eo_2",
           "sway": "straight", "cbm": false,
-          "note": {"ja": "5で回転を継続。次いで右足を左足にブラッシュ", "en": "Continue to turn on 5, then brush RF to LF"} },
-        { "stepNo": 6, "foot": "R", "stepDescription": {"move": "diag_forward"}, "count": "3", "beats": 1,
+          "note": {"ja": "5で回転を継続", "en": "Continue to turn on 5"} },
+        { "stepNo": 6, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["slightly_side"]}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [5, 6]}, "riseAndFall": "up",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 7, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["shoulder_lead", "preparing_OP"]}, "count": "3", "beats": 1,
           "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC"},
-          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [5, 6]}, "riseAndFall": "up_lower_eo_3",
-          "sway": "straight", "cbm": false }
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "左SL。7で体を少し右に回転", "en": "L shoulder lead. Body turns slightly R on 7"} }
       ]
     }
   }

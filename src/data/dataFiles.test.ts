@@ -33,8 +33,8 @@ describe('public/data の全ファイル検証', () => {
         const fig = figureJsons[figPath]
         if (!fig) throw new Error(`${figPath} が存在しない（${indexPath} に記載あり）`)
         const validated = validateFigure(fig)
+        // stepCount は男性の歩数（女性が異なるフィガーあり: ダブル・リバース・スピン等）
         expect(validated.parts.man.steps.length).toBe(entry.stepCount)
-        expect(validated.parts.lady.steps.length).toBe(entry.stepCount)
         expect(beats(validated.parts.man.steps)).toBe(beats(validated.parts.lady.steps))
       }
     }

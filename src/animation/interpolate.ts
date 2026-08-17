@@ -2,7 +2,7 @@ import type { FigurePart, FigureStep, FootSide, Footwork, Move, StepPosition } f
 
 /** 体重を移さない歩（点線で描く） */
 export function isNoWeight(move: Move): boolean {
-  return move === 'close_no_weight' || move === 'brush'
+  return move === 'close_no_weight' || move === 'brush' || move === 'begin_close'
 }
 
 export function totalBeats(steps: FigureStep[]): number {

@@ -1,0 +1,45 @@
+{
+  "id": "closed-wing",
+  "name": {"ja": "クローズド・ウイング", "en": "Closed Wing"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["outside_partner", "in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "H", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "1で回転なし", "en": "No turn on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "begin_close"}, "count": "2", "beats": 1,
+          "footwork": "flat", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "rise_slightly_2_3_nfr",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "2と3で右足のWF、左足TのIEでプレッシャー。2と3で体を少し左に回転", "en": "On 2 and 3: RF whole foot, pressure on IE of LF toe. Body turns slightly L on 2 and 3"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "close_no_weight"}, "count": "3", "beats": 1,
+          "footwork": "T_IE", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "rise_slightly_2_3_nfr",
+          "sway": "straight", "cbm": false }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "1で回転なし", "en": "No turn on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_back", "small_step"]}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false,
+          "note": {"ja": "2で回転なし", "en": "No turn on 2"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["left_outside_partner", "in_CBMP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false,
+          "note": {"ja": "3で体を少し左に回転", "en": "Body turns slightly L on 3"} }
+      ]
+    }
+  }
+}

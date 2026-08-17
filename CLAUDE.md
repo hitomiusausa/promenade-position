@@ -17,7 +17,7 @@ npm install
 npm run dev            # 開発サーバー
 npm test               # 全テスト（全フィガーデータのスキーマ・値チェック込み）
 npm run validate-data  # データ検証だけ
-npm run data-check     # docs/DATA_CHECK.md（教本照合シート）を再生成（Node 22+）
+npm run data-check     # docs/DATA_CHECK.md と .html（教本照合シート）を再生成（Node 22+）
 npm run build          # vitest → tsc → vite build（テストが赤ならビルドしない）
 ```
 
@@ -45,7 +45,7 @@ docs/                             ROADMAP / DECISIONS / HANDOVER / 設計書・�
 3. **座標は保存せず導出する（D-21）**: フィガーJSONに `position` / `startPositions` を書かない（検証で弾かれる）。座標は `src/geometry/derivePositions.ts` がアライメント・足の位置・足から計算する。規約: LOD=+x（画面右）、**壁=画面下(+y)**（教本どおり「LODに面して右手が壁」）、`angle` 0=つま先が画面上・時計回り正。中央0°/DC45°/LOD90°/DW135°/壁180°/逆壁斜め225°/逆LOD270°/逆中央斜め315°。見た目を直したいときは JSON でなく derivePositions.ts のパラメータ（歩幅・足幅）を直す。
 4. **正本は1箇所**: 種目一覧は `dances.json`、フィガー目次は `figures.json`、UI文言と用語訳は辞書ファイル。README・ROADMAP に同じ数値を書くときは出典を併記する。
 5. **ハッシュルーティング＋ `base: './'`** は変えない（任意サイトのサブディレクトリに `dist/` を置くだけで動く、という設計の要）。
-6. **フィガー追加手順**: ① `public/data/waltz/<id>.json` を `natural-turn.json` を雛形に作成 ② `figures.json` に追加 ③ `npm test` ④ コミット。他種目は `dances.json` の `available` を true にしてから同様。
+6. **フィガー追加手順**: ① `public/data/waltz/<id>.json` を `natural-turn.json` を雛形に作成 ② `figures.json` に追加（`stepCount` は男性の歩数） ③ `npm test` ④ `npm run data-check` ⑤ コミット。他種目は `dances.json` の `available` を true にしてから同様。
 7. **コミット前**: `npm test` 緑を確認してからコミット（`npm test && git commit …` の形にする。`npm test | tail && git commit` はパイプの終了コードで赤を通すので禁止）。`git add -A` は使わず、対象ファイルを名指しで add。
 8. **`dist/` はコミットしない**（.gitignore 済み）。デプロイは GitHub Actions が build する。ローカルの `dist/` は古くてもよい。
 

@@ -11,7 +11,7 @@ export const ja: Dictionary = {
     back: '戻る', loading: '読み込み中…', loadError: 'データを読み込めませんでした',
     retry: '再試行', comingSoon: '準備中', steps: '歩', language: '言語',
     viewRole: '表示パート', playbackPosition: '再生位置', reset: 'はじめに戻る',
-    modOpen: '（', modClose: '）', modSep: '・',
+    modOpen: '（', modClose: '）', modSep: '・', almost: 'ほぼ{dir}',
   },
   dance: {
     waltz: 'ワルツ', tango: 'タンゴ', slow_foxtrot: 'スローフォックストロット',
@@ -24,6 +24,7 @@ export const ja: Dictionary = {
   footwork: {
     H: 'ヒール', T: 'トー', TH: 'トー→ヒール', HT: 'ヒール→トー', THT: 'トー→ヒール→トー', flat: 'フラット', none: '体重なし',
     H_IE_WF: 'H・足のIE・WF', T_IE: 'TのIE', H_then_both_T: 'H、次いで両足のT',
+    both_T: '両足のT', T_other_TH: 'T（他足はTH）', both_T_then_other_TH: '両足のT、次いで他足のTH', ball_flat: 'ボール・フラット',
   },
   footworkPart: { H: 'ヒール', T: 'トー' },
   relation: { facing: '{dir}に面して', backing: '{dir}に背面して', pointing: '{dir}に向けて' },
@@ -36,12 +37,14 @@ export const ja: Dictionary = {
     diag_forward: '{foot}斜め前へ', diag_back: '{foot}斜め後ろへ',
     cross_behind: '{foot}後ろにクロス', cross_front: '{foot}前にクロス',
     forward_PP: '{foot}PPで前進', side_in_PP: '{foot}PPで横へ',
-    replace_weight: '{foot}に体重を戻す', brush: '{foot}ブラシ',
-    close_no_weight: '{foot}体重を移さないでクローズ', hold_position: 'ポジションを保つ（{foot}）',
+    replace_weight: '{foot}に体重を移す', brush: '{foot}ブラシ',
+    close_no_weight: '{foot}体重を移さないでクローズ', hold_position: 'ポジションを保つ（{foot}）', begin_close: '{foot}クローズを始める',
   },
   modifier: {
     slightly_back: '少し後ろに', slightly_forward: '少し前に', small_step: '小さく',
     outside_partner: 'アウトサイドパートナー', in_PP: 'PPで', rightward: '少し右方に', leftward: '少し左方に', slightly_side: '少し横に', in_CBMP: 'CBMPに',
+    heel_turn: 'Hターン', shoulder_lead: 'SLで', left_outside_partner: '左OPで', preparing_left_OP: '左OPへの準備をしながら', preparing_OP: 'OPへの準備をしながら',
+    very_small: 'ごく小さく', loosely: 'ルーズに', in_fallaway: 'フォーラウェイ・ポジションで', between_partners_feet: 'パートナーの両足の間に', strong_step: '強いステップ', across: 'アクロスして',
   },
   riseFall: {
     commence_rise_eo_1: '1の終わりにライズ開始', commence_rise_eo_2: '2の終わりにライズ開始',
@@ -49,8 +52,11 @@ export const ja: Dictionary = {
     no_rise_fall: 'ライズ＆フォールなし', rise_slightly: 'わずかにライズ', lower_eo_3: '3の終わりにロア',
     commence_rise_eo_1_nfr: '1の終わりにライズ開始（NFR）', commence_rise_eo_2_nfr: '2の終わりにライズ開始（NFR）',
     continue_rise_lower_eo_3: 'ライズ継続、3の終わりにロア', down: 'ダウン', rise: 'ライズ',
+    down_commence_rise_eo_1: 'ダウン、1の終わりにライズ開始', down_commence_rise_eo_1_nfr: 'ダウン、1の終わりにライズ開始（NFR）', down_commence_rise_eo_2: 'ダウン、2の終わりにライズ開始',
+    commence_rise_slightly_eo_1_nfr: '1の終わりに少しライズ（NFR）', rise_slightly_2_3_nfr: '2〜3の間に少しライズ（NFR）', lower_3: '3でロア', down_relax_knees: 'ダウン、両膝を少し緩めて',
   },
   sway: { straight: 'なし（ストレート）', L: '左', R: '右' },
   turn: { none: '回転なし', withBetween: '{dir}へ{amount}（{from}-{to}歩間）', noBetween: '{dir}へ{amount}' },
+  turnAmount: { '0': '0', '1/8': '1/8', '1/4': '1/4', '3/8': '3/8', '1/2': '1/2', '5/8': '5/8', '3/4': '3/4', '7/8': '7/8', '1': '1回転', '1/4+': '1/4強', '3/8-': '3/8弱', '3/8+': '3/8強', '5/8-': '5/8弱' },
   turnDirection: { right: '右', left: '左' },
 }

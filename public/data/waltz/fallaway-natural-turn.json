@@ -1,0 +1,73 @@
+{
+  "id": "fallaway-natural-turn",
+  "name": {"ja": "フォーラウェイ・ナチュラル・ターン", "en": "Fallaway Natural Turn"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward_PP", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "体は壁に面して。1で右回転を始める", "en": "Body facing wall. Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward", "in_PP"]}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["shoulder_lead", "in_fallaway"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "右SL。中央斜めに動く。3で体を回転", "en": "R shoulder lead. Moving DC. Body turns on 3"} },
+        { "stepNo": 4, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP", "in_fallaway"]}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down_commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "中央斜めに動く。4で回転なし", "en": "Moving DC. No turn on 4"} },
+        { "stepNo": 5, "foot": "R", "stepDescription": {"move": "back"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "centre"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [4, 5]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": true },
+        { "stepNo": 6, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [5, 6]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward_PP", "modifiers": ["in_CBMP", "across"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "pointing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "壁斜めに動く。1で回転なし", "en": "Moving DW. No turn on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "forward_PP"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW", "almost": true},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "2で右回転を始める", "en": "Commence to turn R on 2"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["shoulder_lead", "in_fallaway"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "centre"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4+", "between": [1, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "左SL。中央斜めに動く", "en": "L shoulder lead. Moving DC"} },
+        { "stepNo": 4, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["in_CBMP", "in_fallaway"]}, "count": "1", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "centre"},
+          "amountOfTurn": {"direction": "left", "amount": "5/8-"}, "riseAndFall": "down_commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "中央斜めに動く。4で左足のヒールを離す", "en": "Moving DC. Heel of LF released on 4"} },
+        { "stepNo": 5, "foot": "L", "stepDescription": {"move": "forward"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "centre"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 6, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [5, 6]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} }
+      ]
+    }
+  }
+}

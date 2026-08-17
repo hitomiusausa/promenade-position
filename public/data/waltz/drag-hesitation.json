@@ -1,0 +1,45 @@
+{
+  "id": "drag-hesitation",
+  "name": {"ja": "ドラグ・ヘジテーション", "en": "Drag Hesitation"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "wall"},
+          "amountOfTurn": {"direction": "left", "amount": "1/4", "between": [1, 2]}, "riseAndFall": "down_commence_rise_eo_2",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "close_no_weight"}, "count": "3", "beats": 1,
+          "footwork": "both_T_then_other_TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "両足のT、次いで右足のTH。ボディの回転は少なめ", "en": "T of both feet, then TH of RF. Body turns less"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "pointing", "direction": "DW", "almost": true},
+          "amountOfTurn": {"direction": "left", "amount": "1/4+", "between": [1, 2]}, "riseAndFall": "down_commence_rise_eo_2",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "close_no_weight"}, "count": "3", "beats": 1,
+          "footwork": "both_T_then_other_TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "2と3の間に1/8弱。両足のT、次いで左足のTH。ボディの回転はなお少なめ", "en": "Just under 1/8 between 2-3. T of both feet, then TH of LF. Body turns even less"} }
+      ]
+    }
+  }
+}

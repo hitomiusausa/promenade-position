@@ -1,0 +1,44 @@
+{
+  "id": "open-telemark",
+  "name": {"ja": "オープン・テレマーク", "en": "Open Telemark"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/4", "between": [1, 2]}, "riseAndFall": "up",
+          "sway": "L", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward", "in_PP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/2", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "体は壁に面して。ボディの回転は少なめ", "en": "Body facing wall. Body turns less"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_slightly_eo_1_nfr",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "close", "modifiers": ["heel_turn"]}, "count": "2", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "left", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "diag_forward", "modifiers": ["in_PP", "shoulder_lead"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "右SL。3で体を少し左に回転", "en": "R shoulder lead. Body turns slightly L on 3"} }
+      ]
+    }
+  }
+}

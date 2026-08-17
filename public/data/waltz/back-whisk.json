@@ -1,0 +1,43 @@
+{
+  "id": "back-whisk",
+  "name": {"ja": "バック・ホイスク", "en": "Back Whisk"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "diag_back"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "cross_behind", "modifiers": ["in_PP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "L", "cbm": false,
+          "note": {"ja": "体は右に回転して。PPで終わる", "en": "Body turns to R. Finish in PP"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["outside_partner", "in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で右回転を始める", "en": "Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "centre"},
+          "amountOfTurn": {"direction": "right", "amount": "1/8", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "cross_behind", "modifiers": ["in_PP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "1/8", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false,
+          "note": {"ja": "PPで終わる", "en": "Finish in PP"} }
+      ]
+    }
+  }
+}

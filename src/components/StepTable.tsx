@@ -57,7 +57,7 @@ export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
               <td>{s.stepNo}</td>
               <td>{formatStepDescription(s.foot, s.stepDescription, dict)}</td>
               <td>{s.count}</td>
-              <td className={`fw fw-${s.footwork}`}>{s.footwork === 'flat' || s.footwork === 'none' ? '—' : s.footwork}</td>
+              <td className={`fw fw-${s.footwork}`}>{s.footwork === 'none' ? '—' : /^[HT]+$/.test(s.footwork) ? s.footwork : dict.footwork[s.footwork]}</td>
               <td>{formatAlignment(s.alignment, dict)}</td>
               <td>{formatTurn(s.amountOfTurn, dict)}</td>
               <td>{dict.riseFall[s.riseAndFall]}</td>

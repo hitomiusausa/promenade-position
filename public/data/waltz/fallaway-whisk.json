@@ -1,0 +1,44 @@
+{
+  "id": "fallaway-whisk",
+  "name": {"ja": "フォーラウェイ・ホイスク", "en": "Fallaway Whisk"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で右回転を始める", "en": "Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "2", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "cross_behind", "modifiers": ["loosely", "in_fallaway"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "lower_3",
+          "sway": "R", "cbm": false,
+          "note": {"ja": "3で体は右回転を継続", "en": "Body continues to turn R on 3"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で右回転を始める", "en": "Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "cross_behind", "modifiers": ["loosely", "in_fallaway"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4", "between": [2, 3]}, "riseAndFall": "lower_3",
+          "sway": "L", "cbm": false }
+      ]
+    }
+  }
+}

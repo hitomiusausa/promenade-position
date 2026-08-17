@@ -11,7 +11,7 @@ export const en: Dictionary = {
     back: 'Back', loading: 'Loading…', loadError: 'Failed to load data',
     retry: 'Retry', comingSoon: 'Coming soon', steps: 'steps', language: 'Language',
     viewRole: 'Role view', playbackPosition: 'Playback position', reset: 'Back to start',
-    modOpen: ' (', modClose: ')', modSep: ', ',
+    modOpen: ' (', modClose: ')', modSep: ', ', almost: 'almost {dir}',
   },
   dance: {
     waltz: 'Waltz', tango: 'Tango', slow_foxtrot: 'Slow Foxtrot',
@@ -23,6 +23,7 @@ export const en: Dictionary = {
   foot: { L: 'LF', R: 'RF' },
   footwork: { H: 'Heel', T: 'Toe', TH: 'Toe→Heel', HT: 'Heel→Toe', THT: 'Toe→Heel→Toe', flat: 'Flat', none: 'No weight',
     H_IE_WF: 'H, IE of foot, WF', T_IE: 'IE of T', H_then_both_T: 'H, then T of both feet',
+    both_T: 'T of both feet', T_other_TH: 'T (TH of other foot)', both_T_then_other_TH: 'T of both feet, then TH of other foot', ball_flat: 'Ball flat',
   },
   footworkPart: { H: 'Heel', T: 'Toe' },
   relation: { facing: 'Facing {dir}', backing: 'Backing {dir}', pointing: 'Pointing {dir}' },
@@ -36,11 +37,13 @@ export const en: Dictionary = {
     cross_behind: '{foot} crosses behind', cross_front: '{foot} crosses in front',
     forward_PP: '{foot} forward in PP', side_in_PP: '{foot} to side in PP',
     replace_weight: 'Replace weight to {foot}', brush: '{foot} brushes',
-    close_no_weight: '{foot} closes without weight', hold_position: 'Hold position ({foot})',
+    close_no_weight: '{foot} closes without weight', hold_position: 'Hold position ({foot})', begin_close: '{foot} commences to close',
   },
   modifier: {
     slightly_back: 'slightly back', slightly_forward: 'slightly forward', small_step: 'small step',
     outside_partner: 'outside partner', in_PP: 'in PP', rightward: 'slightly rightward', leftward: 'slightly leftward', slightly_side: 'slightly to side', in_CBMP: 'in CBMP',
+    heel_turn: 'heel turn', shoulder_lead: 'with SL', left_outside_partner: 'in left OP', preparing_left_OP: 'preparing to step left OP', preparing_OP: 'preparing to step OP',
+    very_small: 'very small step', loosely: 'loosely', in_fallaway: 'in fallaway position', between_partners_feet: "between partner's feet", strong_step: 'strong step', across: 'across',
   },
   riseFall: {
     commence_rise_eo_1: 'Commence to rise e/o 1', commence_rise_eo_2: 'Commence to rise e/o 2',
@@ -48,8 +51,11 @@ export const en: Dictionary = {
     no_rise_fall: 'No rise and fall', rise_slightly: 'Rise slightly', lower_eo_3: 'Lower e/o 3',
     commence_rise_eo_1_nfr: 'Commence to rise e/o 1 (NFR)', commence_rise_eo_2_nfr: 'Commence to rise e/o 2 (NFR)',
     continue_rise_lower_eo_3: 'Continue to rise. Lower e/o 3', down: 'Down', rise: 'Rise',
+    down_commence_rise_eo_1: 'Down. Commence to rise e/o 1', down_commence_rise_eo_1_nfr: 'Down. Commence to rise e/o 1 (NFR)', down_commence_rise_eo_2: 'Down. Commence to rise e/o 2',
+    commence_rise_slightly_eo_1_nfr: 'Commence to rise slightly e/o 1 (NFR)', rise_slightly_2_3_nfr: 'Rise slightly between 2-3 (NFR)', lower_3: 'Lower on 3', down_relax_knees: 'Down, both knees slightly relaxed',
   },
   sway: { straight: 'Straight', L: 'Left', R: 'Right' },
   turn: { none: 'No turn', withBetween: '{amount} to {dir} (between {from}-{to})', noBetween: '{amount} to {dir}' },
+  turnAmount: { '0': '0', '1/8': '1/8', '1/4': '1/4', '3/8': '3/8', '1/2': '1/2', '5/8': '5/8', '3/4': '3/4', '7/8': '7/8', '1': '1 full turn', '1/4+': 'just over 1/4', '3/8-': 'just under 3/8', '3/8+': 'just over 3/8', '5/8-': 'just under 5/8' },
   turnDirection: { right: 'right', left: 'left' },
 }

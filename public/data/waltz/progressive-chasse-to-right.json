@@ -1,0 +1,55 @@
+{
+  "id": "progressive-chasse-to-right",
+  "name": {"ja": "プログレッシブ・シャッセ・トゥ・ライト", "en": "Progressive Chasse to Right"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side"}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "wall"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "close"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [2, 3]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} },
+        { "stepNo": 4, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "4で回転なし", "en": "No turn on 4"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side"}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/4", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "close"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "3で体を少し回転", "en": "Body turns slightly on 3"} },
+        { "stepNo": 4, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "4で回転なし", "en": "No turn on 4"} }
+      ]
+    }
+  }
+}

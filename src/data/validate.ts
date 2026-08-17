@@ -77,6 +77,9 @@ function step(v: unknown, index: number, path: string) {
     alignment: {
       relation: oneOf(align.relation, ALIGNMENT_RELATIONS, `${path}.alignment.relation`),
       direction: oneOf(align.direction, DIRECTIONS, `${path}.alignment.direction`),
+      ...(align.almost !== undefined
+        ? { almost: typeof align.almost === 'boolean' ? align.almost : fail(`${path}.alignment.almost`, 'booleanが必要') }
+        : {}),
     },
     amountOfTurn: {
       direction: oneOf(turn.direction, TURN_DIRECTIONS, `${path}.amountOfTurn.direction`),

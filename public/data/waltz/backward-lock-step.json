@@ -1,0 +1,50 @@
+{
+  "id": "backward-lock-step",
+  "name": {"ja": "バックワード・ロック・ステップ", "en": "Backward Lock Step"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "回転なし。体は全体を通して壁と壁斜めの間に背面する。ヒールは1〜2歩の間、フロアに接して後方へ引き寄せられる", "en": "No turn. Body backing between wall and DW throughout. Heel is drawn back in contact with the floor between 1-2"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "back"}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "cross_front"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 4, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["rightward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["outside_partner", "in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "女子の第1歩はOPでCBMPにとられる（フォワード・ロックと同じ足の位置）", "en": "Lady's step 1 is taken OP in CBMP (same as Forward Lock)"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["leftward"]}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "cross_behind"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 4, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["leftward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false }
+      ]
+    }
+  }
+}

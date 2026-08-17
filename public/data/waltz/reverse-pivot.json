@@ -1,0 +1,26 @@
+{
+  "id": "reverse-pivot",
+  "name": {"ja": "リバース・ピボット", "en": "Reverse Pivot"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["in_CBMP", "small_step"]}, "count": "&", "beats": 0.5,
+          "footwork": "THT", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [0, 1]}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "左足をCBMPに保つ。中央斜めへ、Tは内側に向けて、終わりは壁斜めまたはLODに面して。先行歩と1の間に左へ1/8、回転を継続してさらに1/8、1/4または3/8まで", "en": "LF held in CBMP. To DC, toe turned in, ending facing DW or LOD. 1/8 L between preceding step and 1, continuing a further 1/8, 1/4 or 3/8"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["in_CBMP", "small_step"]}, "count": "&", "beats": 0.5,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [0, 1]}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "右足をCBMPに保つ。中央斜めへ、終わりは壁斜めまたはLODに背面して。先行歩と1の間に左へ1/8、回転を継続してさらに1/8、1/4または3/8まで", "en": "RF held in CBMP. To DC, ending backing DW or LOD. 1/8 L between preceding step and 1, continuing a further 1/8, 1/4 or 3/8"} }
+      ]
+    }
+  }
+}

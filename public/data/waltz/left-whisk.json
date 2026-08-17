@@ -1,0 +1,44 @@
+{
+  "id": "left-whisk",
+  "name": {"ja": "レフト・ホイスク", "en": "Left Whisk"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward_PP", "modifiers": ["in_CBMP", "across"]}, "count": "1", "beats": 1,
+          "footwork": "H", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "体は壁に面して", "en": "Body facing wall"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward"]}, "count": "2", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "2で体は左回転を始める", "en": "Body commences to turn L on 2"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "cross_behind"}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "3で体は左回転を継続", "en": "Body continues to turn L on 3"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward_PP", "modifiers": ["in_CBMP", "across"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "pointing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "壁斜めに動く。1で左回転を始める", "en": "Moving DW. Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "2", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [2, 3]}, "riseAndFall": "no_rise_fall",
+          "sway": "straight", "cbm": false }
+      ]
+    }
+  }
+}

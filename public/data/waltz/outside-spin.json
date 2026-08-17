@@ -1,0 +1,45 @@
+{
+  "id": "outside-spin",
+  "name": {"ja": "アウトサイド・スピン", "en": "Outside Spin"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP", "very_small"]}, "count": "1", "beats": 1,
+          "footwork": "THT", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8"}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "右足をCBMPに保つ（ピボット）。Tは内側に向けて。右回転を始め、1で右へ3/8", "en": "RF held in CBMP (pivot). Toe turned in. Commence to turn R, 3/8 on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["outside_partner", "in_CBMP"]}, "count": "2", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down_commence_rise_eo_2",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "2で右回転を継続", "en": "Continue to turn R on 2"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "side"}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "終わりは左足後ろに。3でさらに1/4回転し、終わりは壁斜めに面して", "en": "Ending LF back. A further 1/4 on 3, ending facing DW"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["outside_partner", "in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で右回転を始める", "en": "Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "close"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "wall"},
+          "amountOfTurn": {"direction": "right", "amount": "5/8", "between": [1, 2]}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["between_partners_feet"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "against_LOD"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "3でさらに1/8回転し、終わりは壁斜めに背面して", "en": "A further 1/8 on 3, ending backing DW"} }
+      ]
+    }
+  }
+}

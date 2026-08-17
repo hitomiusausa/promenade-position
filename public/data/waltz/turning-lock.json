@@ -1,0 +1,56 @@
+{
+  "id": "turning-lock",
+  "name": {"ja": "ターニング・ロック（トゥ・レフト）", "en": "Turning Lock (to Left)"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["shoulder_lead"]}, "count": "1", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "L", "cbm": false,
+          "note": {"ja": "右SL。1で回転なし", "en": "R shoulder lead. No turn on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "cross_front"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "L", "cbm": false,
+          "note": {"ja": "2で回転なし", "en": "No turn on 2"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["rightward"]}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "3で左回転を始める", "en": "Commence to turn L on 3"} },
+        { "stepNo": 4, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/4", "between": [3, 4]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["shoulder_lead"]}, "count": "1", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "R", "cbm": false,
+          "note": {"ja": "左SL。1で回転なし", "en": "L shoulder lead. No turn on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "cross_behind"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "R", "cbm": false,
+          "note": {"ja": "2で回転なし", "en": "No turn on 2"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["leftward"]}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "3で左回転を始める", "en": "Commence to turn L on 3"} },
+        { "stepNo": 4, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "left", "amount": "1/4", "between": [3, 4]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} }
+      ]
+    }
+  }
+}

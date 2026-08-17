@@ -1,0 +1,43 @@
+{
+  "id": "closed-impetus-turn",
+  "name": {"ja": "クローズド・インピタス・ターン", "en": "Closed Impetus Turn"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で右回転を始める", "en": "Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "close", "modifiers": ["heel_turn"]}, "count": "2", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "down_commence_rise_eo_2",
+          "sway": "L", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_back"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "1で右回転を始める", "en": "Commence to turn R on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "down_commence_rise_eo_2",
+          "sway": "R", "cbm": false,
+          "note": {"ja": "次いで右足を左足にブラッシュ", "en": "Then brush RF to LF"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "diag_forward"}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false }
+      ]
+    }
+  }
+}

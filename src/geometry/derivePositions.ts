@@ -17,7 +17,7 @@ export const DIRECTION_ANGLE: Record<Direction, number> = {
   centre: 0, DC: 45, LOD: 90, DW: 135, wall: 180, DW_against_LOD: 225, against_LOD: 270, DC_against_LOD: 315,
 }
 
-export function alignmentAngle(a: { relation: AlignmentRelation; direction: Direction }): number {
+export function alignmentAngle(a: { relation: AlignmentRelation; direction: Direction; almost?: boolean }): number {
   const base = DIRECTION_ANGLE[a.direction]
   return a.relation === 'backing' ? (base + 180) % 360 : base
 }
@@ -65,6 +65,7 @@ function bodyOffset(step: Pick<FigureStep, 'foot' | 'stepDescription'>, role: Ro
     case 'replace_weight': lateral = 0; ahead = 0; break
     case 'close_no_weight': lateral = s * 2 * HALF_TRACK; ahead = 0; break
     case 'hold_position': lateral = 0; ahead = 0; break
+    case 'begin_close': lateral = s * 2 * HALF_TRACK + s * 6; ahead = 0; break
   }
   for (const modifier of modifiers) {
     switch (modifier) {
@@ -74,6 +75,7 @@ function bodyOffset(step: Pick<FigureStep, 'foot' | 'stepDescription'>, role: Ro
       case 'leftward': lateral -= SLIGHT; break
       case 'rightward': lateral += SLIGHT; break
       case 'small_step': lateral *= 0.6; ahead *= 0.5; break
+      case 'very_small': lateral *= 0.5; ahead *= 0.3; break
       default: break
     }
   }

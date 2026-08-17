@@ -1,0 +1,50 @@
+{
+  "id": "forward-lock-step",
+  "name": {"ja": "フォワード・ロック・ステップ", "en": "Forward Lock Step"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "forward", "modifiers": ["outside_partner", "in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "回転なし。体は全体を通して壁と壁斜めの間に面する", "en": "No turn. Body facing between wall and DW throughout"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["leftward"]}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "cross_behind"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 4, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["leftward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "back", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "女子はバックワード・ロックと同じ足の位置", "en": "Lady dances the Backward Lock positions"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "back"}, "count": "2", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "cross_front"}, "count": "&", "beats": 0.5,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
+          "sway": "straight", "cbm": false },
+        { "stepNo": 4, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["rightward"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false }
+      ]
+    }
+  }
+}

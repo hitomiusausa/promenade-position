@@ -74,11 +74,15 @@ main { max-width: 1080px; margin: 0 auto; padding: 16px; }
 .step-table .fw { font-weight: 700; }
 .step-table .fw-T { color: var(--toe); }
 .step-table .fw-H { color: var(--heel); }
-.step-table .fw-TH, .step-table .fw-HT, .step-table .fw-THT { color: var(--flat); }
+.step-table .fw-TH, .step-table .fw-HT, .step-table .fw-THT, .step-table .fw-flat, .step-table .fw-H_IE_WF, .step-table .fw-H_then_both_T { color: var(--flat); }
+.step-table .fw-T_IE, .step-table .fw-both_T, .step-table .fw-T_other_TH, .step-table .fw-both_T_then_other_TH { color: var(--toe); font-weight: 600; }
+.step-table .fw-ball_flat { color: var(--flat); }
 /* 女性ビューではFW列の色も女性パレットに合わせる */
 .role-lady .step-table .fw-T { color: var(--toe-lady); }
 .role-lady .step-table .fw-H { color: var(--heel-lady); }
-.role-lady .step-table .fw-TH, .role-lady .step-table .fw-HT, .role-lady .step-table .fw-THT { color: var(--flat-lady); }
+.role-lady .step-table .fw-TH, .role-lady .step-table .fw-HT, .role-lady .step-table .fw-THT, .role-lady .step-table .fw-flat, .role-lady .step-table .fw-H_IE_WF, .role-lady .step-table .fw-H_then_both_T { color: var(--flat-lady); }
+.role-lady .step-table .fw-T_IE, .role-lady .step-table .fw-both_T, .role-lady .step-table .fw-T_other_TH, .role-lady .step-table .fw-both_T_then_other_TH { color: var(--toe-lady); }
+.role-lady .step-table .fw-ball_flat { color: var(--flat-lady); }
 
 @media (min-width: 900px) {
   .step-table { display: table; }

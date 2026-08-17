@@ -1,0 +1,46 @@
+{
+  "id": "contra-check",
+  "name": {"ja": "コントラ・チェック", "en": "Contra Check"},
+  "dance": "waltz",
+  "timeSignature": "3/4",
+  "parts": {
+    "man": {
+      "steps": [
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "ball_flat", "alignment": {"relation": "pointing", "direction": "LOD", "almost": true},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down_relax_knees",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "体は壁斜め。1で体を左に回転。第1歩のフットワークは先行フィガーによって変わる", "en": "Body DW. Body turns L on 1. Footwork of step 1 varies with preceding figure"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "replace_weight"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_2",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "後ろに。2で体を右に回転", "en": "Backward. Body turns R on 2"} },
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "side", "modifiers": ["slightly_forward", "in_PP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "体は壁に面して。3で体は右回転を継続", "en": "Body facing wall. Body continues to turn R on 3"} }
+      ]
+    },
+    "lady": {
+      "steps": [
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back", "modifiers": ["in_CBMP"]}, "count": "1", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "backing", "direction": "LOD", "almost": true},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down_relax_knees",
+          "sway": "straight", "cbm": true,
+          "note": {"ja": "体は壁斜め、両足はほぼLODに背面。1で体を左に回転", "en": "Body DW, both feet almost backing LOD. Body turns L on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "replace_weight"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_2",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "前に。2で体を右に回転", "en": "Forward. Body turns R on 2"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "diag_forward", "modifiers": ["in_PP", "shoulder_lead"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "pointing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "right", "amount": "3/8", "between": [2, 3]}, "riseAndFall": "up_lower_eo_3",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "右SL。壁斜めに動く", "en": "R shoulder lead. Moving DW"} }
+      ]
+    }
+  }
+}

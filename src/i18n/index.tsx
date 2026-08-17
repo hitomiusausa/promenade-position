@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import type {
   AlignmentRelation, DanceId, Direction, FigureStep, FootSide, Footwork,
-  Level, LocaleId, LocalizedText, Modifier, Move, RiseFall, Sway,
+  Level, LocaleId, LocalizedText, Modifier, Move, RiseFall, Sway, TurnAmount,
 } from '../types'
 import { ja } from './locales/ja'
 import { en } from './locales/en'
@@ -11,7 +11,7 @@ export type UiKey =
   | 'man' | 'lady' | 'both' | 'step' | 'footColumn' | 'count' | 'footwork'
   | 'alignment' | 'amountOfTurn' | 'riseAndFall' | 'sway' | 'cbm' | 'yes' | 'no'
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
-  | 'language' | 'modOpen' | 'modClose' | 'modSep' | 'viewRole' | 'playbackPosition' | 'reset'
+  | 'language' | 'modOpen' | 'modClose' | 'modSep' | 'viewRole' | 'playbackPosition' | 'reset' | 'almost'
 
 export interface Dictionary {
   ui: Record<UiKey, string>
@@ -27,6 +27,7 @@ export interface Dictionary {
   riseFall: Record<RiseFall, string>
   sway: Record<Sway, string>
   turn: { none: string; withBetween: string; noBetween: string }
+  turnAmount: Record<TurnAmount, string>
   turnDirection: { right: string; left: string }
 }
 
@@ -42,7 +43,8 @@ export function localized(text: LocalizedText, locale: LocaleId): string {
 }
 
 export function formatAlignment(a: FigureStep['alignment'], d: Dictionary): string {
-  return d.relation[a.relation].replace('{dir}', d.direction[a.direction])
+  const dir = a.almost ? d.ui.almost.replace('{dir}', d.direction[a.direction]) : d.direction[a.direction]
+  return d.relation[a.relation].replace('{dir}', dir)
 }
 
 export function formatStepDescription(foot: FootSide, sd: FigureStep['stepDescription'], d: Dictionary): string {
@@ -54,12 +56,13 @@ export function formatStepDescription(foot: FootSide, sd: FigureStep['stepDescri
 export function formatTurn(t: FigureStep['amountOfTurn'], d: Dictionary): string {
   if (t.direction === 'none' || t.amount === '0') return d.turn.none
   const dir = d.turnDirection[t.direction as 'right' | 'left']
+  const amount = d.turnAmount[t.amount]
   if (t.between) {
     return d.turn.withBetween
-      .replace('{dir}', dir).replace('{amount}', t.amount)
+      .replace('{dir}', dir).replace('{amount}', amount)
       .replace('{from}', String(t.between[0])).replace('{to}', String(t.between[1]))
   }
-  return d.turn.noBetween.replace('{dir}', dir).replace('{amount}', t.amount)
+  return d.turn.noBetween.replace('{dir}', dir).replace('{amount}', amount)
 }
 
 export function formatFootwork(fw: Footwork, d: Dictionary): string {

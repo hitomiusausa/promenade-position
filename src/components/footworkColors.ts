@@ -30,6 +30,10 @@ export function footworkColors(fw: Footwork, variant: FootVariant = 'man'): Foot
   if (fw === 'H_IE_WF') return { toe: palette.flat, heel: palette.heel, dashed: false }
   if (fw === 'T_IE') return { toe: palette.toe, heel: palette.neutral, dashed: false }
   if (fw === 'H_then_both_T') return { toe: palette.toe, heel: palette.heel, dashed: false }
+  if (fw === 'both_T') return { toe: palette.toe, heel: palette.neutral, dashed: false }
+  if (fw === 'T_other_TH') return { toe: palette.toe, heel: palette.neutral, dashed: false }
+  if (fw === 'both_T_then_other_TH') return { toe: palette.toe, heel: palette.neutral, dashed: false }
+  if (fw === 'ball_flat') return { toe: palette.flat, heel: palette.flat, dashed: false }
   if (!/^[HT]+$/.test(fw)) return { toe: palette.neutral, heel: palette.neutral, dashed: false }
   return {
     toe: fw.includes('T') ? palette.toe : palette.neutral,
