@@ -54,7 +54,7 @@ export function FigureDetailView({ figure, backHref, segments, subtitle }: { fig
   const animActive = anim.playing || anim.t > 0
   const parts =
     view === 'both'
-      ? ([{ role: 'man', part: figure.parts.man }, { role: 'lady', part: figure.ladyInCouple ?? figure.parts.lady, mirrorOf: figure.ladyInCouple ? figure.parts.man : undefined }] as const)
+      ? ([{ role: 'man', part: figure.parts.man }, { role: 'lady', part: figure.ladyInCouple ?? figure.parts.lady, couple: figure.ladyInCouple ? { man: figure.parts.man, ladyOwn: figure.parts.lady } : undefined }] as const)
       : ([{ role: primaryRole, part: figure.parts[primaryRole] }] as const)
   const selected = steps.find((s) => s.stepNo === selectedStep) ?? null
 

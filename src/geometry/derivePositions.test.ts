@@ -61,7 +61,7 @@ describe('derivePartPositions', () => {
       step('L', 'close', 'facing', 'LOD'),
     ], 'man')
     const [r, l] = d.positions
-    expect(Math.hypot(r.x - l.x, r.y - l.y)).toBeCloseTo(14)
+    expect(Math.hypot(r.x - l.x, r.y - l.y)).toBeCloseTo(16)
     expect(l.y).toBeLessThan(r.y) // 左足は左手側（画面上）
   })
   it('体重を戻す歩は足の位置を変えない', () => {

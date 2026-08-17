@@ -46,11 +46,10 @@ describe('両方表示（ladyInCouple）で男女の足が重ならない（D-28
   it('全フィガー＋全アマルガメーション・全時刻で男女の足が重ならない', () => {
     const bad: string[] = []
     for (const f of [...figures, ...composites]) {
-      const lady = f.ladyInCouple!
       const T = totalBeats(f.parts.man.steps)
       let worst = -Infinity, worstT = 0
       for (let t = 0; t <= T + 1e-6; t += 0.05) {
-        const m = feetAt(f.parts.man, t), l = coupleLadyFeetAt(f.parts.man, lady, lady.steps, t)
+        const m = feetAt(f.parts.man, t), l = coupleLadyFeetAt(f.parts.man, f.parts.lady, f.parts.lady.steps, t)
         for (const a of [m.L, m.R]) for (const b of [l.L, l.R]) {
           const pen = penetration(a, b)
           if (pen > worst) { worst = pen; worstT = t }

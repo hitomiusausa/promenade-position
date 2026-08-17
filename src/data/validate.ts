@@ -124,7 +124,7 @@ export function derivePositions(inputs: Record<Role, StepInput[]>): Record<Role,
 /** 検証済み歩データから parts（独立導出）と ladyInCouple（両方表示用の鏡映配置）を作る */
 export function deriveAll(inputs: Record<Role, StepInput[]>): { parts: Record<Role, FigurePart>; ladyInCouple: FigurePart } {
   const parts = derivePositions(inputs)
-  return { parts, ladyInCouple: deriveLadyInCouple(parts.man, inputs.lady) }
+  return { parts, ladyInCouple: deriveLadyInCouple(parts.man, parts.lady) }
 }
 
 export function validateFigure(data: unknown): Figure {
