@@ -1,5 +1,5 @@
 import type { Amalgamation, AmalgamationSegment, CompositeFigure, Figure, FigureStep, Role } from '../types'
-import { derivePositions } from './validate'
+import { deriveAll } from './validate'
 
 /**
  * アマルガメーション定義と参照先フィガーから、Figure と同じ形の合成フィガーを作る。
@@ -38,7 +38,7 @@ export function buildAmalgamation(amal: Amalgamation, figures: Record<string, Fi
     name: amal.name,
     dance,
     timeSignature: '3/4',
-    parts: derivePositions(inputs),
+    ...deriveAll(inputs),
     segments,
   }
 }

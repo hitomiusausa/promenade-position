@@ -1,9 +1,10 @@
 import type { FigurePart, Role, StepPosition } from '../types'
 import { feetAt, isNoWeight } from '../animation/interpolate'
+import { coupleLadyFeetAt } from '../geometry/derivePositions'
 import { Foot } from './Foot'
 
 export interface FloorDiagramProps {
-  parts: Array<{ role: Role; part: FigurePart }>
+  parts: Array<{ role: Role; part: FigurePart; /** 両方表示: 男性の足から毎フレーム鏡映する（D-28） */ mirrorOf?: FigurePart }>
   selectedStep: number | null
   onSelectStep: (stepNo: number) => void
   /** null=静止表示、数値=その拍時点のアニメ表示 */
@@ -48,13 +49,13 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
         <path d={`M ${b.maxX - 18},${b.maxY - 16} L ${b.maxX - 10},${b.maxY - 12} L ${b.maxX - 18},${b.maxY - 8} Z`} fill="#adb5bd" />
         <text x={b.minX + 10} y={b.maxY - 18} fontSize={9} fill="#adb5bd">LOD</text>
       </g>
-      {parts.map(({ role, part }) => {
+      {parts.map(({ role, part, mirrorOf }) => {
         // 女性パートは単体表示でも常に対比色パレット（役割＝色のアイデンティティ）。
         // 歩番号バッジの塗り分け（男性=塗りつぶし）は両方表示のときだけ
         const variant = role === 'lady' ? ('lady' as const) : ('man' as const)
         const badgeStyle = parts.length > 1 && role === 'man' ? ('ink' as const) : ('outline' as const)
         if (animTime !== null) {
-          const feet = feetAt(part, animTime)
+          const feet = mirrorOf ? coupleLadyFeetAt(mirrorOf, part, part.steps, animTime) : feetAt(part, animTime)
           // 移動中=点線、着地済み=直近に踏んだ歩のフットワーク色、未着地（開始位置のまま）=点線
           const fw = (side: 'L' | 'R') =>
             feet.movingFoot === side ? 'none' : (feet.landedFootwork[side] ?? 'none')

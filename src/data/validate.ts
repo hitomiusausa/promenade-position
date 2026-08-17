@@ -3,7 +3,7 @@ import {
   RISE_FALLS, SWAYS, TURN_AMOUNTS, TURN_DIRECTIONS,
   type Amalgamation, type DanceInfo, type Figure, type FigureIndexEntry, type FigurePart, type FigureStep, type LocalizedText, type Role,
 } from '../types'
-import { alignmentAngle, derivePartPositions, ladyStart } from '../geometry/derivePositions'
+import { alignmentAngle, deriveLadyInCouple, derivePartPositions, ladyStart } from '../geometry/derivePositions'
 
 function fail(path: string, msg: string): never {
   throw new Error(`${path}: ${msg}`)
@@ -121,6 +121,12 @@ export function derivePositions(inputs: Record<Role, StepInput[]>): Record<Role,
   return { man: attach(inputs.man, man), lady: attach(inputs.lady, lady) }
 }
 
+/** 検証済み歩データから parts（独立導出）と ladyInCouple（両方表示用の鏡映配置）を作る */
+export function deriveAll(inputs: Record<Role, StepInput[]>): { parts: Record<Role, FigurePart>; ladyInCouple: FigurePart } {
+  const parts = derivePositions(inputs)
+  return { parts, ladyInCouple: deriveLadyInCouple(parts.man, inputs.lady) }
+}
+
 export function validateFigure(data: unknown): Figure {
   const o = obj(data, 'figure')
   const parts = obj(o.parts, 'parts')
@@ -130,7 +136,7 @@ export function validateFigure(data: unknown): Figure {
     name: localizedName(o.name, 'name'),
     dance: oneOf(o.dance, DANCES, 'dance'),
     timeSignature: str(o.timeSignature, 'timeSignature'),
-    parts: derivePositions(inputs),
+    ...deriveAll(inputs),
   }
 }
 

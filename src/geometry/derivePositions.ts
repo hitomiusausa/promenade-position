@@ -1,6 +1,7 @@
 import type {
-  AlignmentRelation, Direction, FigureStep, FootSide, Role, StepPosition,
+  AlignmentRelation, Direction, FigurePart, FigureStep, FootSide, Role, StepPosition,
 } from '../types'
+import { feetAt, type FeetState } from '../animation/interpolate'
 
 /**
  * フロア座標の規約（D-21, 2026-08-17）
@@ -23,7 +24,7 @@ export function alignmentAngle(a: { relation: AlignmentRelation; direction: Dire
 }
 
 // 描画パラメータ（単位: フロア座標。足の描画長は約25）
-const HALF_TRACK = 6   // 両足の間隔の半分（閉じた状態で足の中心が12離れる）
+const HALF_TRACK = 7   // 両足の間隔の半分（閉じた状態で足の中心が14離れる。足幅≒13なので重ならない）
 const STEP = 30        // 前進・後退の歩幅
 const SIDE = 28        // 横への歩幅
 const DIAG = 22        // 斜め歩の各成分
@@ -139,4 +140,156 @@ export function ladyStart(manAngle: number, ladyAngle: number): { offset: Vec; a
   const ahead = closed ? 12 : 8
   const right = closed ? HALF_TRACK : 12
   return { offset: { x: f.x * ahead + r.x * right, y: f.y * ahead + r.y * right }, angle: ladyAngle }
+}
+
+// ---- 「両方」表示用: 女性を男性の足に対して鏡映配置する（D-28）
+const PARTNER_AHEAD = 32   // 向かい合う足のつま先同士が触れない距離（足の描画長≒24＋つま先側オフセット＋余白）
+const PARTNER_RIGHT = 0    // クローズド: 男性の左足の線上に女性の右足（同じトラック）。横にずらすと隣の足と重なる
+const PP_SIDE = 20         // PP/フォーラウェイ: 横並び（男性の右足と女性の左足が隣り合う）
+const OP_SHIFT = 12        // アウトサイド・パートナー: 外側に出る足の分だけ横にずれる
+
+type PartnerHold = 'closed' | 'pp' | 'man_op' | 'lady_op' | 'lady_left_op'
+
+function holdOf(ladyStep: Pick<FigureStep, 'stepDescription'> | undefined, manStep: Pick<FigureStep, 'stepDescription'> | undefined): PartnerHold {
+  const lm = ladyStep?.stepDescription.modifiers ?? []
+  const mm = manStep?.stepDescription.modifiers ?? []
+  const lmove = ladyStep?.stepDescription.move
+  const mmove = manStep?.stepDescription.move
+  if (lm.includes('left_outside_partner')) return 'lady_left_op'
+  if (lm.includes('outside_partner')) return 'lady_op'
+  if (mm.includes('outside_partner')) return 'man_op'
+  const ppLike = (mods: string[], move?: string) =>
+    mods.includes('in_PP') || mods.includes('in_fallaway') || move === 'forward_PP' || move === 'side_in_PP'
+  if (ppLike(lm, lmove) || ppLike(mm, mmove)) return 'pp'
+  return 'closed'
+}
+
+function mirrorFoot(his: StepPosition, hold: PartnerHold, angle: number): StepPosition {
+  // 女性の足は「自分の向きの真後ろ」方向に、男性の足から PARTNER_AHEAD 離れる（＝男性から見て前方、向かい合う）。
+  // 男性の足の向きではなく女性の足の向きを基準にするのは、男性の足が回転しながら動く途中で
+  // 鏡映方向が遅れて男性のもう一方の足に重なるのを防ぐため。
+  const f = forwardOf(angle)      // 女性の前方
+  const r = rightOf(angle)        // 女性の右手
+  let back = PARTNER_AHEAD        // 女性の後方＝男性から見て前方
+  let right = -PARTNER_RIGHT      // 男性の右＝女性の左
+  switch (hold) {
+    case 'pp': back = 4; right = -PP_SIDE; break                       // 女性は男性の右側＝女性から見て左に男性
+    case 'man_op': right = -(PARTNER_RIGHT - OP_SHIFT); break
+    case 'lady_op': right = -(PARTNER_RIGHT + OP_SHIFT); break
+    case 'lady_left_op': right = PARTNER_RIGHT + OP_SHIFT; break
+    default: break
+  }
+  return { x: r1(his.x - f.x * back + r.x * right), y: r1(his.y - f.y * back + r.y * right), angle }
+}
+
+/**
+ * 女性の座標を「男性の反対の足の、その時点の位置」から鏡映で決める（両方表示用）。
+ * - 女性の右足は男性の左足、左足は右足に対応し、つま先同士が触れる距離で向かい合う
+ * - PP/フォーラウェイは横並び、OP は外側の足の分だけずらす
+ * - 向き（angle）は女性自身のアライメント
+ * 独立に導出した男女を重ねると足が重なるため（実測: 全39フィガーで重なりが発生）、両方表示ではこちらを使う。
+ * 女性単独表示は自分の歩の形（クローズ等）を正確に見せるため独立導出のまま。
+ */
+export function deriveLadyInCouple(man: FigurePart, ladySteps: Array<Omit<FigureStep, 'position'>>): FigurePart {
+  // まず鏡映で仮の着地点を作り（向き・移動足の情報源）、次に各着地時刻の実配置（押し出し込み）で置き換える
+  const startHold = holdOf(ladySteps[0], man.steps[0])
+  const a0 = ladySteps[0] ? alignmentAngle(ladySteps[0].alignment) : (man.startPositions.R.angle + 180) % 360
+  const provisional: FigurePart = {
+    startPositions: {
+      L: mirrorFoot(man.startPositions.R, startHold, a0),
+      R: mirrorFoot(man.startPositions.L, startHold, a0),
+    },
+    steps: [],
+  }
+  let t = 0
+  const manEnds: number[] = []
+  let acc = 0
+  for (const s of man.steps) { acc += s.beats; manEnds.push(acc) }
+  provisional.steps = ladySteps.map((s) => {
+    t += s.beats
+    const his = feetAt(man, t)
+    const opposite: FootSide = s.foot === 'L' ? 'R' : 'L'
+    const manIdx = manEnds.findIndex((e) => Math.abs(e - t) < 1e-6)
+    const hold = holdOf(s, manIdx >= 0 ? man.steps[manIdx] : undefined)
+    return { ...s, position: mirrorFoot(his[opposite], hold, alignmentAngle(s.alignment)) }
+  })
+  // 押し出し込みの実配置
+  const start = coupleLadyFeetAt(man, provisional, ladySteps, 0)
+  const startPositions = { L: start.L, R: start.R }
+  let tt = 0
+  const steps = provisional.steps.map((s) => {
+    tt += s.beats
+    const feet = coupleLadyFeetAt(man, provisional, ladySteps, tt)
+    return { ...s, position: feet[s.foot] }
+  })
+  return { startPositions, steps }
+}
+
+// ---- 足同士の当たり判定（13×24 の回転矩形、つま先側に3ずれた中心）と押し出し
+export const FOOT_W = 13
+export const FOOT_H = 24
+function footCorners(p: StepPosition): Array<[number, number]> {
+  const a = rad(p.angle), c = Math.cos(a), sn = Math.sin(a)
+  const pts: Array<[number, number]> = []
+  for (const [dx, dy] of [[-FOOT_W / 2, -FOOT_H / 2 - 3], [FOOT_W / 2, -FOOT_H / 2 - 3], [FOOT_W / 2, FOOT_H / 2 - 3], [-FOOT_W / 2, FOOT_H / 2 - 3]] as Array<[number, number]>) {
+    pts.push([p.x + dx * c - dy * sn, p.y + dx * sn + dy * c])
+  }
+  return pts
+}
+/** 2つの足の食い込み量と、b を a から離す最小移動方向。離れていれば pen <= 0 */
+export function footPenetration(a: StepPosition, b: StepPosition): { pen: number; nx: number; ny: number } {
+  const A = footCorners(a), B = footCorners(b)
+  let best = { pen: Infinity, nx: 0, ny: 0 }
+  for (const P of [A, B]) for (let i = 0; i < 2; i++) {
+    const [x1, y1] = P[i], [x2, y2] = P[i + 1]
+    const len = Math.hypot(x2 - x1, y2 - y1)
+    let nx = -(y2 - y1) / len, ny = (x2 - x1) / len
+    const pa = A.map(([x, y]) => x * nx + y * ny), pb = B.map(([x, y]) => x * nx + y * ny)
+    const o1 = Math.max(...pa) - Math.min(...pb) // b を +n 方向へ o1 動かせば離れる
+    const o2 = Math.max(...pb) - Math.min(...pa) // b を -n 方向へ o2 動かせば離れる
+    let o = o1
+    if (o2 < o1) { o = o2; nx = -nx; ny = -ny }
+    if (o < best.pen) best = { pen: o, nx, ny }
+  }
+  return best
+}
+const CLEARANCE = 1.5
+/** 女性の足を男性の両足から押し出して重なりを解消する（最大数回の反復） */
+function resolveAgainst(foot: StepPosition, obstacles: StepPosition[]): StepPosition {
+  let p = { ...foot }
+  for (let iter = 0; iter < 20; iter++) {
+    let moved = false
+    for (const o of obstacles) {
+      const { pen, nx, ny } = footPenetration(o, p)
+      if (pen > -CLEARANCE) {
+        const d = pen + CLEARANCE
+        p = { ...p, x: r1(p.x + nx * d), y: r1(p.y + ny * d) }
+        moved = true
+      }
+    }
+    if (!moved) break
+  }
+  // 男性の両足に挟まれて押し出しきれない場合は、女性の後方（相手から離れる向き）へ逃がす
+  const back = forwardOf(p.angle)
+  for (let k = 0; k < 12 && obstacles.some((o) => footPenetration(o, p).pen > -CLEARANCE); k++) {
+    p = { ...p, x: r1(p.x - back.x * 4), y: r1(p.y - back.y * 4) }
+  }
+  return p
+}
+
+export function coupleLadyFeetAt(man: FigurePart, lady: FigurePart, ladySteps: Array<Pick<FigureStep, 'stepDescription' | 'beats'>>, t: number): FeetState {
+  const his = feetAt(man, t)
+  const hers = feetAt(lady, t)
+  // 現在（または直近）の女性の歩と、同時刻の男性の歩からホールドを決める
+  let acc = 0, idx = -1
+  for (let i = 0; i < ladySteps.length; i++) { acc += ladySteps[i].beats; if (t <= acc + 1e-9) { idx = i; break } }
+  if (idx < 0) idx = ladySteps.length - 1
+  let macc = 0, midx = -1
+  for (let i = 0; i < man.steps.length; i++) { macc += man.steps[i].beats; if (t <= macc + 1e-9) { midx = i; break } }
+  if (midx < 0) midx = man.steps.length - 1
+  const hold = holdOf(ladySteps[idx], man.steps[midx])
+  const obstacles = [his.L, his.R]
+  const L = resolveAgainst(mirrorFoot(his.R, hold, hers.L.angle), obstacles)
+  const R = resolveAgainst(mirrorFoot(his.L, hold, hers.R.angle), [...obstacles, L])
+  return { ...hers, L, R }
 }

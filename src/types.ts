@@ -69,6 +69,8 @@ export interface Figure {
   dance: DanceId
   timeSignature: string
   parts: Record<Role, FigurePart>
+  /** 「両方」表示用: 男性の足を基準に鏡映配置した女性パート（重なりを避ける。D-28）。歩データは parts.lady と同一 */
+  ladyInCouple?: FigurePart
 }
 
 export type Level = 'beginner' | 'intermediate' | 'advanced'
