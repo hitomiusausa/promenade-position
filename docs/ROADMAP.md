@@ -25,7 +25,7 @@
 6. **ナチュラルスピンターン** — 男性4歩目 THT、5歩目 HT・2の終わりにライズ、CBM配置
 7. **ウィスク女性2歩目** — 中央斜めにポイント・1-2間1/4
 8. **シャッセ フロム PP** — 女性の左回転を1-2間/2-3間に各1/8と配分、スウェイ全歩ストレート
-9. **座標の見た目** — ターン系3歩目のペア間隔がやや広い（32単位）など、図で不自然な箇所は随時調整
+9. ~~**座標の見た目** — ターン系3歩目のペア間隔がやや広い（32単位）など~~ → 2026-08-17 座標をデータから外し導出に変更（D-21）。見た目の調整は `src/geometry/derivePositions.ts` のパラメータで
 
 ## 機能拡張の候補（おすすめ順）
 
@@ -50,7 +50,7 @@
 
 - 開発: `npm run dev` ／ 検証: `npm test`（全フィガーデータのスキーマ・値チェック込み）／ データだけ: `npm run validate-data`
 - デプロイ: main にプッシュするだけ（.github/workflows/deploy.yml）。ビルドはテストがゲート
-- フィガー追加手順: ①`public/data/waltz/<id>.json` を natural-turn.json を雛形に作成 ②`figures.json` に目次追加 ③`npm test` ④コミット&プッシュ
+- フィガー追加手順: ①`public/data/waltz/<id>.json` を natural-turn.json を雛形に作成（座標は書かない） ②`figures.json` に目次追加 ③`npm test` ④コミット&プッシュ
 - ISTD項目はすべてコード値（src/types.ts の列挙）。新しい値が必要なら列挙に追加＋ja/en両辞書に対訳追加（型が漏れを検出）
-- 座標規約: LOD=+x（画面右）、angle 0=画面上向き・時計回り、足の描画長約25単位、隣接歩25-40単位・クローズ10-15単位
+- 座標規約（2026-08-17改定・D-21）: LOD=+x（画面右）、壁=+y（画面下）、angle 0=画面上向き・時計回り。座標はJSONに持たず `src/geometry/derivePositions.ts` で導出（歩幅30・横28・足幅12）
 - 設計書: `docs/superpowers/specs/2026-06-11-pp-dance-figures-design.md` ／ v1実装計画: `docs/superpowers/plans/2026-06-11-pp-v1.md`

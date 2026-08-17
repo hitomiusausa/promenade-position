@@ -1,7 +1,7 @@
 # PP（Promenade Position）設計書 — 社交ダンス フィガー学習アプリ
 
 作成日: 2026-06-11
-ステータス: 承認待ち
+ステータス: 実装済み（v1.1）。追補 2026-08-17: §4 の `position` / `startPositions` はJSONから撤去し、`src/geometry/derivePositions.ts` で導出する方式に変更（docs/DECISIONS.md D-21）。座標規約は LOD=画面右・壁=画面下。
 
 ## 1. 概要と目的
 

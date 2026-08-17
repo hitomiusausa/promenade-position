@@ -6,15 +6,12 @@ function validStep(stepNo: number) {
     stepNo, foot: 'R', stepDescription: { move: 'forward' }, count: '1', beats: 1,
     footwork: 'HT', alignment: { relation: 'facing', direction: 'DW' },
     amountOfTurn: { direction: 'none', amount: '0' }, riseAndFall: 'commence_rise_eo_1',
-    sway: 'straight', cbm: true, position: { x: 0, y: 0, angle: 45 },
+    sway: 'straight', cbm: true,
   }
 }
 
 function validFigure() {
-  const part = {
-    startPositions: { L: { x: 0, y: 10, angle: 45 }, R: { x: 10, y: 10, angle: 45 } },
-    steps: [validStep(1)],
-  }
+  const part = { steps: [validStep(1)] }
   return {
     id: 'natural-turn', name: { ja: 'ナチュラルターン', en: 'Natural Turn' },
     dance: 'waltz', timeSignature: '3/4', parts: { man: part, lady: part },
@@ -24,6 +21,25 @@ function validFigure() {
 describe('validateFigure', () => {
   it('正しいデータを通す', () => {
     expect(validateFigure(validFigure()).id).toBe('natural-turn')
+  })
+
+  it('座標を導出して付与する（データには持たない）', () => {
+    const f = validateFigure(validFigure())
+    expect(f.parts.man.startPositions.L.angle).toBe(135) // 壁斜めに面して = 135°
+    expect(f.parts.man.steps[0].position.angle).toBe(135)
+    expect(f.parts.lady.steps[0].position).toBeDefined()
+  })
+
+  it('データに position があれば弾く（座標は導出するので二重管理しない）', () => {
+    const f = validFigure() as any
+    f.parts.man.steps[0].position = { x: 0, y: 0, angle: 0 }
+    expect(() => validateFigure(f)).toThrow(/position/)
+  })
+
+  it('データに startPositions があれば弾く', () => {
+    const f = validFigure() as any
+    f.parts.man.startPositions = { L: { x: 0, y: 0, angle: 0 }, R: { x: 0, y: 0, angle: 0 } }
+    expect(() => validateFigure(f)).toThrow(/startPositions/)
   })
 
   it('未知のフットワーク記号を弾く', () => {

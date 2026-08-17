@@ -1,8 +1,9 @@
 import {
   ALIGNMENT_RELATIONS, DANCES, DIRECTIONS, FOOTWORKS, LOCALES, MODIFIERS, MOVES,
   RISE_FALLS, SWAYS, TURN_AMOUNTS, TURN_DIRECTIONS,
-  type DanceInfo, type Figure, type FigureIndexEntry, type LocalizedText,
+  type DanceInfo, type Figure, type FigureIndexEntry, type FigurePart, type FigureStep, type LocalizedText, type Role,
 } from '../types'
+import { alignmentAngle, derivePartPositions, ladyStart } from '../geometry/derivePositions'
 
 function fail(path: string, msg: string): never {
   throw new Error(`${path}: ${msg}`)
@@ -44,13 +45,9 @@ function localizedName(v: unknown, path: string) {
   return o as Figure['name']
 }
 
-function position(v: unknown, path: string) {
-  const o = obj(v, path)
-  return { x: num(o.x, `${path}.x`), y: num(o.y, `${path}.y`), angle: num(o.angle, `${path}.angle`) }
-}
-
 function step(v: unknown, index: number, path: string) {
   const o = obj(v, path)
+  if (o.position !== undefined) fail(`${path}.position`, '座標はデータに持たない（アライメント等から導出する。D-21）')
   const stepNo = num(o.stepNo, `${path}.stepNo`)
   if (stepNo !== index + 1) fail(`${path}.stepNo`, `${index + 1} のはずが ${stepNo}`)
   const sd = obj(o.stepDescription, `${path}.stepDescription`)
@@ -90,30 +87,43 @@ function step(v: unknown, index: number, path: string) {
     riseAndFall: oneOf(o.riseAndFall, RISE_FALLS, `${path}.riseAndFall`),
     sway: oneOf(o.sway, SWAYS, `${path}.sway`),
     cbm: typeof o.cbm === 'boolean' ? o.cbm : fail(`${path}.cbm`, 'booleanが必要'),
-    position: position(o.position, `${path}.position`),
     ...(o.note !== undefined ? { note: localizedText(o.note, `${path}.note`) } : {}),
   }
 }
 
-function part(v: unknown, path: string) {
+type StepInput = Omit<FigureStep, 'position'>
+
+function part(v: unknown, path: string): StepInput[] {
   const o = obj(v, path)
-  const sp = obj(o.startPositions, `${path}.startPositions`)
+  if (o.startPositions !== undefined) fail(`${path}.startPositions`, '開始位置はデータに持たない（導出する。D-21）')
   if (!Array.isArray(o.steps) || o.steps.length === 0) fail(`${path}.steps`, '1歩以上が必要')
-  return {
-    startPositions: { L: position(sp.L, `${path}.startPositions.L`), R: position(sp.R, `${path}.startPositions.R`) },
-    steps: o.steps.map((s, i) => step(s, i, `${path}.steps[${i}]`)),
-  }
+  return o.steps.map((s, i) => step(s, i, `${path}.steps[${i}]`))
+}
+
+/** 検証済みの歩データに座標を付与する（男性を原点、女性は男性との相対位置から） */
+export function derivePositions(inputs: Record<Role, StepInput[]>): Record<Role, FigurePart> {
+  const manAngle = alignmentAngle(inputs.man[0].alignment)
+  const ladyAngle = alignmentAngle(inputs.lady[0].alignment)
+  const man = derivePartPositions(inputs.man, 'man', { x: 0, y: 0 }, manAngle)
+  const ls = ladyStart(manAngle, ladyAngle)
+  const lady = derivePartPositions(inputs.lady, 'lady', ls.offset, ls.angle)
+  const attach = (steps: StepInput[], d: typeof man): FigurePart => ({
+    startPositions: d.startPositions,
+    steps: steps.map((s, i) => ({ ...s, position: d.positions[i] })),
+  })
+  return { man: attach(inputs.man, man), lady: attach(inputs.lady, lady) }
 }
 
 export function validateFigure(data: unknown): Figure {
   const o = obj(data, 'figure')
   const parts = obj(o.parts, 'parts')
+  const inputs = { man: part(parts.man, 'parts.man'), lady: part(parts.lady, 'parts.lady') }
   return {
     id: str(o.id, 'id'),
     name: localizedName(o.name, 'name'),
     dance: oneOf(o.dance, DANCES, 'dance'),
     timeSignature: str(o.timeSignature, 'timeSignature'),
-    parts: { man: part(parts.man, 'parts.man'), lady: part(parts.lady, 'parts.lady') },
+    parts: derivePositions(inputs),
   }
 }
 
