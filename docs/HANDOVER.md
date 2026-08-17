@@ -1,6 +1,6 @@
 # HANDOVER.md — PP 引き継ぎ書（再開手順書）
 
-最終更新: 2026-08-18 セッション末（く！ちゃん）— 第四弾(b)「教本の先行・後続のデータ化」を実装（D-30）＋利用者の実物確認で判読不能2箇所を確定（D-31）。**未コミット**（下の「次のキュー 0」参照）。前回まで: D-25〜27 は `878046c`、D-28/29 は `ee80083` で公開済み。
+最終更新: 2026-08-18 セッション末（く！ちゃん）— **第四弾(b) 完了**。教本の先行・後続をデータ化（D-30）＋実物確認で判読不能2箇所を確定（D-31）。`17d807b`（データ）／`d911be3`（セレクタ＋UI）の2コミットでプッシュ済み・公開反映を実測確認。次は**第四弾(a) 自作ビルダー**。
 これは作業ログではなく「次のセッションの自分が迷わないための再開手順書」。セッション末に必ず更新する。
 
 ## 読み順
@@ -14,14 +14,14 @@
 ## 現在地（2026-08-18 実測）
 
 - バージョン: v1.3 相当。ワルツ39フィガー（教本38番のうち表のある全て）＋推奨アマルガメーション8本・アニメ再生・男性/女性/両方・日英。
-- リポジトリ: https://github.com/hitomiusausa/promenade-position — 公開済み HEAD `878046c`（D-25〜27）。
-- テスト: 15ファイル **116件 緑**（両方表示の非重なり・非ブレ＋先行後続の検証23件を常設）、`tsc` OK、`vite build` OK（2026-08-18 D-30 時点）。公開済み HEAD は `ee80083`（D-29 まで）。**D-30 はまだプッシュしていない。**
-- 公開: https://hitomiusausa.github.io/promenade-position/ （main へのプッシュで自動デプロイ）。
+- リポジトリ: https://github.com/hitomiusausa/promenade-position — **HEAD `d911be3`、origin/main と一致（実測）**。作業ツリーはクリーン（`.claude/launch.json` のみ未追跡）。
+- テスト: 15ファイル **116件 緑**（両方表示の非重なり・非ブレ＋先行後続の検証23件を常設）、`tsc` OK、`vite build` OK（2026-08-18 D-31 時点）。
+- 公開: https://hitomiusausa.github.io/promenade-position/ （main へのプッシュで自動デプロイ）。**公開版に第四弾(b) が載っていることをバンドル実測で確認済み**（2026-08-18: 配信中の `assets/index-31d0Uo03.js` がローカルビルドと同ハッシュで、D-31 で足した出典 `turning-lock/p.38`・条件コード `ending_backing_almost_LOD`・stub `quick-natural-spin-turn`・UI文言「先行できるフィガー」を含む。出典 `/p.NN` の出現 429）。
 - ローカルの `dist/` は古い可能性があるが、コミット対象外なので放置でよい。
 - 座標系: 2026-08-17 に「壁=画面下」へ改定・座標は導出（D-21）。`e1f3567` としてプッシュ・公開済み。
 - 重複フォルダ `Promenade\ Position\(PP\)`（雛形のみ）は 2026-08-17 に削除済み。正本フォルダは `~/Documents/Playground/Promenade Position(PP)` の1つ。
 
-## 直近でやったこと（2026-08-17）
+## 直近でやったこと（2026-08-18）
 
 - フォルダ・GitHub の同期状況を実測で確認（D-17）。
 - 重複フォルダの中身を全数確認して削除を判断（D-16）。
@@ -51,24 +51,18 @@
 
 ## 次のキュー（上から順に）
 
-0. **D-30（第四弾(b)）のコミット・プッシュ** — 作業ツリーに未コミットで置いてある。データとUIで2コミットに分ける:
-   ```
-   rm -f .git/index.lock
-   git add src/types.ts src/data/transitions.json src/data/validate.ts src/i18n/ scripts/gen-data-check.mjs docs/DATA_CHECK.md docs/DATA_CHECK.html docs/DECISIONS.md docs/HANDOVER.md docs/ROADMAP.md docs/superpowers/specs/2026-08-17-preceding-following.md
-   npm test && git commit -m "feat: 教本の先行・後続をデータ化（transitions.json 368本・stub4・条件コード25）" && git push
-   git add src/data/transitions.ts src/data/transitions.test.ts src/components/TransitionLists.tsx src/pages/FigureDetail.tsx src/styles.css .claude/launch.json
-   npm test && git commit -m "feat: フィガー詳細に先行・後続リスト（セレクタ＋UI）" && git push
-   ```
-   （`git add -A` は使わない。`docs/資料/` は .gitignore 済み＝**転記メモ `docs/資料/ワルツ_先行後続_転記.md` はローカルのみ**で、コミットしない（D-22 の「教本資料はローカルのみ」に従う）。リポジトリ側の正本は `src/data/transitions.json` と `docs/DATA_CHECK.*`。
-   ルート直下の `2026-08-17-preceding-following.md` と `cowork-kickoff.md` は `docs/superpowers/specs/` へコピー済みの受領物なので、消すかどうかは利用者判断（add しない）。
-   `.claude/launch.json`（`npm run dev` をブラウザ確認で起動するための設定）を新規作成した。要らなければ add しなくてよい。）
+0. **第四弾(a) 自作アマルガメーション・ビルダー（ここから）** — 第四弾(b) が済んだので「次に来られるフィガー」を教本根拠で出せる。
+   - API: `src/data/transitions.ts` の `followingFigureIds(dance, figureId, realIds)` が実体フィガーの id だけ返す（stub 4件と群参照 `to: null` の2件を落とす）。条件バッジや歩範囲つきで見せたいなら `followingOf()` を使い `conditions` / `toSteps` / `viaFigure` を読む。
+   - 合成は既存の `src/data/amalgamation.ts` の `buildAmalgamation` がそのまま使える（`{figure, steps?, note?}` の配列を渡すだけ）。表示も `FigureDetailView` を再利用できる（推奨8本と同じ作り。D-27）。
+   - 保存は localStorage、キーは `pp-` 接頭辞（既存の `pp-locale` と同じ規約）。
+   - 設計 → 合意 → 実装の順で。まず Plan モードで画面設計を出して利用者の合意を取る。
 
-0b. **D-30 の独立検収** — `docs/DATA_CHECK.html` の各フィガーに「先行できるフィガー／後続できるフィガー」の表が付いた。教本 pp.17-50 の各表の直下と見比べる。相違は「フィガー／先行or後続／教本の値」で。
-   ~~併せて判読不能だった2箇所を実物で確認してほしい~~ → **2026-08-18 解決済み（D-31）**: (a) は補完どおり（□□＝「は」）でデータ変更なし、(b) は「アンダーターンド・ナチュラル・スピン・ターン」と確定して反映済み。残る検収は DATA_CHECK と教本の突き合わせのみ。
+0b. **第四弾(b) の独立検収（未了・利用者作業）** — `docs/DATA_CHECK.html` の各フィガーに「先行できるフィガー／後続できるフィガー」の表が付いた。教本 pp.17-50 の各表の直下と見比べる。相違は「フィガー／先行or後続／教本の値」で。
+   判読不能だった2箇所は 2026-08-18 に解決済み（D-31）なので、残るは表そのものの突き合わせだけ。
+
 1. **D-25 の独立検収（後回しと合意）** — `docs/DATA_CHECK.html` を教本 pp.23-50 と見比べる（#20 は確認済み。ランニング・スピン・ターンのスウェイ列など）。相違は「フィガー／歩／列／教本の値」で。
 2. 照合で座標（見た目）の不自然さが出たら、JSONでなく `derivePositions.ts` のパラメータで直し、ISTD値の修正とは別コミットに分ける（スコープ混在の禁止）。
-3. **第四弾(a) 自作ビルダー** — (b) が済んだので「次に来られるフィガー」を出せる。API は `src/data/transitions.ts` の `followingFigureIds(dance, figureId, realIds)`（stub と群参照を落として実体 id だけ返す）。歩範囲つきの提案が要るなら `followingOf()` を使い `toSteps` を見る。保存は localStorage `pp-` 接頭辞。
-4. 残りの候補 — (c) 短期機能（クイズ・習得チェック・ズーム・カウント表示） (d) 用語解説ページ（総論の内容） (e) フィガー一覧のグルーピング／フィルタ (f) クイック・ナチュラル・スピン・ターン（教本に表なし。別資料があれば。今は stub として transitions から参照されている） (g) stub 4件（ウイング／クロス・ヘジテーション／ウイーブ）の実体化——教本に単体の表が無いので別資料が要る。
+3. 残りの候補 — (c) 短期機能（クイズ・習得チェック・ズーム・カウント表示） (d) 用語解説ページ（総論の内容） (e) フィガー一覧のグルーピング／フィルタ (f) クイック・ナチュラル・スピン・ターン（教本に表なし。別資料があれば。今は stub として transitions から参照されている） (g) stub 4件（ウイング／クロス・ヘジテーション／ウイーブ）の実体化——教本に単体の表が無いので別資料が要る。
 
 ## 確立した規律（このプロジェクト固有）
 
@@ -82,6 +76,9 @@
 - 設計書のステータス欄は「実装済み（v1.1）＋D-21追補」に更新済み（2026-08-17）。
 - 計画書 `2026-06-11-pp-v1.md` のチェックボックスが全て未チェックのまま。実装完了は git で証明済みなので、更新するか「完了・履歴文書」と冒頭に書くかは利用者判断。
 - `.superpowers/brainstorm/` にブレスト時の一時ファイルが残っている（git 管理外か要確認）。消すかどうかは利用者判断。
+- `.claude/launch.json`（ブラウザ確認で `npm run dev` を起動するための設定）が未追跡のまま。要るならコミット、要らなければ消す（利用者判断）。
+- ルート直下に紛れ込んでいた `2026-08-17-preceding-following.md` と `cowork-kickoff.md` は 2026-08-18 に削除（スペックの正本は `docs/superpowers/specs/2026-08-17-preceding-following.md`。本文が同一なことを diff で確認してから消した）。
+- 第四弾(b) の転記メモ `docs/資料/ワルツ_先行後続_転記.md` は **gitignore 済み＝ローカルのみ**（D-22）。このフォルダを別マシンに持っていくと消える。リポジトリ側の正本は `src/data/transitions.json` と `docs/DATA_CHECK.*`。
 - ROADMAP 短期2「習得チェック」は localStorage 前提。将来サイト統合時にストレージキーの衝突を避けるため `pp-` 接頭辞（既存の `pp-locale` と同じ規約）で統一すること。
 
 ## 環境メモ
