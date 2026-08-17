@@ -12,6 +12,7 @@ export const en: Dictionary = {
     retry: 'Retry', comingSoon: 'Coming soon', steps: 'steps', language: 'Language',
     viewRole: 'Role view', playbackPosition: 'Playback position', reset: 'Back to start',
     modOpen: ' (', modClose: ')', modSep: ', ', almost: 'almost {dir}',
+    amalgamation: 'Amalgamation', amalgamations: 'Recommended amalgamations', amalgamationsDesc: 'Recommended amalgamations from the textbook. Figures are chained and played through.', figuresUnit: ' figures',
   },
   dance: {
     waltz: 'Waltz', tango: 'Tango', slow_foxtrot: 'Slow Foxtrot',

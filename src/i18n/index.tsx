@@ -12,6 +12,7 @@ export type UiKey =
   | 'alignment' | 'amountOfTurn' | 'riseAndFall' | 'sway' | 'cbm' | 'yes' | 'no'
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
   | 'language' | 'modOpen' | 'modClose' | 'modSep' | 'viewRole' | 'playbackPosition' | 'reset' | 'almost'
+  | 'amalgamation' | 'amalgamations' | 'amalgamationsDesc' | 'figuresUnit'
 
 export interface Dictionary {
   ui: Record<UiKey, string>

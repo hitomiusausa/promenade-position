@@ -12,6 +12,7 @@ export const ja: Dictionary = {
     retry: '再試行', comingSoon: '準備中', steps: '歩', language: '言語',
     viewRole: '表示パート', playbackPosition: '再生位置', reset: 'はじめに戻る',
     modOpen: '（', modClose: '）', modSep: '・', almost: 'ほぼ{dir}',
+    amalgamation: 'アマルガメーション', amalgamations: '推奨アマルガメーション', amalgamationsDesc: '教本の推奨アマルガメーション。フィガーをつなげて通しで再生します。', figuresUnit: 'フィガー',
   },
   dance: {
     waltz: 'ワルツ', tango: 'タンゴ', slow_foxtrot: 'スローフォックストロット',

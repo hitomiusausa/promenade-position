@@ -28,8 +28,8 @@ const STEP = 30        // 前進・後退の歩幅
 const SIDE = 28        // 横への歩幅
 const DIAG = 22        // 斜め歩の各成分
 const SLIGHT = 8       // 「少し前に／少し後ろに」の前後成分
-const CROSS_BACK = 12  // クロスの前後成分
-const CROSS_LAT = 8    // クロスの左右成分（反対側へ）
+const CROSS_BACK = 22  // クロスの前後成分（足の描画長≒25。小さいと交差する足が重なって見える）
+const CROSS_LAT = 10   // クロスの左右成分（反対側へ）
 
 type Vec = { x: number; y: number }
 const rad = (deg: number) => (deg * Math.PI) / 180

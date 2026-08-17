@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import type { Figure, Role, ViewRole } from '../types'
+import type { AmalgamationSegment, Figure, Role, ViewRole } from '../types'
 import { DANCE_BPM } from '../types'
 import { loadFigure } from '../data/loader'
 import { localized, useI18n } from '../i18n'
+import { segmentOf } from '../data/amalgamation'
 import { totalBeats } from '../animation/interpolate'
 import { useAnimation } from '../hooks/useAnimation'
 import { FloorDiagram } from '../components/FloorDiagram'
@@ -37,10 +38,10 @@ export function FigureDetail({ dance, figureId }: { dance: string; figureId: str
     )
   }
   if (!figure) return <p className="status">{dict.ui.loading}</p>
-  return <FigureDetailView figure={figure} dance={dance} />
+  return <FigureDetailView figure={figure} backHref={`#/figures/${dance}`} />
 }
 
-function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) {
+export function FigureDetailView({ figure, backHref, segments, subtitle }: { figure: Figure; backHref: string; segments?: AmalgamationSegment[]; subtitle?: string }) {
   const { dict, locale } = useI18n()
   const [view, setView] = useState<ViewRole>('man')
   const [selectedStep, setSelectedStep] = useState<number | null>(null)
@@ -66,9 +67,9 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
 
   return (
     <section>
-      <p><a href={`#/figures/${dance}`}>← {dict.ui.back}</a></p>
+      <p><a href={backHref}>← {dict.ui.back}</a></p>
       <div className="detail-header">
-        <h2>{localized(figure.name, locale)}</h2>
+        <h2>{localized(figure.name, locale)}{subtitle && <span className="detail-subtitle">{subtitle}</span>}</h2>
         <RoleToggle value={view} onChange={setView} />
       </div>
       <div className="detail-grid">
@@ -89,10 +90,21 @@ function FigureDetailView({ figure, dance }: { figure: Figure; dance: string }) 
           <PlaybackBar anim={anim} total={total} />
         </div>
         <div className={primaryRole === 'lady' ? 'role-lady' : undefined}>
-          <StepTable steps={steps} selectedStep={selectedStep} onSelect={selectStep} />
-          {selected && <StepDetailPanel step={selected} />}
+          <StepTable steps={steps} selectedStep={selectedStep} onSelect={selectStep} segments={segments} />
+          {selected && (
+            <StepDetailPanel
+              step={selected}
+              heading={segments ? segmentHeading(segments, selected.stepNo, locale) : undefined}
+            />
+          )}
         </div>
       </div>
     </section>
   )
+}
+
+function segmentHeading(segments: AmalgamationSegment[], stepNo: number, locale: Parameters<typeof localized>[1]): string | undefined {
+  const seg = segmentOf(segments, stepNo)
+  if (!seg) return undefined
+  return `${localized(seg.name, locale)} ${seg.sourceSteps[0] + (stepNo - seg.from)}`
 }

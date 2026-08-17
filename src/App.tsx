@@ -4,6 +4,7 @@ import { LanguageSwitcher } from './components/LanguageSwitcher'
 import { DanceList } from './pages/DanceList'
 import { FigureList } from './pages/FigureList'
 import { FigureDetail } from './pages/FigureDetail'
+import { AmalgamationDetail } from './pages/AmalgamationDetail'
 
 function Shell() {
   const { dict } = useI18n()
@@ -18,6 +19,7 @@ function Shell() {
         {route.page === 'dances' && <DanceList />}
         {route.page === 'figures' && <FigureList dance={route.dance} />}
         {route.page === 'figure' && <FigureDetail dance={route.dance} figureId={route.figureId} />}
+        {route.page === 'amalgamation' && <AmalgamationDetail dance={route.dance} amalgamationId={route.amalgamationId} />}
       </main>
     </>
   )

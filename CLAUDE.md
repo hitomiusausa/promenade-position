@@ -27,13 +27,15 @@ npm run build          # vitest → tsc → vite build（テストが赤なら�
 public/data/dances.json           種目一覧（available: true の種目だけ入れる）
 public/data/waltz/figures.json    ワルツのフィガー目次
 public/data/waltz/<id>.json       フィガー1個=1ファイル（男女両パート）
+public/data/waltz/amalgamations.json  推奨アマルガメーション（フィガーの連結。D-27）
 src/types.ts                      型・ISTDコード値の列挙・DANCE_BPM
 src/data/validate.ts / loader.ts  データ検証・読込
+src/data/amalgamation.ts          フィガー連結（アマルガメーション合成）
 src/i18n/                         辞書（locales/ja.ts, en.ts）とフォーマッタ
 src/animation/interpolate.ts      足位置の補間（純粋関数）
 src/hooks/useAnimation.ts         再生・一時停止・速度（rAF）
 src/components/                   Foot / FloorDiagram / StepTable / PlaybackBar など
-src/pages/                        DanceList / FigureList / FigureDetail
+src/pages/                        DanceList / FigureList / FigureDetail / AmalgamationDetail
 .github/workflows/deploy.yml      GitHub Pages 自動デプロイ
 docs/                             ROADMAP / DECISIONS / HANDOVER / 設計書・計画書
 ```

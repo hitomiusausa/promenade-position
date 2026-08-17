@@ -1,14 +1,18 @@
-import type { FigureStep } from '../types'
-import { formatAlignment, formatStepDescription, formatTurn, useI18n } from '../i18n'
+import { Fragment } from 'react'
+import type { AmalgamationSegment, FigureStep } from '../types'
+import { formatAlignment, formatStepDescription, formatTurn, localized, useI18n } from '../i18n'
 
 export interface StepTableProps {
   steps: FigureStep[]
   selectedStep: number | null
   onSelect: (stepNo: number) => void
+  /** アマルガメーションのフィガー境界（見出し行を挿入する） */
+  segments?: AmalgamationSegment[]
 }
 
-export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
-  const { dict } = useI18n()
+export function StepTable({ steps, selectedStep, onSelect, segments }: StepTableProps) {
+  const { dict, locale } = useI18n()
+  const headerFor = (stepNo: number) => segments?.find((s) => s.from === stepNo)
   return (
     <>
       {/* スマホ: 歩番号チップ */}
@@ -41,8 +45,17 @@ export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
         </thead>
         <tbody>
           {steps.map((s) => (
+            <Fragment key={s.stepNo}>
+            {headerFor(s.stepNo) && (
+              <tr className="segment-row">
+                <th colSpan={9} scope="rowgroup">
+                  ▶ {localized(headerFor(s.stepNo)!.name, locale)}
+                  {(() => { const h = headerFor(s.stepNo)!; return h.sourceSteps[1] - h.sourceSteps[0] + 1 !== h.to - h.from + 1 || h.sourceSteps[0] !== 1 ? ` (${h.sourceSteps[0]}-${h.sourceSteps[1]})` : '' })()}
+                  {headerFor(s.stepNo)!.note && <span className="segment-note"> — {localized(headerFor(s.stepNo)!.note!, locale)}</span>}
+                </th>
+              </tr>
+            )}
             <tr
-              key={s.stepNo}
               role="button"
               tabIndex={0}
               className={selectedStep === s.stepNo ? 'selected' : ''}
@@ -64,6 +77,7 @@ export function StepTable({ steps, selectedStep, onSelect }: StepTableProps) {
               <td>{dict.sway[s.sway]}</td>
               <td>{s.cbm ? dict.ui.yes : dict.ui.no}</td>
             </tr>
+            </Fragment>
           ))}
         </tbody>
       </table>

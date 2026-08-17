@@ -1,0 +1,70 @@
+[
+  { "id": "basic-1", "name": { "ja": "推奨1: 基本のアマルガメーション", "en": "Recommended 1: Basic amalgamation" }, "source": "教本 p.51 #1",
+    "figures": [
+      { "figure": "closed-change-reverse" },
+      { "figure": "natural-turn" },
+      { "figure": "closed-change-natural" },
+      { "figure": "reverse-turn" }
+    ] },
+  { "id": "basic-2", "name": { "ja": "推奨2: ホイスク〜ウイーブ・イン・ワルツ・タイム", "en": "Recommended 2: Whisk to Weave in Waltz Time" }, "source": "教本 p.51 #2",
+    "figures": [
+      { "figure": "whisk", "note": { "ja": "またはコーナーでホイスク", "en": "or Whisk at a corner" } },
+      { "figure": "chasse-from-pp" },
+      { "figure": "natural-spin-turn" },
+      { "figure": "reverse-turn", "steps": [4, 6], "note": { "ja": "LODに面して終わる", "en": "ending facing LOD" } },
+      { "figure": "reverse-turn", "steps": [1, 3] },
+      { "figure": "weave-in-waltz-time" }
+    ] },
+  { "id": "basic-3", "name": { "ja": "推奨3: ヘジテーション〜バック・ホイスク〜アンダーターンド・スピン", "en": "Recommended 3: Hesitation, Back Whisk, Underturned Spin" }, "source": "教本 p.51 #3",
+    "figures": [
+      { "figure": "hesitation-change" },
+      { "figure": "reverse-turn", "steps": [1, 3] },
+      { "figure": "reverse-corte" },
+      { "figure": "back-whisk" },
+      { "figure": "chasse-from-pp" },
+      { "figure": "underturned-natural-spin-turn" },
+      { "figure": "reverse-turn", "steps": [4, 6], "note": { "ja": "中央斜めに終わる", "en": "ending DC" } },
+      { "figure": "reverse-turn" }
+    ] },
+  { "id": "basic-4", "name": { "ja": "推奨4: ホイスク〜ウイーブ〜ターニング・ロック", "en": "Recommended 4: Whisk followed by Weave, Turning Lock" }, "source": "教本 p.51 #4",
+    "figures": [
+      { "figure": "reverse-turn" },
+      { "figure": "whisk-weave" },
+      { "figure": "natural-spin-turn" },
+      { "figure": "turning-lock" }
+    ] },
+  { "id": "basic-5", "name": { "ja": "推奨5: オープン・テレマーク〜ウイング〜アウトサイド・チェンジ", "en": "Recommended 5: Open Telemark, Wing, Outside Change" }, "source": "教本 p.51 #5",
+    "figures": [
+      { "figure": "underturned-natural-spin-turn" },
+      { "figure": "reverse-turn", "steps": [4, 6] },
+      { "figure": "open-telemark-wing" },
+      { "figure": "progressive-chasse-to-right", "note": { "ja": "1/2回転", "en": "1/2 turn" } },
+      { "figure": "outside-change" }
+    ] },
+  { "id": "basic-6", "name": { "ja": "推奨6: プログレッシブ・シャッセ〜ロック〜オープン・インピタス・ウイーブ", "en": "Recommended 6: Progressive Chasse, Lock, Open Impetus to Weave" }, "source": "教本 p.51 #6",
+    "figures": [
+      { "figure": "progressive-chasse-to-right" },
+      { "figure": "backward-lock-step" },
+      { "figure": "open-impetus-weave", "steps": [4, 9] }
+    ] },
+  { "id": "basic-7", "name": { "ja": "推奨7: リバース・コルテ〜アウトサイド・スピン〜ターニング・ロック", "en": "Recommended 7: Reverse Corte, Outside Spin, Turning Lock" }, "source": "教本 p.51 #7",
+    "figures": [
+      { "figure": "reverse-turn", "steps": [1, 3] },
+      { "figure": "reverse-corte" },
+      { "figure": "outside-spin" },
+      { "figure": "hesitation-change" },
+      { "figure": "progressive-chasse-to-right" },
+      { "figure": "underturned-outside-spin" },
+      { "figure": "turning-lock", "note": { "ja": "PPで終わる", "en": "ending in PP" } },
+      { "figure": "chasse-from-pp" }
+    ] },
+  { "id": "basic-8", "name": { "ja": "推奨8: ホイスク〜スピン・ターン（オーバーターン）〜ターニング・ロック・トゥ・ライト", "en": "Recommended 8: Whisk, overturned Spin Turn, Turning Lock to Right" }, "source": "教本 p.51 #8",
+    "figures": [
+      { "figure": "reverse-turn" },
+      { "figure": "whisk" },
+      { "figure": "chasse-from-pp" },
+      { "figure": "natural-spin-turn", "note": { "ja": "オーバーターンして", "en": "overturned" } },
+      { "figure": "turning-lock-to-right" },
+      { "figure": "open-impetus-weave", "steps": [4, 9] }
+    ] }
+]

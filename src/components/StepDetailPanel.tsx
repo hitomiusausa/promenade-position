@@ -1,7 +1,7 @@
 import type { FigureStep } from '../types'
 import { formatAlignment, formatFootwork, formatStepDescription, formatTurn, localized, useI18n } from '../i18n'
 
-export function StepDetailPanel({ step }: { step: FigureStep }) {
+export function StepDetailPanel({ step, heading }: { step: FigureStep; heading?: string }) {
   const { dict, locale } = useI18n()
   const rows: Array<[string, string, string]> = [
     ['count', dict.ui.count, step.count],
@@ -17,6 +17,7 @@ export function StepDetailPanel({ step }: { step: FigureStep }) {
     <div className="step-detail">
       <h3>
         {dict.ui.step} {step.stepNo} — {formatStepDescription(step.foot, step.stepDescription, dict)}
+        {heading && <span className="detail-heading-sub">（{heading}）</span>}
       </h3>
       <dl>
         {rows.map(([id, k, v]) => (

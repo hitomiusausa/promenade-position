@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import type { DanceId, FigureIndexEntry } from '../types'
-import { loadFigureIndex } from '../data/loader'
+import type { Amalgamation, DanceId, FigureIndexEntry } from '../types'
+import { loadAmalgamations, loadFigureIndex } from '../data/loader'
 import { localized, useI18n } from '../i18n'
 import { navigate } from '../router'
 
 export function FigureList({ dance }: { dance: string }) {
   const { dict, locale } = useI18n()
   const [figures, setFigures] = useState<FigureIndexEntry[] | null>(null)
+  const [amals, setAmals] = useState<Amalgamation[]>([])
   const [error, setError] = useState(false)
   const [retryKey, setRetryKey] = useState(0)
 
@@ -17,6 +18,11 @@ export function FigureList({ dance }: { dance: string }) {
     loadFigureIndex(dance).then(
       (f) => active && setFigures(f),
       () => active && setError(true),
+    )
+    // アマルガメーションは無くてもページは成立する（他種目には未整備）
+    loadAmalgamations(dance).then(
+      (a) => active && setAmals(a),
+      () => active && setAmals([]),
     )
     return () => { active = false }
   }, [dance, retryKey])
@@ -48,6 +54,32 @@ export function FigureList({ dance }: { dance: string }) {
           </li>
         ))}
       </ul>
+      {amals.length > 0 && (
+        <>
+          <h2 className="section-title">{dict.ui.amalgamations}</h2>
+          <p className="section-desc">{dict.ui.amalgamationsDesc}</p>
+          <ul className="card-list">
+            {amals.map((a) => {
+              const chain = a.figures.map((f) => {
+                const name = figures.find((x) => x.id === f.figure)?.name
+                const label = name ? localized(name, locale) : f.figure
+                return f.steps ? `${label}(${f.steps[0]}-${f.steps[1]})` : label
+              }).join(' → ')
+              return (
+                <li key={a.id}>
+                  <button className="card-button" onClick={() => navigate(`/amalgamation/${dance}/${a.id}`)}>
+                    <span className="card-title">
+                      {localized(a.name, locale)}
+                      <span className="card-subtitle">{chain}</span>
+                    </span>
+                    <span className="badge">{a.figures.length}{dict.ui.figuresUnit}</span>
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+        </>
+      )}
     </section>
   )
 }

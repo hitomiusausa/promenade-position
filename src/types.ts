@@ -86,3 +86,33 @@ export interface DanceInfo {
   category: 'standard' | 'latin'
   available: boolean
 }
+
+/** アマルガメーション（フィガーの連結）。教本の推奨アマルガメーション等 */
+export interface AmalgamationItem {
+  figure: string
+  /** 男性の歩番号範囲（省略=全歩）。女性も同じ範囲 */
+  steps?: [number, number]
+  note?: LocalizedText
+}
+export interface Amalgamation {
+  id: string
+  name: LocalizedText & { en: string }
+  source?: string
+  figures: AmalgamationItem[]
+  note?: LocalizedText
+}
+
+/** 合成結果: Figure と同じ形で描画・再生でき、フィガー境界を segments に持つ */
+export interface AmalgamationSegment {
+  figureId: string
+  name: LocalizedText & { en: string }
+  /** 通し番号（1始まり）での範囲 */
+  from: number
+  to: number
+  /** 元フィガーでの歩番号範囲 */
+  sourceSteps: [number, number]
+  note?: LocalizedText
+}
+export interface CompositeFigure extends Figure {
+  segments: AmalgamationSegment[]
+}

@@ -95,3 +95,11 @@ main { max-width: 1080px; margin: 0 auto; padding: 16px; }
 .detail-row { display: flex; gap: 8px; padding: 3px 0; font-size: 14px; }
 .detail-row dt { color: #888; min-width: 9em; }
 .detail-row dd { margin: 0; font-weight: 500; }
+
+/* アマルガメーション */
+.section-title { margin-top: 28px; }
+.section-desc { color: #666; font-size: 13px; margin-top: -4px; }
+.detail-subtitle { display: block; font-size: 13px; font-weight: 400; color: #666; margin-top: 2px; }
+.step-table .segment-row th { background: #eef2f6; text-align: left; font-weight: 700; padding: 6px 8px; font-size: 13px; }
+.step-table .segment-note { font-weight: 400; color: #666; }
+.detail-heading-sub { font-size: 12px; font-weight: 400; color: #666; margin-left: 4px; }

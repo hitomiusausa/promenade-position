@@ -1,7 +1,7 @@
 import {
   ALIGNMENT_RELATIONS, DANCES, DIRECTIONS, FOOTWORKS, LOCALES, MODIFIERS, MOVES,
   RISE_FALLS, SWAYS, TURN_AMOUNTS, TURN_DIRECTIONS,
-  type DanceInfo, type Figure, type FigureIndexEntry, type FigurePart, type FigureStep, type LocalizedText, type Role,
+  type Amalgamation, type DanceInfo, type Figure, type FigureIndexEntry, type FigurePart, type FigureStep, type LocalizedText, type Role,
 } from '../types'
 import { alignmentAngle, derivePartPositions, ladyStart } from '../geometry/derivePositions'
 
@@ -160,6 +160,37 @@ export function validateFigureIndex(data: unknown): FigureIndexEntry[] {
         if (!Number.isInteger(stepCount) || stepCount < 1) fail(`figures[${i}].stepCount`, '1以上の整数が必要')
         return stepCount
       })(),
+    }
+  })
+}
+
+export function validateAmalgamations(data: unknown): Amalgamation[] {
+  if (!Array.isArray(data)) fail('amalgamations', '配列が必要')
+  return data.map((a, i) => {
+    const o = obj(a, `amalgamations[${i}]`)
+    if (!Array.isArray(o.figures) || o.figures.length === 0) fail(`amalgamations[${i}].figures`, '1つ以上のフィガーが必要')
+    return {
+      id: str(o.id, `amalgamations[${i}].id`),
+      name: localizedName(o.name, `amalgamations[${i}].name`),
+      ...(o.source !== undefined ? { source: str(o.source, `amalgamations[${i}].source`) } : {}),
+      figures: o.figures.map((f, j) => {
+        const p = `amalgamations[${i}].figures[${j}]`
+        const fo = obj(f, p)
+        let steps: [number, number] | undefined
+        if (fo.steps !== undefined) {
+          if (!Array.isArray(fo.steps) || fo.steps.length !== 2) fail(`${p}.steps`, '[from, to] が必要')
+          const from = num(fo.steps[0], `${p}.steps[0]`)
+          const to = num(fo.steps[1], `${p}.steps[1]`)
+          if (!Number.isInteger(from) || !Number.isInteger(to) || from < 1 || to < from) fail(`${p}.steps`, '1以上の整数で from <= to')
+          steps = [from, to]
+        }
+        return {
+          figure: str(fo.figure, `${p}.figure`),
+          ...(steps ? { steps } : {}),
+          ...(fo.note !== undefined ? { note: localizedText(fo.note, `${p}.note`) } : {}),
+        }
+      }),
+      ...(o.note !== undefined ? { note: localizedText(o.note, `amalgamations[${i}].note`) } : {}),
     }
   })
 }
