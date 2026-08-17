@@ -2,3 +2,6 @@
 node_modules/
 dist/
 .DS_Store
+
+# 教本PDF等の資料はローカルのみ（D-22）
+docs/資料/
