@@ -26,10 +26,10 @@ export type Direction = (typeof DIRECTIONS)[number]
 export const MOVES = ['forward', 'back', 'side', 'close', 'diag_forward', 'diag_back', 'cross_behind', 'cross_front', 'forward_PP', 'side_in_PP', 'replace_weight', 'brush'] as const
 export type Move = (typeof MOVES)[number]
 
-export const MODIFIERS = ['slightly_back', 'slightly_forward', 'small_step', 'outside_partner', 'in_PP', 'rightward', 'leftward'] as const
+export const MODIFIERS = ['slightly_back', 'slightly_forward', 'small_step', 'outside_partner', 'in_PP', 'rightward', 'leftward', 'slightly_side'] as const
 export type Modifier = (typeof MODIFIERS)[number]
 
-export const RISE_FALLS = ['commence_rise_eo_1', 'commence_rise_eo_2', 'continue_rise', 'up', 'up_lower_eo_3', 'no_rise_fall', 'rise_slightly', 'lower_eo_3'] as const
+export const RISE_FALLS = ['commence_rise_eo_1', 'commence_rise_eo_2', 'continue_rise', 'up', 'up_lower_eo_3', 'no_rise_fall', 'rise_slightly', 'lower_eo_3', 'commence_rise_eo_1_nfr', 'commence_rise_eo_2_nfr', 'continue_rise_lower_eo_3'] as const
 export type RiseFall = (typeof RISE_FALLS)[number]
 
 export const SWAYS = ['straight', 'L', 'R'] as const

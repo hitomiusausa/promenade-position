@@ -36,4 +36,9 @@ describe('i18n formatters', () => {
   it('回転量: 区間なし', () => {
     expect(formatTurn({ direction: 'left', amount: '1/8' }, ja)).toBe('左へ1/8')
   })
+
+  it('教本語: 「向けて」「逆壁斜め」', () => {
+    expect(formatAlignment({ relation: 'pointing', direction: 'DC' }, ja)).toBe('中央斜めに向けて')
+    expect(formatAlignment({ relation: 'backing', direction: 'DW_against_LOD' }, ja)).toBe('逆壁斜めに背面して')
+  })
 })

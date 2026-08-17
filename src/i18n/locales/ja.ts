@@ -23,10 +23,10 @@ export const ja: Dictionary = {
   foot: { L: '左足', R: '右足' },
   footwork: { H: 'ヒール', T: 'トー', TH: 'トー→ヒール', HT: 'ヒール→トー', THT: 'トー→ヒール→トー', flat: 'フラット', none: '体重なし' },
   footworkPart: { H: 'ヒール', T: 'トー' },
-  relation: { facing: '{dir}に面して', backing: '{dir}に背面して', pointing: '{dir}にポイントして' },
+  relation: { facing: '{dir}に面して', backing: '{dir}に背面して', pointing: '{dir}に向けて' },
   direction: {
     LOD: 'LOD', DW: '壁斜め', DC: '中央斜め', wall: '壁', centre: '中央',
-    against_LOD: '逆LOD', DW_against_LOD: '逆LODの壁斜め', DC_against_LOD: '逆LODの中央斜め',
+    against_LOD: '逆LOD', DW_against_LOD: '逆壁斜め', DC_against_LOD: '逆中央斜め',
   },
   move: {
     forward: '{foot}前進', back: '{foot}後退', side: '{foot}横へ', close: '{foot}を閉じる',
@@ -37,12 +37,14 @@ export const ja: Dictionary = {
   },
   modifier: {
     slightly_back: '少し後ろに', slightly_forward: '少し前に', small_step: '小さく',
-    outside_partner: 'アウトサイドパートナー', in_PP: 'PPで', rightward: '右方向に', leftward: '左方向に',
+    outside_partner: 'アウトサイドパートナー', in_PP: 'PPで', rightward: '右方向に', leftward: '左方向に', slightly_side: '少し横に',
   },
   riseFall: {
     commence_rise_eo_1: '1の終わりにライズ開始', commence_rise_eo_2: '2の終わりにライズ開始',
     continue_rise: 'ライズ継続', up: 'アップ', up_lower_eo_3: 'アップ、3の終わりにロア',
     no_rise_fall: 'ライズ＆フォールなし', rise_slightly: 'わずかにライズ', lower_eo_3: '3の終わりにロア',
+    commence_rise_eo_1_nfr: '1の終わりにライズ開始（NFR）', commence_rise_eo_2_nfr: '2の終わりにライズ開始（NFR）',
+    continue_rise_lower_eo_3: 'ライズ継続、3の終わりにロア',
   },
   sway: { straight: 'なし（ストレート）', L: '左', R: '右' },
   turn: { none: '回転なし', withBetween: '{dir}へ{amount}（{from}-{to}歩間）', noBetween: '{dir}へ{amount}' },

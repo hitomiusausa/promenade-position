@@ -37,12 +37,14 @@ export const en: Dictionary = {
   },
   modifier: {
     slightly_back: 'slightly back', slightly_forward: 'slightly forward', small_step: 'small step',
-    outside_partner: 'outside partner', in_PP: 'in PP', rightward: 'rightward', leftward: 'leftward',
+    outside_partner: 'outside partner', in_PP: 'in PP', rightward: 'rightward', leftward: 'leftward', slightly_side: 'slightly to side',
   },
   riseFall: {
     commence_rise_eo_1: 'Commence to rise e/o 1', commence_rise_eo_2: 'Commence to rise e/o 2',
     continue_rise: 'Continue to rise', up: 'Up', up_lower_eo_3: 'Up. Lower e/o 3',
     no_rise_fall: 'No rise and fall', rise_slightly: 'Rise slightly', lower_eo_3: 'Lower e/o 3',
+    commence_rise_eo_1_nfr: 'Commence to rise e/o 1 (NFR)', commence_rise_eo_2_nfr: 'Commence to rise e/o 2 (NFR)',
+    continue_rise_lower_eo_3: 'Continue to rise. Lower e/o 3',
   },
   sway: { straight: 'Straight', L: 'Left', R: 'Right' },
   turn: { none: 'No turn', withBetween: '{amount} to {dir} (between {from}-{to})', noBetween: '{amount} to {dir}' },

@@ -17,6 +17,7 @@ npm install
 npm run dev            # 開発サーバー
 npm test               # 全テスト（全フィガーデータのスキーマ・値チェック込み）
 npm run validate-data  # データ検証だけ
+npm run data-check     # docs/DATA_CHECK.md（教本照合シート）を再生成（Node 22+）
 npm run build          # vitest → tsc → vite build（テストが赤ならビルドしない）
 ```
 
