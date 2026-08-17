@@ -1,0 +1,2713 @@
+{
+  "waltz": {
+    "stubs": [
+      {
+        "id": "wing",
+        "name": {
+          "ja": "ウイング",
+          "en": "Wing"
+        },
+        "stub": true,
+        "source": "教本 14/17「…followed by Wing」の表題・本文より"
+      },
+      {
+        "id": "cross-hesitation",
+        "name": {
+          "ja": "クロス・ヘジテーション",
+          "en": "Cross Hesitation"
+        },
+        "stub": true,
+        "source": "教本 15/18「…followed by Cross Hesitation」の表題・本文より"
+      },
+      {
+        "id": "weave",
+        "name": {
+          "ja": "ウイーブ",
+          "en": "Weave"
+        },
+        "stub": true,
+        "source": "教本 19/20「…followed by Weave」の表題・本文より"
+      },
+      {
+        "id": "quick-natural-spin-turn",
+        "name": {
+          "ja": "クイック・ナチュラル・スピン・ターン",
+          "en": "Quick Natural Spin Turn"
+        },
+        "stub": true,
+        "source": "教本 目次 36（p.16）・p.49（表なし）"
+      }
+    ],
+    "transitions": [
+      {
+        "from": "reverse-turn",
+        "to": "closed-change-reverse",
+        "source": "closed-change-reverse/p.17; reverse-turn/p.19"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "natural-spin-turn",
+        "to": "closed-change-reverse",
+        "source": "closed-change-reverse/p.17"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "closed-change-reverse",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "closed-change-reverse/p.17"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "closed-change-reverse",
+        "source": "closed-change-reverse/p.17"
+      },
+      {
+        "from": "closed-change-reverse",
+        "to": "natural-turn",
+        "source": "closed-change-reverse/p.17; natural-turn/p.18"
+      },
+      {
+        "from": "closed-change-reverse",
+        "to": "natural-spin-turn",
+        "source": "closed-change-reverse/p.17; natural-spin-turn/p.22"
+      },
+      {
+        "from": "closed-change-reverse",
+        "to": "underturned-natural-spin-turn",
+        "source": "closed-change-reverse/p.17; underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "closed-change-reverse",
+        "to": "hesitation-change",
+        "source": "closed-change-reverse/p.17; hesitation-change/p.24"
+      },
+      {
+        "from": "closed-change-reverse",
+        "to": "running-spin-turn",
+        "source": "closed-change-reverse/p.17; running-spin-turn/p.46"
+      },
+      {
+        "from": "natural-turn",
+        "to": "closed-change-natural",
+        "source": "closed-change-natural/p.17; natural-turn/p.18"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "reverse-turn",
+        "source": "closed-change-natural/p.17; reverse-turn/p.19"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "closed-telemark",
+        "source": "closed-change-natural/p.17; closed-telemark/p.29"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "open-telemark",
+        "source": "closed-change-natural/p.17; open-telemark/p.29"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "open-telemark-wing",
+        "source": "closed-change-natural/p.17; open-telemark-wing/p.30"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "open-telemark-cross-hesitation",
+        "source": "closed-change-natural/p.17; open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "progressive-chasse-to-right",
+        "source": "closed-change-natural/p.17; progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "double-reverse-spin",
+        "source": "closed-change-natural/p.17"
+      },
+      {
+        "from": "outside-spin",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18; outside-spin/p.42"
+      },
+      {
+        "from": "chasse-from-pp",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "natural-turn/p.18; chasse-from-pp/p.21"
+      },
+      {
+        "from": "outside-change",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "turning-lock",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "natural-turn",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "contra-check",
+        "to": "natural-turn",
+        "conditions": [
+          "ending_in_close_hold"
+        ],
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "natural-turn",
+        "to": null,
+        "conditions": [
+          "ending_facing_new_DW"
+        ],
+        "note_ja": "もし新壁斜めに面して終わる場合: すべてのナチュラル系フィガー",
+        "note_en": "If ending facing new DW: all natural figures",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "natural-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "back-whisk",
+        "source": "natural-turn/p.18"
+      },
+      {
+        "from": "natural-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "open-impetus-turn",
+        "source": "natural-turn/p.18; open-impetus-turn/p.32"
+      },
+      {
+        "from": "natural-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "outside-change",
+        "conditions": [
+          "ending_backing_DC"
+        ],
+        "note_ja": "ナチュラル・ターンの1〜3歩を中央斜めに背面して終わった後、アウトサイド・チェンジの第1歩は女子をイン・ラインに左足後退。",
+        "note_en": "After steps 1-3 of the Natural Turn ending backing DC, the first step of the Outside Change is LF back, lady in line.",
+        "source": "natural-turn/p.18; outside-change/p.27"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "reverse-turn",
+        "source": "reverse-turn/p.19; hesitation-change/p.24"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "reverse-turn",
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "reverse-turn",
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "reverse-turn",
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "wing",
+        "to": "reverse-turn",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "closed-wing",
+        "to": "reverse-turn",
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "reverse-turn",
+        "to": "whisk",
+        "source": "reverse-turn/p.19; whisk/p.20"
+      },
+      {
+        "from": "reverse-turn",
+        "to": "double-reverse-spin",
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "reverse-turn",
+        "to": "contra-check",
+        "source": "reverse-turn/p.19; contra-check/p.48"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "reverse-corte",
+        "source": "reverse-turn/p.19; reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "reverse-pivot",
+        "source": "reverse-turn/p.19; reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "weave-in-waltz-time",
+        "conditions": [
+          "underturned",
+          "ending_backing_DW"
+        ],
+        "source": "reverse-turn/p.19"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "whisk",
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "whisk",
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "natural-spin-turn",
+        "to": "whisk",
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "whisk",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "wing",
+        "to": "whisk",
+        "conditions": [
+          "ending_facing_new_DW"
+        ],
+        "note_ja": "ウイングを新壁斜めに終わった場合: 第1歩を左足左 OP で CBMP に前進",
+        "note_en": "When the Wing ends facing new DW: commence with LF forward left OP in CBMP",
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "whisk",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "whisk",
+        "to": "chasse-from-pp",
+        "source": "whisk/p.20; chasse-from-pp/p.21"
+      },
+      {
+        "from": "whisk",
+        "to": "cross-hesitation",
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "whisk",
+        "to": "wing",
+        "source": "whisk/p.20"
+      },
+      {
+        "from": "whisk",
+        "to": "left-whisk",
+        "conditions": [
+          "start_RF_PP_CBMP_across"
+        ],
+        "note_ja": "女子第1歩のアラインメントは、中央斜めに面して、LOD に沿って動く。",
+        "note_en": "The lady's alignment on step 1 is facing DC, moving along LOD.",
+        "source": "whisk/p.20; left-whisk/p.44"
+      },
+      {
+        "from": "back-whisk",
+        "to": "chasse-from-pp",
+        "source": "chasse-from-pp/p.21; back-whisk/p.26"
+      },
+      {
+        "from": "open-telemark",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "start_RF_PP_CBMP_forward"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "contra-check",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "start_RF_PP_CBMP_forward"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "outside-change",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "chasse-from-pp/p.21; outside-change/p.27"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "turning-lock",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "open-impetus-turn",
+        "to": "chasse-from-pp",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "chasse-from-pp",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "chasse-from-pp/p.21; natural-spin-turn/p.22"
+      },
+      {
+        "from": "chasse-from-pp",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "chasse-from-pp/p.21; underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "chasse-from-pp",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "chasse-from-pp/p.21; hesitation-change/p.24"
+      },
+      {
+        "from": "chasse-from-pp",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "chasse-from-pp/p.21; running-spin-turn/p.46"
+      },
+      {
+        "from": "chasse-from-pp",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "chasse-from-pp/p.21"
+      },
+      {
+        "from": "outside-spin",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22; outside-spin/p.42"
+      },
+      {
+        "from": "outside-change",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "turning-lock",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "natural-spin-turn",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "contra-check",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "ending_in_close_hold"
+        ],
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "reverse-corte",
+        "source": "natural-spin-turn/p.22; reverse-corte/p.25"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "turning-lock",
+        "source": "natural-spin-turn/p.22; turning-lock/p.38"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "reverse-pivot",
+        "source": "natural-spin-turn/p.22; reverse-pivot/p.38"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "turning-lock-to-right",
+        "source": "natural-spin-turn/p.22"
+      },
+      {
+        "from": "outside-spin",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23; outside-spin/p.42"
+      },
+      {
+        "from": "outside-change",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "turning-lock",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "underturned-natural-spin-turn",
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "contra-check",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "ending_in_close_hold"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "ending_pointing_DC"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-pivot",
+        "source": "underturned-natural-spin-turn/p.23; reverse-pivot/p.38"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-corte",
+        "conditions": [
+          "turned_quarter_or_half_left"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "turning-lock",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-corte",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "turning-lock",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "underturned-natural-spin-turn/p.23; turning-lock/p.38"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "reverse-pivot",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "turning-lock-to-right",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "underturned-natural-spin-turn/p.23"
+      },
+      {
+        "from": "outside-spin",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24; outside-spin/p.42"
+      },
+      {
+        "from": "outside-change",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "turning-lock",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "hesitation-change",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "contra-check",
+        "to": "hesitation-change",
+        "conditions": [
+          "ending_in_close_hold"
+        ],
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "progressive-chasse-to-right",
+        "source": "hesitation-change/p.24; progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "double-reverse-spin",
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "closed-change-reverse",
+        "conditions": [
+          "at_corner",
+          "ending_facing_new_DW"
+        ],
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "whisk",
+        "conditions": [
+          "at_corner",
+          "ending_facing_new_DW"
+        ],
+        "source": "hesitation-change/p.24"
+      },
+      {
+        "from": "underturned-outside-spin",
+        "to": "reverse-corte",
+        "source": "reverse-corte/p.25; underturned-outside-spin/p.37"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "back-whisk",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "outside-spin",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "outside-change",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "at_corner"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "back-whisk",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "turned_half",
+          "ending_backing_DW"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "open-impetus-turn",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "turned_half",
+          "ending_backing_DW"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "underturned-outside-spin",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "turned_half",
+          "ending_backing_DW"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "backward-lock-step",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "turned_half",
+          "ending_backing_DW"
+        ],
+        "source": "reverse-corte/p.25"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "back-whisk",
+        "source": "back-whisk/p.26"
+      },
+      {
+        "from": "open-telemark-cross-hesitation",
+        "to": "back-whisk",
+        "source": "back-whisk/p.26"
+      },
+      {
+        "from": "back-whisk",
+        "to": "left-whisk",
+        "source": "back-whisk/p.26"
+      },
+      {
+        "from": "running-spin-turn",
+        "to": "outside-change",
+        "source": "outside-change/p.27; running-spin-turn/p.46"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "outside-change",
+        "conditions": [
+          "turned_half"
+        ],
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "outside-change",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "open-telemark-cross-hesitation",
+        "to": "outside-change",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "outside-change",
+        "to": null,
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "note_ja": "右足 OP で CBMP に前進してすべてのナチュラル系フィガーに。",
+        "note_en": "Stepping forward RF OP in CBMP into all natural figures.",
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "outside-change",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "outside-change",
+        "to": "cross-hesitation",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "outside-change",
+        "to": "left-whisk",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "outside-change/p.27; left-whisk/p.44"
+      },
+      {
+        "from": "outside-change",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "outside-change/p.27; fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "outside-change",
+        "to": "wing",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "note_ja": "註: 男子 左足 PP で横、少し後ろに、体は壁に面して、壁斜めに向けて／女子 右足 PP で右サイド・リーディングで前、少し右に、LOD に向けて。",
+        "note_en": "Note: Man LF to side and slightly back in PP, body facing wall, pointing DW / Lady RF forward and slightly right in PP with RSL, pointing LOD.",
+        "source": "outside-change/p.27"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "weave-in-waltz-time",
+        "conditions": [
+          "ending_backing_DW"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "weave-in-waltz-time",
+        "conditions": [
+          "ending_backing_DC"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "weave-in-waltz-time",
+        "conditions": [
+          "ending_backing_LOD"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "weave-in-waltz-time/p.28"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "closed-telemark",
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "closed-telemark",
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "closed-telemark",
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "closed-telemark",
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "wing",
+        "to": "closed-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "closed-wing",
+        "to": "closed-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29; closed-wing/p.47"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "closed-telemark/p.29"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "open-telemark",
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "open-telemark",
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "open-telemark",
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "open-telemark",
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "wing",
+        "to": "open-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "closed-wing",
+        "to": "open-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark/p.29; closed-wing/p.47"
+      },
+      {
+        "from": "open-telemark",
+        "to": "chasse-from-pp",
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "open-telemark",
+        "to": "cross-hesitation",
+        "source": "open-telemark/p.29"
+      },
+      {
+        "from": "open-telemark",
+        "to": "left-whisk",
+        "source": "open-telemark/p.29; left-whisk/p.44"
+      },
+      {
+        "from": "open-telemark",
+        "to": "fallaway-natural-turn",
+        "source": "open-telemark/p.29; fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "open-telemark-wing",
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "open-telemark-wing",
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "open-telemark-wing",
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "open-telemark-wing",
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "wing",
+        "to": "open-telemark-wing",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "closed-wing",
+        "to": "open-telemark-wing",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30; closed-wing/p.47"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "reverse-turn",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "closed-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "open-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "open-telemark-cross-hesitation",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "open-telemark-wing",
+        "to": "whisk",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "open-telemark-wing/p.30"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "open-telemark-cross-hesitation",
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "open-telemark-cross-hesitation",
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "open-telemark-cross-hesitation",
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "open-telemark-cross-hesitation",
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "wing",
+        "to": "open-telemark-cross-hesitation",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "closed-wing",
+        "to": "open-telemark-cross-hesitation",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-telemark-cross-hesitation/p.31; closed-wing/p.47"
+      },
+      {
+        "from": "open-telemark-cross-hesitation",
+        "to": "back-whisk",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "open-telemark-cross-hesitation",
+        "to": "outside-spin",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "open-telemark-cross-hesitation",
+        "to": "outside-change",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "at_corner"
+        ],
+        "source": "open-telemark-cross-hesitation/p.31"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "open-impetus-turn",
+        "conditions": [
+          "start_backing_DW"
+        ],
+        "source": "open-impetus-turn/p.32"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "open-impetus-turn",
+        "conditions": [
+          "start_backing_DW"
+        ],
+        "source": "open-impetus-turn/p.32"
+      },
+      {
+        "from": "open-impetus-turn",
+        "to": "chasse-from-pp",
+        "source": "open-impetus-turn/p.32"
+      },
+      {
+        "from": "open-impetus-turn",
+        "to": "wing",
+        "source": "open-impetus-turn/p.32"
+      },
+      {
+        "from": "open-impetus-turn",
+        "to": "weave",
+        "source": "open-impetus-turn/p.32"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "reverse-turn",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "closed-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "open-telemark",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "open-telemark-wing",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "open-telemark-cross-hesitation",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-wing",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-wing/p.33"
+      },
+      {
+        "from": "open-impetus-cross-hesitation",
+        "to": "natural-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "open-impetus-cross-hesitation/p.34"
+      },
+      {
+        "from": "open-impetus-cross-hesitation",
+        "to": "back-whisk",
+        "conditions": [
+          "start_LF_CBMP_back",
+          "with_or_without_turn"
+        ],
+        "source": "open-impetus-cross-hesitation/p.34"
+      },
+      {
+        "from": "open-impetus-cross-hesitation",
+        "to": "open-impetus-turn",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "open-impetus-cross-hesitation/p.34"
+      },
+      {
+        "from": "open-impetus-cross-hesitation",
+        "to": "underturned-outside-spin",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "open-impetus-cross-hesitation/p.34"
+      },
+      {
+        "from": "open-impetus-cross-hesitation",
+        "to": "backward-lock-step",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "open-impetus-cross-hesitation/p.34"
+      },
+      {
+        "from": "open-impetus-cross-hesitation",
+        "to": "back-whisk",
+        "conditions": [
+          "at_corner",
+          "with_or_without_turn"
+        ],
+        "source": "open-impetus-cross-hesitation/p.34"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-weave/p.35"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-weave/p.35"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-weave/p.35"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-weave/p.35"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "open-impetus-weave/p.35"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "open-impetus-weave/p.35"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "whisk-weave/p.36"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "whisk-weave/p.36"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "whisk-weave/p.36"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "whisk-weave/p.36"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "whisk-weave/p.36"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "whisk-weave/p.36"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "underturned-outside-spin",
+        "source": "underturned-outside-spin/p.37; progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "underturned-outside-spin",
+        "source": "underturned-outside-spin/p.37; backward-lock-step/p.40"
+      },
+      {
+        "from": "reverse-corte",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "underturned-outside-spin",
+        "conditions": [
+          "turned_half"
+        ],
+        "source": "underturned-outside-spin/p.37"
+      },
+      {
+        "from": "cross-hesitation",
+        "viaFigure": "open-impetus-turn",
+        "to": "underturned-outside-spin",
+        "source": "underturned-outside-spin/p.37"
+      },
+      {
+        "from": "cross-hesitation",
+        "viaFigure": "turning-lock-to-right",
+        "to": "underturned-outside-spin",
+        "source": "underturned-outside-spin/p.37"
+      },
+      {
+        "from": "underturned-outside-spin",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "underturned-outside-spin/p.37"
+      },
+      {
+        "from": "underturned-outside-spin",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "underturned-outside-spin/p.37"
+      },
+      {
+        "from": "underturned-outside-spin",
+        "to": "turning-lock",
+        "source": "underturned-outside-spin/p.37; turning-lock/p.38"
+      },
+      {
+        "from": "underturned-outside-spin",
+        "to": "reverse-pivot",
+        "source": "underturned-outside-spin/p.37; reverse-pivot/p.38"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "turning-lock",
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "to": "left-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "turning-lock",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "closed-wing",
+        "note_ja": "註(3): このフィガーは、アンダーターンド・ナチュラル・スピン・ターンの後、逆中央斜めに背面して始め、クローズド・ウイングに続けてもよい。",
+        "note_en": "Note (3): after an Underturned Natural Spin Turn this figure may commence backing DC against LOD and be followed by a Closed Wing.",
+        "source": "turning-lock/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "reverse-pivot/p.38; double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "whisk",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "reverse-pivot/p.38; double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "reverse-turn",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "closed-telemark",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "open-telemark",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "reverse-pivot/p.38"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "reverse-pivot/p.38; double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "progressive-chasse-to-right",
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "progressive-chasse-to-right",
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "wing",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "closed-wing",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "progressive-chasse-to-right/p.39; closed-wing/p.47"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "natural-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "hesitation-change",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "back-whisk",
+        "conditions": [
+          "with_or_without_turn"
+        ],
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "open-impetus-turn",
+        "source": "progressive-chasse-to-right/p.39"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "backward-lock-step",
+        "source": "progressive-chasse-to-right/p.39; backward-lock-step/p.40"
+      },
+      {
+        "from": "cross-hesitation",
+        "to": "backward-lock-step",
+        "source": "backward-lock-step/p.40"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "backward-lock-step",
+        "conditions": [
+          "turned_half"
+        ],
+        "source": "backward-lock-step/p.40"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "natural-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "backward-lock-step/p.40"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "hesitation-change",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "backward-lock-step/p.40"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "back-whisk",
+        "conditions": [
+          "with_or_without_turn"
+        ],
+        "source": "backward-lock-step/p.40"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "open-impetus-turn",
+        "source": "backward-lock-step/p.40"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "closed-wing",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-turn",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "reverse-turn",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "closed-telemark",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "open-telemark",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "open-telemark-wing",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "open-telemark-cross-hesitation",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "reverse-turn",
+        "toSteps": [
+          1,
+          3
+        ],
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "progressive-chasse-to-right",
+        "conditions": [
+          "ending_facing_LOD"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "closed-change-reverse",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "whisk",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "contra-check",
+        "conditions": [
+          "ending_facing_DW"
+        ],
+        "source": "double-reverse-spin/p.41"
+      },
+      {
+        "from": "reverse-corte",
+        "to": "outside-spin",
+        "source": "outside-spin/p.42"
+      },
+      {
+        "from": "open-telemark-cross-hesitation",
+        "to": "outside-spin",
+        "source": "outside-spin/p.42"
+      },
+      {
+        "from": "outside-spin",
+        "to": "running-spin-turn",
+        "source": "outside-spin/p.42; running-spin-turn/p.46"
+      },
+      {
+        "from": "natural-spin-turn",
+        "to": "turning-lock-to-right",
+        "conditions": [
+          "overturned",
+          "ending_backing_almost_LOD"
+        ],
+        "source": "turning-lock-to-right/p.43"
+      },
+      {
+        "from": "underturned-outside-spin",
+        "to": "turning-lock-to-right",
+        "conditions": [
+          "overturned",
+          "ending_backing_almost_LOD"
+        ],
+        "source": "turning-lock-to-right/p.43"
+      },
+      {
+        "from": "underturned-natural-spin-turn",
+        "to": "turning-lock-to-right",
+        "conditions": [
+          "at_corner",
+          "overturned",
+          "ending_backing_almost_LOD"
+        ],
+        "source": "turning-lock-to-right/p.43"
+      },
+      {
+        "from": "turning-lock-to-right",
+        "to": "open-impetus-weave",
+        "toSteps": [
+          4,
+          9
+        ],
+        "source": "turning-lock-to-right/p.43"
+      },
+      {
+        "from": "turning-lock-to-right",
+        "to": "wing",
+        "source": "turning-lock-to-right/p.43"
+      },
+      {
+        "from": "open-impetus-turn",
+        "to": "left-whisk",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "contra-check",
+        "to": "left-whisk",
+        "source": "left-whisk/p.44; contra-check/p.48"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "left-whisk",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "weave",
+        "to": "left-whisk",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "turning-lock",
+        "to": "left-whisk",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "back-whisk",
+        "to": "left-whisk",
+        "conditions": [
+          "start_RF_PP_CBMP_across"
+        ],
+        "note_ja": "女子第1歩のアラインメントは、中央斜めに面して、LOD に沿って動く。",
+        "note_en": "The lady's alignment on step 1 is facing DC, moving along LOD.",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "outside-change",
+        "to": "left-whisk",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "left-whisk",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "weave",
+        "to": "left-whisk",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "turning-lock",
+        "to": "left-whisk",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "left-whisk",
+        "to": "underturned-outside-spin",
+        "note_ja": "女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。",
+        "note_en": "The lady turns round the man on his right side RLRL (1 2 & 3).",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "left-whisk",
+        "to": "open-impetus-turn",
+        "note_ja": "女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。",
+        "note_en": "The lady turns round the man on his right side RLRL (1 2 & 3).",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "left-whisk",
+        "to": "back-whisk",
+        "conditions": [
+          "with_or_without_turn"
+        ],
+        "note_ja": "女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。",
+        "note_en": "The lady turns round the man on his right side RLRL (1 2 & 3).",
+        "source": "left-whisk/p.44"
+      },
+      {
+        "from": "contra-check",
+        "to": "fallaway-natural-turn",
+        "source": "fallaway-natural-turn/p.45; contra-check/p.48"
+      },
+      {
+        "from": "open-impetus-turn",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "turning-lock-to-right",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "weave",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "turning-lock",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "ending_in_PP"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "whisk",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "start_RF_PP_CBMP_across"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "back-whisk",
+        "to": "fallaway-natural-turn",
+        "conditions": [
+          "start_RF_PP_CBMP_across"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "natural-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "underturned-natural-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "hesitation-change",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "running-spin-turn",
+        "conditions": [
+          "start_RF_OP_CBMP_forward"
+        ],
+        "source": "fallaway-natural-turn/p.45"
+      },
+      {
+        "from": "outside-change",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "weave-in-waltz-time",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "closed-telemark",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "open-impetus-weave",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "whisk-weave",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "turning-lock",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "fallaway-natural-turn",
+        "to": "running-spin-turn",
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "contra-check",
+        "to": "running-spin-turn",
+        "conditions": [
+          "ending_in_close_hold"
+        ],
+        "source": "running-spin-turn/p.46"
+      },
+      {
+        "from": "chasse-from-pp",
+        "viaFigure": "whisk",
+        "to": "closed-wing",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "closed-wing/p.47"
+      },
+      {
+        "from": "chasse-from-pp",
+        "viaFigure": "back-whisk",
+        "to": "closed-wing",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "closed-wing/p.47"
+      },
+      {
+        "from": "turning-lock",
+        "viaFigure": "underturned-natural-spin-turn",
+        "to": "closed-wing",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "closed-wing/p.47"
+      },
+      {
+        "from": "outside-change",
+        "to": "closed-wing",
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "closed-wing/p.47"
+      },
+      {
+        "from": "closed-wing",
+        "to": "reverse-turn",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "closed-wing/p.47"
+      },
+      {
+        "from": "closed-wing",
+        "to": "double-reverse-spin",
+        "conditions": [
+          "start_LF_left_OP_CBMP_forward"
+        ],
+        "source": "closed-wing/p.47"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "viaFigure": "natural-spin-turn",
+        "to": "contra-check",
+        "source": "contra-check/p.48"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "contra-check",
+        "source": "contra-check/p.48"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "contra-check",
+        "source": "contra-check/p.48"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "contra-check",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "contra-check/p.48"
+      },
+      {
+        "from": "contra-check",
+        "to": "chasse-from-pp",
+        "source": "contra-check/p.48"
+      },
+      {
+        "from": "contra-check",
+        "to": "open-impetus-weave",
+        "toSteps": [
+          4,
+          9
+        ],
+        "conditions": [
+          "ending_facing_DC"
+        ],
+        "source": "contra-check/p.48"
+      },
+      {
+        "from": "closed-change-natural",
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "reverse-turn",
+        "fromSteps": [
+          4,
+          6
+        ],
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "hesitation-change",
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "wing",
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "reverse-pivot",
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "double-reverse-spin",
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "closed-wing",
+        "to": "drag-hesitation",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "natural-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "hesitation-change",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "back-whisk",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "open-impetus-turn",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "underturned-outside-spin",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "backward-lock-step",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "fallaway-whisk",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "closed-impetus-turn",
+        "source": "drag-hesitation/p.49"
+      },
+      {
+        "from": "natural-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "fallaway-whisk",
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "fallaway-whisk",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "fallaway-whisk",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "fallaway-whisk",
+        "conditions": [
+          "start_LF_CBMP_back"
+        ],
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "quick-natural-spin-turn",
+        "to": "fallaway-whisk",
+        "conditions": [
+          "count_1"
+        ],
+        "note_ja": "クイック・ナチュラル・スピン・ターンを踊り、右足横に中央斜めに面して終わり（1 2 3、1 2 & 3）、次いでフォーラウェイ・ホイスク（カウント1）、クイック・ウイング（2 & 3）に続ける。",
+        "note_en": "Dance a Quick Natural Spin Turn ending RF to side facing DC (1 2 3, 1 2 & 3), then a Fallaway Whisk (count 1) followed by a Quick Wing (2 & 3).",
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "fallaway-whisk",
+        "to": "chasse-from-pp",
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "fallaway-whisk",
+        "to": "weave",
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "fallaway-whisk",
+        "to": "wing",
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "fallaway-whisk",
+        "to": "left-whisk",
+        "source": "fallaway-whisk/p.50"
+      },
+      {
+        "from": "natural-turn",
+        "fromSteps": [
+          1,
+          3
+        ],
+        "to": "closed-impetus-turn",
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "backward-lock-step",
+        "to": "closed-impetus-turn",
+        "conditions": [
+          "start_backing_DW"
+        ],
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "progressive-chasse-to-right",
+        "to": "closed-impetus-turn",
+        "conditions": [
+          "start_backing_DW"
+        ],
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "drag-hesitation",
+        "to": "closed-impetus-turn",
+        "conditions": [
+          "start_backing_DW"
+        ],
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "closed-impetus-turn",
+        "to": "reverse-turn",
+        "toSteps": [
+          4,
+          6
+        ],
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "closed-impetus-turn",
+        "to": "reverse-corte",
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "closed-impetus-turn",
+        "to": "reverse-pivot",
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "closed-impetus-turn",
+        "to": "turning-lock",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "closed-impetus-turn/p.50"
+      },
+      {
+        "from": "closed-impetus-turn",
+        "to": "left-whisk",
+        "conditions": [
+          "at_corner"
+        ],
+        "source": "closed-impetus-turn/p.50"
+      }
+    ]
+  }
+}

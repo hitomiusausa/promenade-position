@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import type {
   AlignmentRelation, DanceId, Direction, FigureStep, FootSide, Footwork,
-  Level, LocaleId, LocalizedText, Modifier, Move, RiseFall, Sway, TurnAmount,
+  Level, LocaleId, LocalizedText, Modifier, Move, RiseFall, Sway, TransitionCondition, TurnAmount,
 } from '../types'
 import { ja } from './locales/ja'
 import { en } from './locales/en'
@@ -13,6 +13,8 @@ export type UiKey =
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
   | 'language' | 'modOpen' | 'modClose' | 'modSep' | 'viewRole' | 'playbackPosition' | 'reset' | 'almost'
   | 'amalgamation' | 'amalgamations' | 'amalgamationsDesc' | 'figuresUnit'
+  | 'preceding' | 'following' | 'precedingDesc' | 'followingDesc' | 'notIncluded'
+  | 'stepRange' | 'viaFigure' | 'noTransitions' | 'thisFigureSteps'
 
 export interface Dictionary {
   ui: Record<UiKey, string>
@@ -30,6 +32,7 @@ export interface Dictionary {
   turn: { none: string; withBetween: string; noBetween: string }
   turnAmount: Record<TurnAmount, string>
   turnDirection: { right: string; left: string }
+  transitionCondition: Record<TransitionCondition, string>
 }
 
 export const DICTIONARIES: Partial<Record<LocaleId, Dictionary>> = { ja, en }

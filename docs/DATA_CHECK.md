@@ -23,6 +23,26 @@
 | 2 | R | 横へ（少し後ろに） | 2 | T | 中央斜めに背面して | なし | ライズ継続 | 左 |  |  |
 | 3 | L | 閉じる | 3 | TH | 中央斜めに背面して | なし | ライズ継続、3の終わりにロア | 左 |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | closed-change-natural/p.17; natural-turn/p.18 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン |  |  | closed-change-natural/p.17; reverse-turn/p.19 |
+| クローズド・テレマーク |  |  | closed-change-natural/p.17; closed-telemark/p.29 |
+| オープン・テレマーク |  |  | closed-change-natural/p.17; open-telemark/p.29 |
+| オープン・テレマーク・フォロード・バイ・ウイング |  |  | closed-change-natural/p.17; open-telemark-wing/p.30 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション |  |  | closed-change-natural/p.17; open-telemark-cross-hesitation/p.31 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | closed-change-natural/p.17; progressive-chasse-to-right/p.39 |
+| ダブル・リバース・スピン |  |  | closed-change-natural/p.17 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
 ## クローズドチェンジ（リバースからナチュラル） / Closed Change (Reverse to Natural)  (`closed-change-reverse`)
 
 ✅ 2026-08-17 教本『ワルツ』p.17 と全歩・全列を照合済み（D-24）
@@ -42,6 +62,27 @@
 | 1 | R | 後退 | 1 | TH | 壁斜めに背面して | なし | 1の終わりにライズ開始（NFR） | ｰ | ○ | 1で少しCBM |
 | 2 | L | 横へ（少し後ろに） | 2 | T | 壁斜めに背面して | なし | ライズ継続 | 右 |  |  |
 | 3 | R | 閉じる | 3 | TH | 壁斜めに背面して | なし | ライズ継続、3の終わりにロア | 右 |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン |  |  | closed-change-reverse/p.17; reverse-turn/p.19 |
+| リバースターンの4〜6歩 | ナチュラルスピンターンの後 |  | closed-change-reverse/p.17 |
+| ヘジテーションチェンジ | コーナーで |  | closed-change-reverse/p.17 |
+| ダブル・リバース・スピン |  |  | closed-change-reverse/p.17 |
+| ヘジテーションチェンジ | コーナーで／新壁斜めに面して終わる |  | hesitation-change/p.24 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | closed-change-reverse/p.17; natural-turn/p.18 |
+| ナチュラルスピンターン |  |  | closed-change-reverse/p.17; natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | closed-change-reverse/p.17; underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | closed-change-reverse/p.17; hesitation-change/p.24 |
+| ランニング・スピン・ターン |  |  | closed-change-reverse/p.17; running-spin-turn/p.46 |
 
 ## ナチュラルターン / Natural Turn  (`natural-turn`)
 
@@ -69,6 +110,44 @@
 | 5 | L | 横へ | 2 | T | 中央に背面して | 右1/4(4-5) | ライズ継続 | 右 |  |  |
 | 6 | R | 閉じる | 3 | TH | 中央斜めに背面して | 右1/8(5-6) | ライズ継続、3の終わりにロア | 右 |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17; natural-turn/p.18 |
+| アウトサイド・スピン |  |  | natural-turn/p.18; outside-spin/p.42 |
+| シャッセ フロム PP | 右足OPでCBMPに前進する場合 |  | natural-turn/p.18; chasse-from-pp/p.21 |
+| アウトサイドチェンジ |  |  | natural-turn/p.18 |
+| ウイーブ・イン・ワルツ・タイム |  |  | natural-turn/p.18 |
+| クローズド・テレマーク |  |  | natural-turn/p.18 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ |  |  | natural-turn/p.18 |
+| ホイスク・フォロード・バイ・ウイーブ |  |  | natural-turn/p.18 |
+| ターニング・ロック（トゥ・レフト） |  |  | natural-turn/p.18 |
+| フォーラウェイ・ナチュラル・ターン |  |  | natural-turn/p.18 |
+| コントラ・チェック | クローズ・ホールドで終わる |  | natural-turn/p.18 |
+| ウイーブ・イン・ワルツ・タイム | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める／このフィガーの4〜6歩へ |  | open-impetus-cross-hesitation/p.34 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ホイスク・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ターニング・ロック（トゥ・レフト） | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| プログレッシブ・シャッセ・トゥ・ライト | このフィガーの4〜6歩へ |  | progressive-chasse-to-right/p.39 |
+| バックワード・ロック・ステップ | このフィガーの4〜6歩へ |  | backward-lock-step/p.40 |
+| フォーラウェイ・ナチュラル・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| ドラグ・ヘジテーション | このフィガーの4〜6歩へ |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; natural-turn/p.18 |
+| （教本が群で記述・特定不可） | 新壁斜めに面して終わる | もし新壁斜めに面して終わる場合: すべてのナチュラル系フィガー | natural-turn/p.18 |
+| バック・ホイスク | このフィガーの1〜3歩の後 |  | natural-turn/p.18 |
+| オープン・インピタス・ターン | このフィガーの1〜3歩の後 |  | natural-turn/p.18; open-impetus-turn/p.32 |
+| アウトサイドチェンジ | 中央斜めに背面して終わる／このフィガーの1〜3歩の後 | ナチュラル・ターンの1〜3歩を中央斜めに背面して終わった後、アウトサイド・チェンジの第1歩は女子をイン・ラインに左足後退。 | natural-turn/p.18; outside-change/p.27 |
+| フォーラウェイ・ホイスク | このフィガーの1〜3歩の後 |  | fallaway-whisk/p.50 |
+| クローズド・インピタス・ターン | このフィガーの1〜3歩の後 |  | closed-impetus-turn/p.50 |
+
 ## リバースターン / Reverse Turn  (`reverse-turn`)
 
 ✅ 2026-08-17 教本『ワルツ』p.19 と全歩・全列を照合済み（D-24）
@@ -94,6 +173,61 @@
 | 4 | L | 前進 | 1 | HT | LODに面して | なし | ダウン、1の終わりにライズ開始 | ｰ | ○ | 4で左回転を継続 |
 | 5 | R | 横へ | 2 | T | 壁に背面して | 左1/4(4-5) | ライズ継続 | 左 |  |  |
 | 6 | L | 閉じる | 3 | TH | 壁斜めに背面して | 左1/8(5-6) | ライズ継続、3の終わりにロア | 左 |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; reverse-turn/p.19 |
+| ヘジテーションチェンジ |  |  | reverse-turn/p.19; hesitation-change/p.24 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後 |  | reverse-turn/p.19 |
+| リバース・ピボット |  |  | reverse-turn/p.19 |
+| ダブル・リバース・スピン |  |  | reverse-turn/p.19 |
+| ウイング【未収録】 | 左足左OPでCBMPに前進する場合 |  | reverse-turn/p.19 |
+| クローズド・ウイング |  |  | reverse-turn/p.19 |
+| ナチュラルスピンターン | 壁斜めに面して終わる／このフィガーの4〜6歩へ |  | natural-spin-turn/p.22 |
+| ナチュラルスピンターン | LODに面して終わる／このフィガーの4〜6歩へ |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン | 中央斜めに向けて終わる／このフィガーの4〜6歩へ |  | underturned-natural-spin-turn/p.23 |
+| アンダーターンド・ナチュラル・スピン・ターン | 中央斜めに面して終わる／このフィガーの4〜6歩へ |  | underturned-natural-spin-turn/p.23 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで／このフィガーの4〜6歩へ |  | underturned-natural-spin-turn/p.23 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| アンダーターンド・アウトサイド・スピン | 壁斜めに面して終わる／このフィガーの4〜6歩へ |  | underturned-outside-spin/p.37 |
+| アンダーターンド・アウトサイド・スピン | LODに面して終わる／このフィガーの4〜6歩へ |  | underturned-outside-spin/p.37 |
+| リバース・ピボット | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | LODに面して終わる／このフィガーの1〜3歩へ |  | double-reverse-spin/p.41 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | closed-wing/p.47 |
+| クローズド・インピタス・ターン | このフィガーの4〜6歩へ |  | closed-impetus-turn/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17; reverse-turn/p.19 |
+| クローズドチェンジ（リバースからナチュラル） | ナチュラルスピンターンの後／このフィガーの4〜6歩の後 |  | closed-change-reverse/p.17 |
+| リバースターン | アンダーターンド・ナチュラル・スピン・ターンの後／このフィガーの4〜6歩の後 |  | reverse-turn/p.19 |
+| ウィスク |  |  | reverse-turn/p.19; whisk/p.20 |
+| ダブル・リバース・スピン |  |  | reverse-turn/p.19 |
+| コントラ・チェック |  |  | reverse-turn/p.19; contra-check/p.48 |
+| リバースコルテ | このフィガーの1〜3歩の後 |  | reverse-turn/p.19; reverse-corte/p.25 |
+| リバース・ピボット | このフィガーの1〜3歩の後 |  | reverse-turn/p.19; reverse-pivot/p.38 |
+| ウイーブ・イン・ワルツ・タイム | アンダーターンして／壁斜めに背面して終わる／このフィガーの1〜3歩の後 |  | reverse-turn/p.19 |
+| ウィスク | ナチュラルスピンターンの後／このフィガーの4〜6歩の後 |  | whisk/p.20 |
+| ウイーブ・イン・ワルツ・タイム | 壁斜めに背面して終わる／このフィガーの1〜3歩の後 |  | weave-in-waltz-time/p.28 |
+| ウイーブ・イン・ワルツ・タイム | 中央斜めに背面して終わる／このフィガーの1〜3歩の後 |  | weave-in-waltz-time/p.28 |
+| ウイーブ・イン・ワルツ・タイム | LODに背面して終わる／このフィガーの1〜3歩の後 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | アンダーターンド・ナチュラル・スピン・ターンの後／このフィガーの4〜6歩の後 |  | closed-telemark/p.29 |
+| オープン・テレマーク | アンダーターンド・ナチュラル・スピン・ターンの後／このフィガーの4〜6歩の後 |  | open-telemark/p.29 |
+| オープン・テレマーク・フォロード・バイ・ウイング | アンダーターンド・ナチュラル・スピン・ターンの後／このフィガーの4〜6歩の後 |  | open-telemark-wing/p.30 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | アンダーターンド・ナチュラル・スピン・ターンの後／このフィガーの4〜6歩の後 |  | open-telemark-cross-hesitation/p.31 |
+| プログレッシブ・シャッセ・トゥ・ライト | 中央斜めに面して終わる／このフィガーの4〜6歩の後 |  | progressive-chasse-to-right/p.39 |
+| プログレッシブ・シャッセ・トゥ・ライト | LODに面して終わる／このフィガーの4〜6歩の後 |  | progressive-chasse-to-right/p.39 |
+| ダブル・リバース・スピン | アンダーターンド・ナチュラル・スピン・ターンの後／中央斜めに面して終わる／このフィガーの4〜6歩の後 |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | アンダーターンド・ナチュラル・スピン・ターンの後／LODに面して終わる／このフィガーの4〜6歩の後 |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| コントラ・チェック | ナチュラルスピンターンの後／このフィガーの4〜6歩の後 |  | contra-check/p.48 |
+| ドラグ・ヘジテーション | このフィガーの4〜6歩の後 |  | drag-hesitation/p.49 |
 
 ## ナチュラルスピンターン / Natural Spin Turn  (`natural-spin-turn`)
 
@@ -121,6 +255,40 @@
 | 5 | L | 後退（少し左方に） | 2 | T | LODに背面して | なし | ダウン、2の終わりにライズ開始 | ｰ |  | 5で回転を継続。次いで右足を左足にブラッシュ |
 | 6 | R | 斜め前へ | 3 | TH | 中央斜めに面して | 右3/8(5-6) | アップ、3の終わりにロア | ｰ |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17; natural-spin-turn/p.22 |
+| シャッセ フロム PP | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; natural-spin-turn/p.22 |
+| アウトサイド・スピン |  |  | natural-spin-turn/p.22; outside-spin/p.42 |
+| アウトサイドチェンジ |  |  | natural-spin-turn/p.22 |
+| ウイーブ・イン・ワルツ・タイム |  |  | natural-spin-turn/p.22 |
+| クローズド・テレマーク |  |  | natural-spin-turn/p.22 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ |  |  | natural-spin-turn/p.22 |
+| ホイスク・フォロード・バイ・ウイーブ |  |  | natural-spin-turn/p.22 |
+| ターニング・ロック（トゥ・レフト） |  |  | natural-spin-turn/p.22 |
+| フォーラウェイ・ナチュラル・ターン |  |  | natural-spin-turn/p.22 |
+| コントラ・チェック | クローズ・ホールドで終わる |  | natural-spin-turn/p.22 |
+| ウイーブ・イン・ワルツ・タイム | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ホイスク・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ターニング・ロック（トゥ・レフト） | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| フォーラウェイ・ナチュラル・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターンの4〜6歩 | 壁斜めに面して終わる |  | natural-spin-turn/p.22 |
+| リバースターンの4〜6歩 | LODに面して終わる |  | natural-spin-turn/p.22 |
+| リバースコルテ |  |  | natural-spin-turn/p.22; reverse-corte/p.25 |
+| ターニング・ロック（トゥ・レフト） |  |  | natural-spin-turn/p.22; turning-lock/p.38 |
+| リバース・ピボット |  |  | natural-spin-turn/p.22; reverse-pivot/p.38 |
+| ターニング・ロック・トゥ・ライト |  |  | natural-spin-turn/p.22 |
+| ターニング・ロック・トゥ・ライト | オーバーターンして／終わりはほぼLODに背面して |  | turning-lock-to-right/p.43 |
+
 ## ウィスク / Whisk  (`whisk`)
 
 ✅ 2026-08-17 教本『ワルツ』p.20 と全歩・全列を照合済み（D-24）
@@ -140,6 +308,32 @@
 | 1 | R | 後退 | 1 | TH | 壁斜めに背面して | なし | 1の終わりにライズ開始（NFR） | ｰ |  | 1で回転なし |
 | 2 | L | 斜め後ろへ | 2 | T | 中央斜めに向けて | 右1/4(1-2) | ライズ継続 | 右 |  | ボディの回転は少なめ |
 | 3 | R | 後ろにクロス（PPで） | 3 | TH | 中央斜めに面して | なし | アップ、3の終わりにロア | 右 |  | 3で体の回転を完了。PPで終わる |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン |  |  | reverse-turn/p.19; whisk/p.20 |
+| リバース・ピボット |  |  | whisk/p.20 |
+| ダブル・リバース・スピン |  |  | whisk/p.20 |
+| リバースターンの4〜6歩 | ナチュラルスピンターンの後 |  | whisk/p.20 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで |  | whisk/p.20 |
+| ウイング【未収録】 | 新壁斜めに面して終わる | ウイングを新壁斜めに終わった場合: 第1歩を左足左 OP で CBMP に前進 | whisk/p.20 |
+| ヘジテーションチェンジ | コーナーで |  | whisk/p.20 |
+| ヘジテーションチェンジ | コーナーで／新壁斜めに面して終わる |  | hesitation-change/p.24 |
+| オープン・テレマーク・フォロード・バイ・ウイング | コーナーで |  | open-telemark-wing/p.30 |
+| リバース・ピボット | 壁斜めに面して終わる |  | reverse-pivot/p.38 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| シャッセ フロム PP |  |  | whisk/p.20; chasse-from-pp/p.21 |
+| クロス・ヘジテーション【未収録】 |  |  | whisk/p.20 |
+| ウイング【未収録】 |  |  | whisk/p.20 |
+| レフト・ホイスク | PPで男子右足CBMPにアクロスして前進 | 女子第1歩のアラインメントは、中央斜めに面して、LOD に沿って動く。 | whisk/p.20; left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン | PPで男子右足CBMPにアクロスして前進 |  | fallaway-natural-turn/p.45 |
 
 ## シャッセ フロム PP / Chasse from PP  (`chasse-from-pp`)
 
@@ -162,6 +356,38 @@
 | 2 | R | 横へ | 2 | T | 壁に背面して | 左1/8(1-2) | ライズ継続 | ｰ |  |  |
 | 3 | L | 閉じる | & | T | 壁斜めに背面して | 左1/8(2-3) | ライズ継続 | ｰ |  | ボディの回転は少なめ |
 | 4 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | なし | アップ、3の終わりにロア | ｰ |  | クローズドポジションで終わる |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ウィスク |  |  | whisk/p.20; chasse-from-pp/p.21 |
+| バック・ホイスク |  |  | chasse-from-pp/p.21; back-whisk/p.26 |
+| オープン・テレマーク | PPで男子右足CBMPに前進 |  | chasse-from-pp/p.21 |
+| コントラ・チェック | PPで男子右足CBMPに前進 |  | chasse-from-pp/p.21 |
+| アウトサイドチェンジ | PPで終わるとき |  | chasse-from-pp/p.21; outside-change/p.27 |
+| ウイーブ・イン・ワルツ・タイム | PPで終わるとき |  | chasse-from-pp/p.21 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | PPで終わるとき |  | chasse-from-pp/p.21 |
+| ホイスク・フォロード・バイ・ウイーブ | PPで終わるとき |  | chasse-from-pp/p.21 |
+| ターニング・ロック（トゥ・レフト） | PPで終わるとき |  | chasse-from-pp/p.21 |
+| オープン・インピタス・ターン | コーナーで |  | chasse-from-pp/p.21 |
+| オープン・テレマーク |  |  | open-telemark/p.29 |
+| オープン・インピタス・ターン |  |  | open-impetus-turn/p.32 |
+| コントラ・チェック |  |  | contra-check/p.48 |
+| フォーラウェイ・ホイスク |  |  | fallaway-whisk/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | natural-turn/p.18; chasse-from-pp/p.21 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; hesitation-change/p.24 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; running-spin-turn/p.46 |
+| レフト・ホイスク | カウント1 |  | chasse-from-pp/p.21 |
+| クローズド・ウイング | ウィスクの後／中央斜めに面して終わる |  | closed-wing/p.47 |
+| クローズド・ウイング | バック・ホイスクの後／中央斜めに面して終わる |  | closed-wing/p.47 |
 
 ## ヘジテーションチェンジ / Hesitation Change  (`hesitation-change`)
 
@@ -189,6 +415,50 @@
 | 5 | L | 横へ | 2 | TH | 中央斜めに背面して | 右3/8(4-5) | ダウン | 右 |  |  |
 | 6 | R | 体重を移さないでクローズ | 3 | TのIE | 中央斜めに背面して | なし | ダウン | 右 |  | 6で回転なし |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17; hesitation-change/p.24 |
+| シャッセ フロム PP | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; hesitation-change/p.24 |
+| アウトサイド・スピン |  |  | hesitation-change/p.24; outside-spin/p.42 |
+| アウトサイドチェンジ |  |  | hesitation-change/p.24 |
+| ウイーブ・イン・ワルツ・タイム |  |  | hesitation-change/p.24 |
+| クローズド・テレマーク |  |  | hesitation-change/p.24 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ |  |  | hesitation-change/p.24 |
+| ホイスク・フォロード・バイ・ウイーブ |  |  | hesitation-change/p.24 |
+| ターニング・ロック（トゥ・レフト） |  |  | hesitation-change/p.24 |
+| フォーラウェイ・ナチュラル・ターン |  |  | hesitation-change/p.24 |
+| コントラ・チェック | クローズ・ホールドで終わる |  | hesitation-change/p.24 |
+| ウイーブ・イン・ワルツ・タイム | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ホイスク・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ターニング・ロック（トゥ・レフト） | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| プログレッシブ・シャッセ・トゥ・ライト | このフィガーの4〜6歩へ |  | progressive-chasse-to-right/p.39 |
+| バックワード・ロック・ステップ | このフィガーの4〜6歩へ |  | backward-lock-step/p.40 |
+| フォーラウェイ・ナチュラル・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| ドラグ・ヘジテーション | このフィガーの4〜6歩へ |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） | コーナーで |  | closed-change-reverse/p.17 |
+| リバースターン |  |  | reverse-turn/p.19; hesitation-change/p.24 |
+| ウィスク | コーナーで |  | whisk/p.20 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | hesitation-change/p.24; progressive-chasse-to-right/p.39 |
+| ダブル・リバース・スピン |  |  | hesitation-change/p.24 |
+| クローズドチェンジ（リバースからナチュラル） | コーナーで／新壁斜めに面して終わる |  | hesitation-change/p.24 |
+| ウィスク | コーナーで／新壁斜めに面して終わる |  | hesitation-change/p.24 |
+| クローズド・テレマーク |  |  | closed-telemark/p.29 |
+| オープン・テレマーク |  |  | open-telemark/p.29 |
+| オープン・テレマーク・フォロード・バイ・ウイング |  |  | open-telemark-wing/p.30 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション |  |  | open-telemark-cross-hesitation/p.31 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| コントラ・チェック | コーナーで |  | contra-check/p.48 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
 ## アウトサイドチェンジ / Outside Change  (`outside-change`)
 
 ✅ 2026-08-17 教本『ワルツ』p.27 と全歩・全列を照合済み（D-24）
@@ -209,6 +479,37 @@
 | 2 | L | 前進 | 2 | T | 中央斜めに面して | なし | ライズ継続 | ｰ | ○ | 2で左回転を始める |
 | 3 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左1/4(2-3) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターンの1〜3歩 | 中央斜めに背面して終わる | ナチュラル・ターンの1〜3歩を中央斜めに背面して終わった後、アウトサイド・チェンジの第1歩は女子をイン・ラインに左足後退。 | natural-turn/p.18; outside-change/p.27 |
+| リバースコルテ | 左足CBMPに後退して始める／コーナーで |  | reverse-corte/p.25 |
+| ランニング・スピン・ターン |  |  | outside-change/p.27; running-spin-turn/p.46 |
+| プログレッシブ・シャッセ・トゥ・ライト | 1/2回転して |  | outside-change/p.27 |
+| リバースコルテ | コーナーで |  | outside-change/p.27 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | コーナーで |  | outside-change/p.27 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める／コーナーで |  | open-telemark-cross-hesitation/p.31 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| シャッセ フロム PP | PPで終わるとき |  | chasse-from-pp/p.21; outside-change/p.27 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| （教本が群で記述・特定不可） | 右足OPでCBMPに前進する場合 | 右足 OP で CBMP に前進してすべてのナチュラル系フィガーに。 | outside-change/p.27 |
+| レフト・ホイスク | カウント1 |  | outside-change/p.27 |
+| クロス・ヘジテーション【未収録】 | PPで終わるとき |  | outside-change/p.27 |
+| レフト・ホイスク | PPで終わるとき |  | outside-change/p.27; left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン | PPで終わるとき |  | outside-change/p.27; fallaway-natural-turn/p.45 |
+| ウイング【未収録】 | PPで終わるとき | 註: 男子 左足 PP で横、少し後ろに、体は壁に面して、壁斜めに向けて／女子 右足 PP で右サイド・リーディングで前、少し右に、LOD に向けて。 | outside-change/p.27 |
+| レフト・ホイスク |  |  | left-whisk/p.44 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
+| クローズド・ウイング | 中央斜めに面して終わる |  | closed-wing/p.47 |
+
 ## リバースコルテ / Reverse Corte  (`reverse-corte`)
 
 ✅ 2026-08-17 教本『ワルツ』p.25 と全歩・全列を照合済み（D-24）
@@ -228,6 +529,34 @@
 | 1 | L | 前進 | 1 | HT | LODに面して | なし | 1の終わりにライズ開始 | ｰ | ○ | 1で左回転を始める |
 | 2 | R | 横へ | 2 | T | 中央に面して | 左1/4(1-2) | ライズ継続 | 左 |  |  |
 | 3 | L | 閉じる | 3 | TH | 逆中央斜めに面して | 左1/8(2-3) | ライズ継続、3の終わりにロア | 左 |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターンの1〜3歩 |  |  | reverse-turn/p.19; reverse-corte/p.25 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22; reverse-corte/p.25 |
+| アンダーターンド・ナチュラル・スピン・ターン | 左へ1/4、または1/2回転する |  | underturned-natural-spin-turn/p.23 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| アンダーターンド・アウトサイド・スピン |  |  | reverse-corte/p.25; underturned-outside-spin/p.37 |
+| クローズド・インピタス・ターン |  |  | closed-impetus-turn/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| バック・ホイスク | 左足CBMPに後退して始める |  | reverse-corte/p.25 |
+| アウトサイド・スピン | 左足CBMPに後退して始める |  | reverse-corte/p.25 |
+| アウトサイドチェンジ | 左足CBMPに後退して始める／コーナーで |  | reverse-corte/p.25 |
+| バック・ホイスク | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| オープン・インピタス・ターン | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| アンダーターンド・アウトサイド・スピン | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| バックワード・ロック・ステップ | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| バック・ホイスク |  |  | back-whisk/p.26 |
+| アウトサイドチェンジ | コーナーで |  | outside-change/p.27 |
+| アンダーターンド・アウトサイド・スピン | アンダーターンド・ナチュラル・スピン・ターンの後／1/2回転して |  | underturned-outside-spin/p.37 |
+| バックワード・ロック・ステップ | 1/2回転して |  | backward-lock-step/p.40 |
+| アウトサイド・スピン |  |  | outside-spin/p.42 |
 
 ## アンダーターンド・ナチュラル・スピン・ターン / Underturned Natural Spin Turn  (`underturned-natural-spin-turn`)
 
@@ -255,6 +584,46 @@
 | 5 | L | 後退（少し左方に） | 2 | T | 中央斜めに背面して | なし | ダウン、2の終わりにライズ開始 | ｰ |  | 5で回転を継続。次いで右足を左足にブラッシュ |
 | 6 | R | 斜め前へ | 3 | TH | 逆中央斜めに面して | 右1/4(5-6) | アップ、3の終わりにロア | ｰ |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17; underturned-natural-spin-turn/p.23 |
+| シャッセ フロム PP | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; underturned-natural-spin-turn/p.23 |
+| アウトサイド・スピン |  |  | underturned-natural-spin-turn/p.23; outside-spin/p.42 |
+| アウトサイドチェンジ |  |  | underturned-natural-spin-turn/p.23 |
+| ウイーブ・イン・ワルツ・タイム |  |  | underturned-natural-spin-turn/p.23 |
+| クローズド・テレマーク |  |  | underturned-natural-spin-turn/p.23 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ |  |  | underturned-natural-spin-turn/p.23 |
+| ホイスク・フォロード・バイ・ウイーブ |  |  | underturned-natural-spin-turn/p.23 |
+| ターニング・ロック（トゥ・レフト） |  |  | underturned-natural-spin-turn/p.23 |
+| フォーラウェイ・ナチュラル・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| コントラ・チェック | クローズ・ホールドで終わる |  | underturned-natural-spin-turn/p.23 |
+| ウイーブ・イン・ワルツ・タイム | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ホイスク・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ターニング・ロック（トゥ・レフト） | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| フォーラウェイ・ナチュラル・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ウィスク | コーナーで |  | whisk/p.20 |
+| リバースターンの4〜6歩 | 中央斜めに向けて終わる |  | underturned-natural-spin-turn/p.23 |
+| リバースターンの4〜6歩 | 中央斜めに面して終わる |  | underturned-natural-spin-turn/p.23 |
+| リバース・ピボット |  |  | underturned-natural-spin-turn/p.23; reverse-pivot/p.38 |
+| リバースコルテ | 左へ1/4、または1/2回転する |  | underturned-natural-spin-turn/p.23 |
+| ターニング・ロック（トゥ・レフト） | 中央斜めに面して終わる |  | underturned-natural-spin-turn/p.23 |
+| リバースターンの4〜6歩 | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| リバースコルテ | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| ターニング・ロック（トゥ・レフト） | コーナーで |  | underturned-natural-spin-turn/p.23; turning-lock/p.38 |
+| リバース・ピボット | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| ターニング・ロック・トゥ・ライト | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| ターニング・ロック（トゥ・レフト） |  |  | turning-lock/p.38 |
+| ターニング・ロック・トゥ・ライト | コーナーで／オーバーターンして／終わりはほぼLODに背面して |  | turning-lock-to-right/p.43 |
+
 ## バック・ホイスク / Back Whisk  (`back-whisk`)
 
 🆕 2026-08-17 教本『ワルツ』p.26 から転記（D-25）— 利用者の独立検収待ち
@@ -274,6 +643,32 @@
 | 1 | R | 前進（アウトサイドパートナー・CBMPに） | 1 | HT | 逆中央斜めに面して | なし | 1の終わりにライズ開始 | ｰ | ○ | 1で右回転を始める |
 | 2 | L | 横へ | 2 | T | 中央に面して | 右1/8(1-2) | ライズ継続 | 右 |  |  |
 | 3 | R | 後ろにクロス（PPで） | 3 | TH | 中央斜めに面して | 右1/8(2-3) | アップ、3の終わりにロア | 右 |  | PPで終わる |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターンの1〜3歩 |  |  | natural-turn/p.18 |
+| リバースコルテ | 左足CBMPに後退して始める |  | reverse-corte/p.25 |
+| リバースコルテ | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| リバースコルテ |  |  | back-whisk/p.26 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション |  |  | back-whisk/p.26 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める |  | open-telemark-cross-hesitation/p.31 |
+| オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める／回転の有無にかかわらず |  | open-impetus-cross-hesitation/p.34 |
+| オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション | コーナーで／回転の有無にかかわらず |  | open-impetus-cross-hesitation/p.34 |
+| プログレッシブ・シャッセ・トゥ・ライト | 回転の有無にかかわらず |  | progressive-chasse-to-right/p.39 |
+| バックワード・ロック・ステップ | 回転の有無にかかわらず |  | backward-lock-step/p.40 |
+| レフト・ホイスク | 回転の有無にかかわらず | 女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。 | left-whisk/p.44 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| シャッセ フロム PP |  |  | chasse-from-pp/p.21; back-whisk/p.26 |
+| レフト・ホイスク |  |  | back-whisk/p.26 |
+| レフト・ホイスク | PPで男子右足CBMPにアクロスして前進 | 女子第1歩のアラインメントは、中央斜めに面して、LOD に沿って動く。 | left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン | PPで男子右足CBMPにアクロスして前進 |  | fallaway-natural-turn/p.45 |
 
 ## ウイーブ・イン・ワルツ・タイム / Weave in Waltz Time  (`weave-in-waltz-time`)
 
@@ -301,6 +696,35 @@
 | 5 | L | 前進 | 2 | T | 中央斜めに面して | なし | ライズ継続 | ｰ | ○ | 5で左回転を継続 |
 | 6 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左1/4(5-6) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターンの1〜3歩 | アンダーターンして／壁斜めに背面して終わる |  | reverse-turn/p.19 |
+| リバースターンの1〜3歩 | 壁斜めに背面して終わる |  | weave-in-waltz-time/p.28 |
+| リバースターンの1〜3歩 | 中央斜めに背面して終わる |  | weave-in-waltz-time/p.28 |
+| リバースターンの1〜3歩 | LODに背面して終わる |  | weave-in-waltz-time/p.28 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| シャッセ フロム PP | PPで終わるとき |  | chasse-from-pp/p.21 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| レフト・ホイスク | カウント1 |  | weave-in-waltz-time/p.28 |
+| レフト・ホイスク | PPで終わるとき |  | left-whisk/p.44 |
+| レフト・ホイスク |  |  | left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン | PPで終わるとき |  | fallaway-natural-turn/p.45 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
+
 ## クローズド・テレマーク / Closed Telemark  (`closed-telemark`)
 
 🆕 2026-08-17 教本『ワルツ』p.29 から転記（D-25）— 利用者の独立検収待ち
@@ -321,6 +745,38 @@
 | 2 | L | 閉じる（Hターン） | 2 | HT | LODに面して | 左3/8(1-2) | ライズ継続 | 右 |  |  |
 | 3 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左3/8(2-3) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; closed-telemark/p.29 |
+| ヘジテーションチェンジ |  |  | closed-telemark/p.29 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後 |  | closed-telemark/p.29 |
+| リバース・ピボット |  |  | closed-telemark/p.29 |
+| ダブル・リバース・スピン |  |  | closed-telemark/p.29 |
+| ウイング【未収録】 | 左足左OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | closed-telemark/p.29; closed-wing/p.47 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| リバース・ピボット | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| レフト・ホイスク | カウント1 |  | closed-telemark/p.29 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
+
 ## オープン・テレマーク / Open Telemark  (`open-telemark`)
 
 🆕 2026-08-17 教本『ワルツ』p.29 から転記（D-25）— 利用者の独立検収待ち
@@ -340,6 +796,32 @@
 | 1 | R | 後退 | 1 | TH | 中央斜めに背面して | なし | 1の終わりに少しライズ（NFR） | ｰ | ○ | 1で左回転を始める |
 | 2 | L | 閉じる（Hターン） | 2 | HT | LODに面して | 左3/8(1-2) | ライズ継続 | 右 |  |  |
 | 3 | R | 斜め前へ（PPで・SLで） | 3 | TH | LODに向けて | なし | アップ、3の終わりにロア | ｰ |  | 右SL。3で体を少し左に回転 |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; open-telemark/p.29 |
+| ヘジテーションチェンジ |  |  | open-telemark/p.29 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後 |  | open-telemark/p.29 |
+| リバース・ピボット |  |  | open-telemark/p.29 |
+| ダブル・リバース・スピン |  |  | open-telemark/p.29 |
+| ウイング【未収録】 | 左足左OPでCBMPに前進する場合 |  | open-telemark/p.29 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark/p.29; closed-wing/p.47 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| リバース・ピボット | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| シャッセ フロム PP | PPで男子右足CBMPに前進 |  | chasse-from-pp/p.21 |
+| シャッセ フロム PP |  |  | open-telemark/p.29 |
+| クロス・ヘジテーション【未収録】 |  |  | open-telemark/p.29 |
+| レフト・ホイスク |  |  | open-telemark/p.29; left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン |  |  | open-telemark/p.29; fallaway-natural-turn/p.45 |
 
 ## オープン・テレマーク・フォロード・バイ・ウイング / Open Telemark followed by Wing  (`open-telemark-wing`)
 
@@ -367,6 +849,32 @@
 | 5 | R | 前進（左OPへの準備をしながら） | 2 | T | 中央に面して | 左1/8(4-5) | ライズ継続 | 左 |  |  |
 | 6 | L | 前進（左OPで・CBMPに） | 3 | TH | 逆LODに面して | 左1/4(5-6) | アップ、3の終わりにロア | 左 |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; open-telemark-wing/p.30 |
+| ヘジテーションチェンジ |  |  | open-telemark-wing/p.30 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後 |  | open-telemark-wing/p.30 |
+| リバース・ピボット |  |  | open-telemark-wing/p.30 |
+| ダブル・リバース・スピン |  |  | open-telemark-wing/p.30 |
+| ウイング【未収録】 | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30; closed-wing/p.47 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| クローズド・テレマーク | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・テレマーク | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| プログレッシブ・シャッセ・トゥ・ライト | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| ダブル・リバース・スピン | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| ウィスク | コーナーで |  | open-telemark-wing/p.30 |
+
 ## オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション / Open Telemark followed by Cross Hesitation  (`open-telemark-cross-hesitation`)
 
 🆕 2026-08-17 教本『ワルツ』p.31 から転記（D-25）— 利用者の独立検収待ち
@@ -393,6 +901,32 @@
 | 5 | R | 横へ | 2 | T | 中央に面して | 左1/4(4-5) | ライズ継続 | 左 |  |  |
 | 6 | L | 閉じる | 3 | TH | 逆中央斜めに面して | 左1/8(5-6) | ライズ継続、3の終わりにロア | 左 |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; open-telemark-cross-hesitation/p.31 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| ヘジテーションチェンジ |  |  | open-telemark-cross-hesitation/p.31 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後 |  | open-telemark-cross-hesitation/p.31 |
+| リバース・ピボット |  |  | open-telemark-cross-hesitation/p.31 |
+| ダブル・リバース・スピン |  |  | open-telemark-cross-hesitation/p.31 |
+| ウイング【未収録】 | 左足左OPでCBMPに前進する場合 |  | open-telemark-cross-hesitation/p.31 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-cross-hesitation/p.31; closed-wing/p.47 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| バック・ホイスク |  |  | back-whisk/p.26 |
+| アウトサイドチェンジ | コーナーで |  | outside-change/p.27 |
+| バック・ホイスク | 左足CBMPに後退して始める |  | open-telemark-cross-hesitation/p.31 |
+| アウトサイド・スピン | 左足CBMPに後退して始める |  | open-telemark-cross-hesitation/p.31 |
+| アウトサイドチェンジ | 左足CBMPに後退して始める／コーナーで |  | open-telemark-cross-hesitation/p.31 |
+| アウトサイド・スピン |  |  | outside-spin/p.42 |
+
 ## オープン・インピタス・ターン / Open Impetus Turn  (`open-impetus-turn`)
 
 🆕 2026-08-17 教本『ワルツ』p.32 から転記（D-25）— 利用者の独立検収待ち
@@ -412,6 +946,31 @@
 | 1 | R | 前進 | 1 | HT | LODに面して | なし | ダウン | ｰ | ○ | 1で右回転を始める |
 | 2 | L | 横へ | 2 | T | 中央斜めに背面して | 右3/8(1-2) | ダウン、2の終わりにライズ開始 | 右 |  | 次いで右足を左足にブラッシュ |
 | 3 | R | 横へ（PPで） | 3 | TH | 中央に向けて | 右3/8(2-3) | アップ、3の終わりにロア | ｰ |  | 中央斜めに動く。ボディの回転は少なめ |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターンの1〜3歩 |  |  | natural-turn/p.18; open-impetus-turn/p.32 |
+| リバースコルテ | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| プログレッシブ・シャッセ・トゥ・ライト | 壁斜めに背面して始める場合 |  | open-impetus-turn/p.32 |
+| バックワード・ロック・ステップ | 壁斜めに背面して始める場合 |  | open-impetus-turn/p.32 |
+| オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | progressive-chasse-to-right/p.39 |
+| バックワード・ロック・ステップ |  |  | backward-lock-step/p.40 |
+| レフト・ホイスク |  | 女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。 | left-whisk/p.44 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| シャッセ フロム PP | コーナーで |  | chasse-from-pp/p.21 |
+| シャッセ フロム PP |  |  | open-impetus-turn/p.32 |
+| ウイング【未収録】 |  |  | open-impetus-turn/p.32 |
+| ウイーブ【未収録】 |  |  | open-impetus-turn/p.32 |
+| レフト・ホイスク |  |  | left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン | コーナーで |  | fallaway-natural-turn/p.45 |
 
 ## オープン・インピタス・ターン・フォロード・バイ・ウイング / Open Impetus Turn followed by Wing  (`open-impetus-wing`)
 
@@ -439,6 +998,22 @@
 | 5 | R | 前進（左OPへの準備をしながら） | 2 | T | 逆中央斜めに面して | 左1/8(4-5) | ライズ継続 | 左 |  |  |
 | 6 | L | 前進（左OPで・CBMPに） | 3 | TH | 逆壁斜めに面して | 左1/4(5-6) | アップ、3の終わりにロア | 左 |  |  |
 
+### 先行できるフィガー
+
+教本に記載なし
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| クローズド・テレマーク | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| オープン・テレマーク | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| プログレッシブ・シャッセ・トゥ・ライト | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| ダブル・リバース・スピン | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+
 ## オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション / Open Impetus Turn followed by Cross Hesitation  (`open-impetus-cross-hesitation`)
 
 ✅ 2026-08-17 教本 p.34 から転記（D-25）— 利用者が教本と照合し一致を確認（p.34はスキャンがぼやけていたが読み取りは正しかった）
@@ -464,6 +1039,21 @@
 | 4 | L | PPで前進（CBMPに） | 1 | HT | 逆中央斜めに面して | 左1/8(3-4) | 1の終わりにライズ開始 | ｰ | ○ |  |
 | 5 | R | 横へ | 2 | T | 壁に面して | 左3/8(4-5) | ライズ継続 | 左 |  |  |
 | 6 | L | 閉じる | 3 | TH | 壁斜めに面して | 左1/8(5-6) | ライズ継続、3の終わりにロア | 左 |  |  |
+
+### 先行できるフィガー
+
+教本に記載なし
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターンの4〜6歩 | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| バック・ホイスク | 左足CBMPに後退して始める／回転の有無にかかわらず |  | open-impetus-cross-hesitation/p.34 |
+| オープン・インピタス・ターン | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| アンダーターンド・アウトサイド・スピン | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| バックワード・ロック・ステップ | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| バック・ホイスク | コーナーで／回転の有無にかかわらず |  | open-impetus-cross-hesitation/p.34 |
 
 ## オープン・インピタス・ターン・フォロード・バイ・ウイーブ / Open Impetus Turn followed by Weave  (`open-impetus-weave`)
 
@@ -497,6 +1087,30 @@
 | 8 | L | 前進 | 2 | T | LODに面して | なし | ライズ継続 | ｰ | ○ | 8で左回転を継続 |
 | 9 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左3/8(8-9) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ターニング・ロック・トゥ・ライト | このフィガーの4〜9歩へ |  | turning-lock-to-right/p.43 |
+| コントラ・チェック | 中央斜めに面して終わる／このフィガーの4〜9歩へ |  | contra-check/p.48 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| シャッセ フロム PP | PPで終わるとき |  | chasse-from-pp/p.21 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| レフト・ホイスク | カウント1 |  | open-impetus-weave/p.35 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
+
 ## ホイスク・フォロード・バイ・ウイーブ / Whisk followed by Weave  (`whisk-weave`)
 
 🆕 2026-08-17 教本『ワルツ』p.36 から転記（D-25）— 利用者の独立検収待ち
@@ -529,6 +1143,27 @@
 | 8 | L | 前進 | 2 | T | 中央斜めに面して | なし | ライズ継続 | ｰ | ○ | 8で左回転を継続 |
 | 9 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左1/4(8-9) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+教本に記載なし
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| シャッセ フロム PP | PPで終わるとき |  | chasse-from-pp/p.21 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| レフト・ホイスク | カウント1 |  | whisk-weave/p.36 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
+
 ## アンダーターンド・アウトサイド・スピン / Underturned Outside Spin  (`underturned-outside-spin`)
 
 🆕 2026-08-17 教本『ワルツ』p.37 から転記（D-25）— 利用者の独立検収待ち
@@ -548,6 +1183,31 @@
 | 1 | R | 前進（アウトサイドパートナー・CBMPに） | 1 | HT | 壁斜めに面して | なし | 1の終わりにライズ開始 | ｰ | ○ | 1で右回転を始める |
 | 2 | L | 閉じる | 2 | T | 逆中央斜めに面して | 右1/2(1-2) | ライズ継続 | ｰ |  |  |
 | 3 | R | 斜め前へ | 3 | TH | 中央斜めに面して | 右1/4(2-3) | アップ、3の終わりにロア | ｰ |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースコルテ | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | underturned-outside-spin/p.37; progressive-chasse-to-right/p.39 |
+| バックワード・ロック・ステップ |  |  | underturned-outside-spin/p.37; backward-lock-step/p.40 |
+| リバースコルテ | アンダーターンド・ナチュラル・スピン・ターンの後／1/2回転して |  | underturned-outside-spin/p.37 |
+| クロス・ヘジテーション【未収録】 | オープン・インピタス・ターンの後 |  | underturned-outside-spin/p.37 |
+| クロス・ヘジテーション【未収録】 | ターニング・ロック・トゥ・ライトの後 |  | underturned-outside-spin/p.37 |
+| レフト・ホイスク |  | 女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。 | left-whisk/p.44 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースコルテ |  |  | reverse-corte/p.25; underturned-outside-spin/p.37 |
+| リバースターンの4〜6歩 | 壁斜めに面して終わる |  | underturned-outside-spin/p.37 |
+| リバースターンの4〜6歩 | LODに面して終わる |  | underturned-outside-spin/p.37 |
+| ターニング・ロック（トゥ・レフト） |  |  | underturned-outside-spin/p.37; turning-lock/p.38 |
+| リバース・ピボット |  |  | underturned-outside-spin/p.37; reverse-pivot/p.38 |
+| ターニング・ロック・トゥ・ライト | オーバーターンして／終わりはほぼLODに背面して |  | turning-lock-to-right/p.43 |
 
 ## ターニング・ロック（トゥ・レフト） / Turning Lock (to Left)  (`turning-lock`)
 
@@ -571,6 +1231,39 @@
 | 3 | L | 前進（少し左方に） | 2 | T | 中央斜めに面して | なし | ライズ継続 | ｰ |  | 3で左回転を始める |
 | 4 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左1/4(3-4) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22; turning-lock/p.38 |
+| アンダーターンド・ナチュラル・スピン・ターン | 中央斜めに面して終わる |  | underturned-natural-spin-turn/p.23 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで |  | underturned-natural-spin-turn/p.23; turning-lock/p.38 |
+| アンダーターンド・アウトサイド・スピン |  |  | underturned-outside-spin/p.37; turning-lock/p.38 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | turning-lock/p.38 |
+| クローズド・インピタス・ターン | コーナーで |  | closed-impetus-turn/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| シャッセ フロム PP | PPで終わるとき |  | chasse-from-pp/p.21 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| レフト・ホイスク | カウント1 |  | turning-lock/p.38 |
+| クローズド・ウイング | アンダーターンド・ナチュラル・スピン・ターンの後 | 註(3): このフィガーは、アンダーターンド・ナチュラル・スピン・ターンの後、逆中央斜めに背面して始め、クローズド・ウイングに続けてもよい。 | turning-lock/p.38 |
+| レフト・ホイスク | PPで終わるとき |  | left-whisk/p.44 |
+| レフト・ホイスク |  |  | left-whisk/p.44 |
+| フォーラウェイ・ナチュラル・ターン | PPで終わるとき |  | fallaway-natural-turn/p.45 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
+| クローズド・ウイング | アンダーターンド・ナチュラル・スピン・ターンの後／中央斜めに面して終わる |  | closed-wing/p.47 |
+
 ## リバース・ピボット / Reverse Pivot  (`reverse-pivot`)
 
 🆕 2026-08-17 教本『ワルツ』p.38 から転記（D-25）— 利用者の独立検収待ち
@@ -586,6 +1279,40 @@
 | 歩 | 足 | 足の位置 | ｶｳﾝﾄ | FW | アライメント | 回転量 | ライズ＆フォール | ｽｳｪｲ | CBM | メモ |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | L | 前進（CBMPに・小さく） | & | TH | 中央斜めに面して | 左1/8(0-1) | ダウン | ｰ | ○ | 右足をCBMPに保つ。中央斜めへ、終わりは壁斜めまたはLODに背面して。先行歩と1の間に左へ1/8、回転を継続してさらに1/8、1/4または3/8まで |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターンの1〜3歩 |  |  | reverse-turn/p.19; reverse-pivot/p.38 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22; reverse-pivot/p.38 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23; reverse-pivot/p.38 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| アンダーターンド・アウトサイド・スピン |  |  | underturned-outside-spin/p.37; reverse-pivot/p.38 |
+| クローズド・インピタス・ターン |  |  | closed-impetus-turn/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン |  |  | reverse-turn/p.19 |
+| ウィスク |  |  | whisk/p.20 |
+| クローズド・テレマーク |  |  | closed-telemark/p.29 |
+| オープン・テレマーク |  |  | open-telemark/p.29 |
+| オープン・テレマーク・フォロード・バイ・ウイング |  |  | open-telemark-wing/p.30 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション |  |  | open-telemark-cross-hesitation/p.31 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | reverse-pivot/p.38; double-reverse-spin/p.41 |
+| ウィスク | 壁斜めに面して終わる |  | reverse-pivot/p.38 |
+| ダブル・リバース・スピン | LODに面して終わる |  | reverse-pivot/p.38; double-reverse-spin/p.41 |
+| プログレッシブ・シャッセ・トゥ・ライト | LODに面して終わる |  | reverse-pivot/p.38 |
+| リバースターン | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| プログレッシブ・シャッセ・トゥ・ライト | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| クローズド・テレマーク | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| オープン・テレマーク | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | reverse-pivot/p.38; double-reverse-spin/p.41 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | progressive-chasse-to-right/p.39 |
+| コントラ・チェック |  |  | contra-check/p.48 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
 
 ## プログレッシブ・シャッセ・トゥ・ライト / Progressive Chasse to Right  (`progressive-chasse-to-right`)
 
@@ -609,6 +1336,40 @@
 | 3 | R | 閉じる | & | T | 壁斜めに面して | なし | ライズ継続 | ｰ |  | 3で体を少し回転 |
 | 4 | L | 横へ（少し前に） | 3 | TH | 壁斜めに面して | なし | アップ、3の終わりにロア | ｰ |  | 4で回転なし |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17; progressive-chasse-to-right/p.39 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24; progressive-chasse-to-right/p.39 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| リバース・ピボット | LODに面して終わる |  | reverse-pivot/p.38 |
+| リバース・ピボット | 中央斜めに面して終わる |  | reverse-pivot/p.38 |
+| リバース・ピボット |  |  | progressive-chasse-to-right/p.39 |
+| ダブル・リバース・スピン |  |  | progressive-chasse-to-right/p.39 |
+| リバースターンの4〜6歩 | 中央斜めに面して終わる |  | progressive-chasse-to-right/p.39 |
+| リバースターンの4〜6歩 | LODに面して終わる |  | progressive-chasse-to-right/p.39 |
+| ウイング【未収録】 | 左足左OPでCBMPに前進する場合 |  | progressive-chasse-to-right/p.39 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | progressive-chasse-to-right/p.39; closed-wing/p.47 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | LODに面して終わる |  | double-reverse-spin/p.41 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| アウトサイドチェンジ | 1/2回転して |  | outside-change/p.27 |
+| オープン・インピタス・ターン | 壁斜めに背面して始める場合 |  | open-impetus-turn/p.32 |
+| アンダーターンド・アウトサイド・スピン |  |  | underturned-outside-spin/p.37; progressive-chasse-to-right/p.39 |
+| ナチュラルターンの4〜6歩 |  |  | progressive-chasse-to-right/p.39 |
+| ヘジテーションチェンジの4〜6歩 |  |  | progressive-chasse-to-right/p.39 |
+| バック・ホイスク | 回転の有無にかかわらず |  | progressive-chasse-to-right/p.39 |
+| オープン・インピタス・ターン |  |  | progressive-chasse-to-right/p.39 |
+| バックワード・ロック・ステップ |  |  | progressive-chasse-to-right/p.39; backward-lock-step/p.40 |
+| フォーラウェイ・ホイスク | 左足CBMPに後退して始める |  | fallaway-whisk/p.50 |
+| クローズド・インピタス・ターン | 壁斜めに背面して始める場合 |  | closed-impetus-turn/p.50 |
+
 ## バックワード・ロック・ステップ / Backward Lock Step  (`backward-lock-step`)
 
 🆕 2026-08-17 教本『ワルツ』p.40 から転記（D-25）— 利用者の独立検収待ち
@@ -630,6 +1391,30 @@
 | 2 | L | 前進（少し左方に） | 2 | T | 壁斜めに面して | なし | ライズ継続 | ｰ |  |  |
 | 3 | R | 後ろにクロス | & | T | 壁斜めに面して | なし | ライズ継続 | ｰ |  |  |
 | 4 | L | 前進（少し左方に） | 3 | TH | 壁斜めに面して | なし | アップ、3の終わりにロア | ｰ |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースコルテ | アンダーターンド・ナチュラル・スピン・ターンの後／左足CBMPに後退して始める／1/2回転して／壁斜めに背面して終わる |  | reverse-corte/p.25 |
+| オープン・インピタス・ターン・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める |  | open-impetus-cross-hesitation/p.34 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | progressive-chasse-to-right/p.39; backward-lock-step/p.40 |
+| クロス・ヘジテーション【未収録】 |  |  | backward-lock-step/p.40 |
+| リバースコルテ | 1/2回転して |  | backward-lock-step/p.40 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| オープン・インピタス・ターン | 壁斜めに背面して始める場合 |  | open-impetus-turn/p.32 |
+| アンダーターンド・アウトサイド・スピン |  |  | underturned-outside-spin/p.37; backward-lock-step/p.40 |
+| ナチュラルターンの4〜6歩 |  |  | backward-lock-step/p.40 |
+| ヘジテーションチェンジの4〜6歩 |  |  | backward-lock-step/p.40 |
+| バック・ホイスク | 回転の有無にかかわらず |  | backward-lock-step/p.40 |
+| オープン・インピタス・ターン |  |  | backward-lock-step/p.40 |
+| フォーラウェイ・ホイスク | 左足CBMPに後退して始める |  | fallaway-whisk/p.50 |
+| クローズド・インピタス・ターン | 壁斜めに背面して始める場合 |  | closed-impetus-turn/p.50 |
 
 ## フォワード・ロック・ステップ / Forward Lock Step  (`forward-lock-step`)
 
@@ -674,6 +1459,58 @@
 | 3 | R | 横へ（少し後ろに） | & | T | 壁に背面して | 左1/4(2-3) | アップ | ｰ |  |  |
 | 4 | L | 前にクロス | 3 | TH | 壁斜めに背面して | 左1/8(3-4) | アップ、3の終わりにロア | ｰ |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | closed-change-natural/p.17 |
+| リバースターン |  |  | reverse-turn/p.19 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-impetus-wing/p.33 |
+| リバース・ピボット | 壁斜めに面して終わる |  | reverse-pivot/p.38; double-reverse-spin/p.41 |
+| リバース・ピボット | LODに面して終わる |  | reverse-pivot/p.38; double-reverse-spin/p.41 |
+| リバース・ピボット | 中央斜めに面して終わる |  | reverse-pivot/p.38; double-reverse-spin/p.41 |
+| クローズドチェンジ（ナチュラルからリバース） | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ヘジテーションチェンジ | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後／中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| クローズド・ウイング | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターンの4〜6歩 | アンダーターンド・ナチュラル・スピン・ターンの後／LODに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | LODに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| クローズド・ウイング | 左足左OPでCBMPに前進する場合 |  | closed-wing/p.47 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17 |
+| リバースターン |  |  | reverse-turn/p.19 |
+| ウィスク |  |  | whisk/p.20 |
+| クローズド・テレマーク |  |  | closed-telemark/p.29 |
+| オープン・テレマーク |  |  | open-telemark/p.29 |
+| オープン・テレマーク・フォロード・バイ・ウイング |  |  | open-telemark-wing/p.30 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション |  |  | open-telemark-cross-hesitation/p.31 |
+| プログレッシブ・シャッセ・トゥ・ライト |  |  | progressive-chasse-to-right/p.39 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | LODに面して終わる |  | double-reverse-spin/p.41 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| クローズド・テレマーク | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| オープン・テレマーク | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| プログレッシブ・シャッセ・トゥ・ライト | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターンの1〜3歩 | LODに面して終わる |  | double-reverse-spin/p.41 |
+| プログレッシブ・シャッセ・トゥ・ライト | LODに面して終わる |  | double-reverse-spin/p.41 |
+| クローズドチェンジ（リバースからナチュラル） | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| ウィスク | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| コントラ・チェック | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| コントラ・チェック |  |  | contra-check/p.48 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+
 ## アウトサイド・スピン / Outside Spin  (`outside-spin`)
 
 🆕 2026-08-17 教本『ワルツ』p.42 から転記（D-25）— 利用者の独立検収待ち
@@ -693,6 +1530,25 @@
 | 1 | R | 前進（アウトサイドパートナー・CBMPに） | 1 | HT | 逆中央斜めに面して | なし | 1の終わりにライズ開始 | ｰ | ○ | 1で右回転を始める |
 | 2 | L | 閉じる | 2 | T | 壁に面して | 右5/8(1-2) | ライズ継続 | ｰ |  |  |
 | 3 | R | 前進（パートナーの両足の間に） | 3 | TH | 逆LODに面して | 右1/4(2-3) | アップ、3の終わりにロア | ｰ |  | 3でさらに1/8回転し、終わりは壁斜めに背面して |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースコルテ | 左足CBMPに後退して始める |  | reverse-corte/p.25 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 左足CBMPに後退して始める |  | open-telemark-cross-hesitation/p.31 |
+| リバースコルテ |  |  | outside-spin/p.42 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション |  |  | outside-spin/p.42 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18; outside-spin/p.42 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22; outside-spin/p.42 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23; outside-spin/p.42 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24; outside-spin/p.42 |
+| ランニング・スピン・ターン |  |  | outside-spin/p.42; running-spin-turn/p.46 |
 
 ## ターニング・ロック・トゥ・ライト / Turning Lock to Right  (`turning-lock-to-right`)
 
@@ -716,6 +1572,24 @@
 | 3 | L | 横へ（少し後ろに） | 2 | T | LODに背面して | 右1/4(2-3) | ライズ継続 | ｰ |  | 次いで右足を左足にブラッシュ |
 | 4 | R | 横へ（PPで） | 3 | TH | 中央に向けて | 右1/4(3-4) | アップ、3の終わりにロア | ｰ |  | 中央斜めに動く。ボディの回転は少なめ |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで |  | underturned-natural-spin-turn/p.23 |
+| ナチュラルスピンターン | オーバーターンして／終わりはほぼLODに背面して |  | turning-lock-to-right/p.43 |
+| アンダーターンド・アウトサイド・スピン | オーバーターンして／終わりはほぼLODに背面して |  | turning-lock-to-right/p.43 |
+| アンダーターンド・ナチュラル・スピン・ターン | コーナーで／オーバーターンして／終わりはほぼLODに背面して |  | turning-lock-to-right/p.43 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブの4〜9歩 |  |  | turning-lock-to-right/p.43 |
+| ウイング【未収録】 |  |  | turning-lock-to-right/p.43 |
+| フォーラウェイ・ナチュラル・ターン | コーナーで |  | fallaway-natural-turn/p.45 |
+
 ## レフト・ホイスク / Left Whisk  (`left-whisk`)
 
 🆕 2026-08-17 教本『ワルツ』p.44 から転記（D-25）— 利用者の独立検収待ち
@@ -735,6 +1609,42 @@
 | 1 | L | PPで前進（CBMPに・アクロスして） | 1 | HT | LODに向けて | なし | ライズ＆フォールなし | ｰ | ○ | 壁斜めに動く。1で左回転を始める |
 | 2 | R | 横へ（少し後ろに） | 2 | TH | 壁斜めに背面して | 左3/8(1-2) | ライズ＆フォールなし | ｰ |  |  |
 | 3 | L | 後退（CBMPに） | 3 | TH | LODに背面して | 左1/8(2-3) | ライズ＆フォールなし | ｰ |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ウィスク | PPで男子右足CBMPにアクロスして前進 | 女子第1歩のアラインメントは、中央斜めに面して、LOD に沿って動く。 | whisk/p.20; left-whisk/p.44 |
+| シャッセ フロム PP | カウント1 |  | chasse-from-pp/p.21 |
+| バック・ホイスク |  |  | back-whisk/p.26 |
+| アウトサイドチェンジ | カウント1 |  | outside-change/p.27 |
+| アウトサイドチェンジ | PPで終わるとき |  | outside-change/p.27; left-whisk/p.44 |
+| ウイーブ・イン・ワルツ・タイム | カウント1 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | カウント1 |  | closed-telemark/p.29 |
+| オープン・テレマーク |  |  | open-telemark/p.29; left-whisk/p.44 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | カウント1 |  | open-impetus-weave/p.35 |
+| ホイスク・フォロード・バイ・ウイーブ | カウント1 |  | whisk-weave/p.36 |
+| ターニング・ロック（トゥ・レフト） | カウント1 |  | turning-lock/p.38 |
+| オープン・インピタス・ターン |  |  | left-whisk/p.44 |
+| コントラ・チェック |  |  | left-whisk/p.44; contra-check/p.48 |
+| ウイーブ・イン・ワルツ・タイム | PPで終わるとき |  | left-whisk/p.44 |
+| ウイーブ【未収録】 | PPで終わるとき |  | left-whisk/p.44 |
+| ターニング・ロック（トゥ・レフト） | PPで終わるとき |  | left-whisk/p.44 |
+| バック・ホイスク | PPで男子右足CBMPにアクロスして前進 | 女子第1歩のアラインメントは、中央斜めに面して、LOD に沿って動く。 | left-whisk/p.44 |
+| アウトサイドチェンジ |  |  | left-whisk/p.44 |
+| ウイーブ・イン・ワルツ・タイム |  |  | left-whisk/p.44 |
+| ウイーブ【未収録】 |  |  | left-whisk/p.44 |
+| ターニング・ロック（トゥ・レフト） |  |  | left-whisk/p.44 |
+| フォーラウェイ・ホイスク |  |  | fallaway-whisk/p.50 |
+| クローズド・インピタス・ターン | コーナーで |  | closed-impetus-turn/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| アンダーターンド・アウトサイド・スピン |  | 女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。 | left-whisk/p.44 |
+| オープン・インピタス・ターン |  | 女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。 | left-whisk/p.44 |
+| バック・ホイスク | 回転の有無にかかわらず | 女子は男子の右側で男子の周りを RLRL（1 2 & 3）で回って続ける。 | left-whisk/p.44 |
 
 ## フォーラウェイ・ナチュラル・ターン / Fallaway Natural Turn  (`fallaway-natural-turn`)
 
@@ -761,6 +1671,36 @@
 | 4 | R | 後退（CBMPに・フォーラウェイ・ポジションで） | 1 | T | 中央に背面して | 左5/8弱 | ダウン、1の終わりにライズ開始 | ｰ | ○ | 中央斜めに動く。4で左足のヒールを離す |
 | 5 | L | 前進 | 2 | T | 中央に面して | なし | ライズ継続 | ｰ |  |  |
 | 6 | R | 横へ（少し後ろに） | 3 | TH | 壁斜めに背面して | 左1/8(5-6) | アップ、3の終わりにロア | ｰ |  | ボディの回転は少なめ |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| アウトサイドチェンジ | PPで終わるとき |  | outside-change/p.27; fallaway-natural-turn/p.45 |
+| オープン・テレマーク |  |  | open-telemark/p.29; fallaway-natural-turn/p.45 |
+| コントラ・チェック |  |  | fallaway-natural-turn/p.45; contra-check/p.48 |
+| オープン・インピタス・ターン | コーナーで |  | fallaway-natural-turn/p.45 |
+| ターニング・ロック・トゥ・ライト | コーナーで |  | fallaway-natural-turn/p.45 |
+| ウイーブ・イン・ワルツ・タイム | PPで終わるとき |  | fallaway-natural-turn/p.45 |
+| ウイーブ【未収録】 | PPで終わるとき |  | fallaway-natural-turn/p.45 |
+| ターニング・ロック（トゥ・レフト） | PPで終わるとき |  | fallaway-natural-turn/p.45 |
+| ウィスク | PPで男子右足CBMPにアクロスして前進 |  | fallaway-natural-turn/p.45 |
+| バック・ホイスク | PPで男子右足CBMPにアクロスして前進 |  | fallaway-natural-turn/p.45 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン |  |  | natural-turn/p.18 |
+| ナチュラルスピンターン |  |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン |  |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ |  |  | hesitation-change/p.24 |
+| ナチュラルターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| ナチュラルスピンターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| アンダーターンド・ナチュラル・スピン・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| ヘジテーションチェンジ | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| ランニング・スピン・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| ランニング・スピン・ターン |  |  | running-spin-turn/p.46 |
 
 ## ランニング・スピン・ターン / Running Spin Turn  (`running-spin-turn`)
 
@@ -790,6 +1730,34 @@
 | 6 | R | 前進（少し横に） | 2 | T | 中央斜めに面して | 右3/8(5-6) | アップ | ｰ |  |  |
 | 7 | L | 前進（SLで・OPへの準備をしながら） | 3 | TH | 中央斜めに面して | なし | アップ、3の終わりにロア | ｰ |  | 左SL。7で体を少し右に回転 |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（リバースからナチュラル） |  |  | closed-change-reverse/p.17; running-spin-turn/p.46 |
+| シャッセ フロム PP | 右足OPでCBMPに前進する場合 |  | chasse-from-pp/p.21; running-spin-turn/p.46 |
+| ウイーブ・イン・ワルツ・タイム | 右足OPでCBMPに前進する場合 |  | weave-in-waltz-time/p.28 |
+| クローズド・テレマーク | 右足OPでCBMPに前進する場合 |  | closed-telemark/p.29 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | open-impetus-weave/p.35 |
+| ホイスク・フォロード・バイ・ウイーブ | 右足OPでCBMPに前進する場合 |  | whisk-weave/p.36 |
+| ターニング・ロック（トゥ・レフト） | 右足OPでCBMPに前進する場合 |  | turning-lock/p.38 |
+| アウトサイド・スピン |  |  | outside-spin/p.42; running-spin-turn/p.46 |
+| フォーラウェイ・ナチュラル・ターン | 右足OPでCBMPに前進する場合 |  | fallaway-natural-turn/p.45 |
+| アウトサイドチェンジ |  |  | running-spin-turn/p.46 |
+| ウイーブ・イン・ワルツ・タイム |  |  | running-spin-turn/p.46 |
+| クローズド・テレマーク |  |  | running-spin-turn/p.46 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブ |  |  | running-spin-turn/p.46 |
+| ホイスク・フォロード・バイ・ウイーブ |  |  | running-spin-turn/p.46 |
+| ターニング・ロック（トゥ・レフト） |  |  | running-spin-turn/p.46 |
+| フォーラウェイ・ナチュラル・ターン |  |  | running-spin-turn/p.46 |
+| コントラ・チェック | クローズ・ホールドで終わる |  | running-spin-turn/p.46 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| アウトサイドチェンジ |  |  | outside-change/p.27; running-spin-turn/p.46 |
+
 ## クローズド・ウイング / Closed Wing  (`closed-wing`)
 
 🆕 2026-08-17 教本『ワルツ』p.47 から転記（D-25）— 利用者の独立検収待ち
@@ -809,6 +1777,31 @@
 | 1 | L | 後退（CBMPに） | 1 | TH | 中央斜めに背面して | なし | 1の終わりにライズ開始（NFR） | ｰ |  | 1で回転なし |
 | 2 | R | 横へ（少し後ろに・小さく） | 2 | T | 中央斜めに背面して | なし | ライズ継続 | 左 |  | 2で回転なし |
 | 3 | L | 前進（左OPで・CBMPに） | 3 | TH | 中央斜めに背面して | なし | アップ、3の終わりにロア | 左 |  | 3で体を少し左に回転 |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ターニング・ロック（トゥ・レフト） | アンダーターンド・ナチュラル・スピン・ターンの後 | 註(3): このフィガーは、アンダーターンド・ナチュラル・スピン・ターンの後、逆中央斜めに背面して始め、クローズド・ウイングに続けてもよい。 | turning-lock/p.38 |
+| シャッセ フロム PP | ウィスクの後／中央斜めに面して終わる |  | closed-wing/p.47 |
+| シャッセ フロム PP | バック・ホイスクの後／中央斜めに面して終わる |  | closed-wing/p.47 |
+| ターニング・ロック（トゥ・レフト） | アンダーターンド・ナチュラル・スピン・ターンの後／中央斜めに面して終わる |  | closed-wing/p.47 |
+| アウトサイドチェンジ | 中央斜めに面して終わる |  | closed-wing/p.47 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン |  |  | reverse-turn/p.19 |
+| クローズド・テレマーク | 左足左OPでCBMPに前進する場合 |  | closed-telemark/p.29; closed-wing/p.47 |
+| オープン・テレマーク | 左足左OPでCBMPに前進する場合 |  | open-telemark/p.29; closed-wing/p.47 |
+| オープン・テレマーク・フォロード・バイ・ウイング | 左足左OPでCBMPに前進する場合 |  | open-telemark-wing/p.30; closed-wing/p.47 |
+| オープン・テレマーク・フォロード・バイ・クロス・ヘジテーション | 左足左OPでCBMPに前進する場合 |  | open-telemark-cross-hesitation/p.31; closed-wing/p.47 |
+| プログレッシブ・シャッセ・トゥ・ライト | 左足左OPでCBMPに前進する場合 |  | progressive-chasse-to-right/p.39; closed-wing/p.47 |
+| ダブル・リバース・スピン | 中央斜めに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターン | 左足左OPでCBMPに前進する場合 |  | closed-wing/p.47 |
+| ダブル・リバース・スピン | 左足左OPでCBMPに前進する場合 |  | closed-wing/p.47 |
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
 
 ## コントラ・チェック / Contra Check  (`contra-check`)
 
@@ -830,6 +1823,32 @@
 | 2 | L | に体重を移す | 2 | T | 逆中央斜めに面して | なし | 2の終わりにライズ開始 | ｰ |  | 前に。2で体を右に回転 |
 | 3 | R | 斜め前へ（PPで・SLで） | 3 | TH | LODに向けて | 右3/8(2-3) | アップ、3の終わりにロア | ｰ |  | 右SL。壁斜めに動く |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターン |  |  | reverse-turn/p.19; contra-check/p.48 |
+| ダブル・リバース・スピン | 壁斜めに面して終わる |  | double-reverse-spin/p.41 |
+| リバースターンの4〜6歩 | ナチュラルスピンターンの後 |  | contra-check/p.48 |
+| ダブル・リバース・スピン |  |  | contra-check/p.48 |
+| リバース・ピボット |  |  | contra-check/p.48 |
+| ヘジテーションチェンジ | コーナーで |  | contra-check/p.48 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターン | クローズ・ホールドで終わる |  | natural-turn/p.18 |
+| シャッセ フロム PP | PPで男子右足CBMPに前進 |  | chasse-from-pp/p.21 |
+| ナチュラルスピンターン | クローズ・ホールドで終わる |  | natural-spin-turn/p.22 |
+| アンダーターンド・ナチュラル・スピン・ターン | クローズ・ホールドで終わる |  | underturned-natural-spin-turn/p.23 |
+| ヘジテーションチェンジ | クローズ・ホールドで終わる |  | hesitation-change/p.24 |
+| レフト・ホイスク |  |  | left-whisk/p.44; contra-check/p.48 |
+| フォーラウェイ・ナチュラル・ターン |  |  | fallaway-natural-turn/p.45; contra-check/p.48 |
+| ランニング・スピン・ターン | クローズ・ホールドで終わる |  | running-spin-turn/p.46 |
+| シャッセ フロム PP |  |  | contra-check/p.48 |
+| オープン・インピタス・ターン・フォロード・バイ・ウイーブの4〜9歩 | 中央斜めに面して終わる |  | contra-check/p.48 |
+
 ## ドラグ・ヘジテーション / Drag Hesitation  (`drag-hesitation`)
 
 🆕 2026-08-17 教本『ワルツ』p.49 から転記（D-25）— 利用者の独立検収待ち
@@ -849,6 +1868,33 @@
 | 1 | R | 後退 | 1 | TH | LODに背面して | なし | ダウン | ｰ | ○ | 1で左回転を始める |
 | 2 | L | 横へ | 2 | T | ほぼ壁斜めに向けて | 左1/4強(1-2) | ダウン、2の終わりにライズ開始 | ｰ |  | ボディの回転は少なめ |
 | 3 | R | 体重を移さないでクローズ | 3 | 両足のT、次いで他足のTH | 壁斜めに面して | 左1/8(2-3) | アップ、3の終わりにロア | ｰ |  | 2と3の間に1/8弱。両足のT、次いで左足のTH。ボディの回転はなお少なめ |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| クローズドチェンジ（ナチュラルからリバース） |  |  | drag-hesitation/p.49 |
+| リバースターンの4〜6歩 |  |  | drag-hesitation/p.49 |
+| ヘジテーションチェンジ |  |  | drag-hesitation/p.49 |
+| ウイング【未収録】 |  |  | drag-hesitation/p.49 |
+| リバース・ピボット |  |  | drag-hesitation/p.49 |
+| ダブル・リバース・スピン |  |  | drag-hesitation/p.49 |
+| クローズド・ウイング |  |  | drag-hesitation/p.49 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ナチュラルターンの4〜6歩 |  |  | drag-hesitation/p.49 |
+| ヘジテーションチェンジの4〜6歩 |  |  | drag-hesitation/p.49 |
+| バック・ホイスク |  |  | drag-hesitation/p.49 |
+| オープン・インピタス・ターン |  |  | drag-hesitation/p.49 |
+| アンダーターンド・アウトサイド・スピン |  |  | drag-hesitation/p.49 |
+| バックワード・ロック・ステップ |  |  | drag-hesitation/p.49 |
+| フォーラウェイ・ホイスク |  |  | drag-hesitation/p.49 |
+| クローズド・インピタス・ターン |  |  | drag-hesitation/p.49 |
+| フォーラウェイ・ホイスク | 左足CBMPに後退して始める |  | fallaway-whisk/p.50 |
+| クローズド・インピタス・ターン | 壁斜めに背面して始める場合 |  | closed-impetus-turn/p.50 |
 
 ## フォーラウェイ・ホイスク / Fallaway Whisk  (`fallaway-whisk`)
 
@@ -870,6 +1916,26 @@
 | 2 | L | 横へ | 2 | TH | 中央斜めに背面して | 右3/8(1-2) | ライズ継続 | ｰ |  |  |
 | 3 | R | 後ろにクロス（ルーズに・フォーラウェイ・ポジションで） | 3 | TH | 逆中央斜めに面して | 右1/4(2-3) | 3でロア | 左 |  |  |
 
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+| ナチュラルターンの1〜3歩 |  |  | fallaway-whisk/p.50 |
+| プログレッシブ・シャッセ・トゥ・ライト | 左足CBMPに後退して始める |  | fallaway-whisk/p.50 |
+| ドラグ・ヘジテーション | 左足CBMPに後退して始める |  | fallaway-whisk/p.50 |
+| バックワード・ロック・ステップ | 左足CBMPに後退して始める |  | fallaway-whisk/p.50 |
+| クイック・ナチュラル・スピン・ターン【未収録】 | カウント1 | クイック・ナチュラル・スピン・ターンを踊り、右足横に中央斜めに面して終わり（1 2 3、1 2 & 3）、次いでフォーラウェイ・ホイスク（カウント1）、クイック・ウイング（2 & 3）に続ける。 | fallaway-whisk/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| シャッセ フロム PP |  |  | fallaway-whisk/p.50 |
+| ウイーブ【未収録】 |  |  | fallaway-whisk/p.50 |
+| ウイング【未収録】 |  |  | fallaway-whisk/p.50 |
+| レフト・ホイスク |  |  | fallaway-whisk/p.50 |
+
 ## クローズド・インピタス・ターン / Closed Impetus Turn  (`closed-impetus-turn`)
 
 🆕 2026-08-17 教本『ワルツ』p.50 から転記（D-25）— 利用者の独立検収待ち
@@ -889,3 +1955,23 @@
 | 1 | R | 前進 | 1 | HT | LODに面して | なし | ダウン | ｰ | ○ | 1で右回転を始める |
 | 2 | L | 横へ | 2 | T | 中央斜めに背面して | 右3/8(1-2) | ダウン、2の終わりにライズ開始 | 右 |  | 次いで右足を左足にブラッシュ |
 | 3 | R | 斜め前へ | 3 | TH | 逆中央斜めに面して | 右1/4(2-3) | アップ、3の終わりにロア | ｰ |  |  |
+
+### 先行できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| ドラグ・ヘジテーション |  |  | drag-hesitation/p.49 |
+| ナチュラルターンの1〜3歩 |  |  | closed-impetus-turn/p.50 |
+| バックワード・ロック・ステップ | 壁斜めに背面して始める場合 |  | closed-impetus-turn/p.50 |
+| プログレッシブ・シャッセ・トゥ・ライト | 壁斜めに背面して始める場合 |  | closed-impetus-turn/p.50 |
+| ドラグ・ヘジテーション | 壁斜めに背面して始める場合 |  | closed-impetus-turn/p.50 |
+
+### 後続できるフィガー
+
+| フィガー | 条件 | 教本の註 | 出典 |
+|---|---|---|---|
+| リバースターンの4〜6歩 |  |  | closed-impetus-turn/p.50 |
+| リバースコルテ |  |  | closed-impetus-turn/p.50 |
+| リバース・ピボット |  |  | closed-impetus-turn/p.50 |
+| ターニング・ロック（トゥ・レフト） | コーナーで |  | closed-impetus-turn/p.50 |
+| レフト・ホイスク | コーナーで |  | closed-impetus-turn/p.50 |

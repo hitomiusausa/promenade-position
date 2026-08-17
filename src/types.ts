@@ -82,6 +82,19 @@ export interface FigureIndexEntry {
   stepCount: number
 }
 
+/**
+ * 教本が先行・後続に挙げるが本アプリに歩データが無いフィガーの「骨」。
+ * 名前は教本の目次／表題から転記する（推測しない。D-15）。
+ * フィガー一覧からは除外し、先行・後続リストではグレー表示・リンクなしにする。
+ */
+export interface FigureStub {
+  id: string
+  name: LocalizedText & { en: string }
+  stub: true
+  /** 教本での出典（目次番号やページ） */
+  source: string
+}
+
 export interface DanceInfo {
   id: DanceId
   name: LocalizedText & { en: string }
@@ -102,6 +115,71 @@ export interface Amalgamation {
   source?: string
   figures: AmalgamationItem[]
   note?: LocalizedText
+}
+
+/**
+ * 教本が先行・後続に付ける条件。教本の表現に1対1で対応させる（D-04: 列挙＋ja/en辞書をセットで）。
+ * 列挙で表せない自由記述だけ transitions の note_ja / note_en に原文を転記する。
+ */
+export const TRANSITION_CONDITIONS = [
+  // 入り方（後続フィガーの第1歩をどうとるか）
+  'start_RF_OP_CBMP_forward',        // 右足 OP で CBMP に前進する場合
+  'start_LF_left_OP_CBMP_forward',   // 左足左 OP で CBMP に前進する場合
+  'start_LF_CBMP_back',              // 左足 CBMP に後退して始める
+  'start_RF_PP_CBMP_across',         // PP で男子右足 CBMP にアクロスして前進
+  'start_RF_PP_CBMP_forward',        // PP で男子右足 CBMP に前進
+  'start_backing_DW',                // 壁斜めに背面して始める場合
+  'start_facing_DC',                 // 中央斜めに始める場合
+  // 終わり方（先行フィガーがどう終わるか）
+  'ending_in_PP',                    // PP で終わるとき
+  'ending_in_close_hold',            // クローズ・ホールドで終わる
+  'ending_facing_new_DW',            // 新壁斜めに面して終わる
+  'ending_facing_DW',                // 壁斜めに面して終わる
+  'ending_facing_DC',                // 中央斜めに面して終わる
+  'ending_facing_LOD',               // LOD に面して終わる
+  'ending_backing_DW',               // 壁斜めに背面して終わる
+  'ending_backing_DC',               // 中央斜めに背面して終わる
+  'ending_backing_LOD',              // LOD に背面して終わる
+  'ending_backing_almost_LOD',       // 終わりはほぼ LOD に背面して
+  'ending_pointing_DC',              // 中央斜めに向けて終わる
+  // 位置
+  'at_corner',                       // コーナーで／アット・ア・コーナー
+  // 回転量
+  'overturned',                      // オーバーターンして
+  'underturned',                     // アンダーターンして
+  'turned_half',                     // 1/2 回転して
+  'turned_quarter_or_half_left',     // 左へ 1/4、または 1/2 回転する
+  'with_or_without_turn',            // 回転の有無にかかわらず
+  // タイミング
+  'count_1',                         // カウント 1
+] as const
+export type TransitionCondition = (typeof TRANSITION_CONDITIONS)[number]
+
+/**
+ * 教本の「先行・後続」1本。保存は常に from→to の一方向（先行欄の記述は from→to に正規化する）。
+ * 教本にない繋がりは書かない・推測で補完しない（D-15）。
+ */
+export interface Transition {
+  /** 先行フィガーの id（figures.json か stub に存在すること） */
+  from: string
+  /** 先行フィガーのうち実際に使う歩の範囲（省略=全歩）。例「リバース・ターンの4〜6歩」 */
+  fromSteps?: [number, number]
+  /** from のさらに前に教本が指定するフィガー。例「アンダーターンド・ナチュラル・スピン・ターンの後のリバース・ターンの4〜6歩」 */
+  viaFigure?: string
+  /**
+   * 後続フィガーの id。教本が「すべてのナチュラル系フィガー」のように群で書いていて
+   * 個別のフィガーを特定できない場合だけ null にし、note に原文を転記する（推測で展開しない）。
+   */
+  to: string | null
+  /** 後続フィガーのうち実際に使う歩の範囲（省略=全歩） */
+  toSteps?: [number, number]
+  /** 教本の条件。無条件なら省略 */
+  conditions?: TransitionCondition[]
+  /** 列挙で表せない註の転記（原文まま。en は訳） */
+  note_ja?: string
+  note_en?: string
+  /** 記載元フィガー＋ページ。複数の欄に同じ繋がりが載る場合は ';' 区切りで併記 */
+  source: string
 }
 
 /** 合成結果: Figure と同じ形で描画・再生でき、フィガー境界を segments に持つ */

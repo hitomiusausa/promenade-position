@@ -1,7 +1,8 @@
 import {
   ALIGNMENT_RELATIONS, DANCES, DIRECTIONS, FOOTWORKS, LOCALES, MODIFIERS, MOVES,
-  RISE_FALLS, SWAYS, TURN_AMOUNTS, TURN_DIRECTIONS,
-  type Amalgamation, type DanceInfo, type Figure, type FigureIndexEntry, type FigurePart, type FigureStep, type LocalizedText, type Role,
+  RISE_FALLS, SWAYS, TRANSITION_CONDITIONS, TURN_AMOUNTS, TURN_DIRECTIONS,
+  type Amalgamation, type DanceInfo, type Figure, type FigureIndexEntry, type FigurePart, type FigureStep,
+  type FigureStub, type LocalizedText, type Role, type Transition,
 } from '../types'
 import { alignmentAngle, deriveLadyInCouple, derivePartPositions, ladyStart } from '../geometry/derivePositions'
 
@@ -199,4 +200,88 @@ export function validateAmalgamations(data: unknown): Amalgamation[] {
       ...(o.note !== undefined ? { note: localizedText(o.note, `amalgamations[${i}].note`) } : {}),
     }
   })
+}
+
+function stepRange(v: unknown, path: string): [number, number] {
+  if (!Array.isArray(v) || v.length !== 2) fail(path, '[from, to] が必要')
+  const from = num(v[0], `${path}[0]`)
+  const to = num(v[1], `${path}[1]`)
+  if (!Number.isInteger(from) || !Number.isInteger(to) || from < 1 || to < from) fail(path, '1以上の整数で from <= to')
+  return [from, to]
+}
+
+/** 教本の先行・後続データ（stub＋transitions）。dance ごとに1エントリ */
+export interface TransitionData {
+  stubs: FigureStub[]
+  transitions: Transition[]
+}
+
+export function validateTransitionData(data: unknown, dance: string): TransitionData {
+  const root = obj(data, 'transitions.json')
+  const o = obj(root[dance], `transitions.json.${dance}`)
+  if (!Array.isArray(o.stubs)) fail(`${dance}.stubs`, '配列が必要')
+  if (!Array.isArray(o.transitions)) fail(`${dance}.transitions`, '配列が必要')
+
+  const stubs: FigureStub[] = o.stubs.map((v, i) => {
+    const p = `${dance}.stubs[${i}]`
+    const so = obj(v, p)
+    // 規則5: stub は骨だけ。歩データを持たない
+    for (const k of ['parts', 'steps', 'timeSignature', 'stepCount']) {
+      if (so[k] !== undefined) fail(`${p}.${k}`, 'stub は歩データを持たない（id・名前・出典のみ）')
+    }
+    if (so.stub !== true) fail(`${p}.stub`, 'true が必要')
+    return { id: str(so.id, `${p}.id`), name: localizedName(so.name, `${p}.name`), stub: true, source: str(so.source, `${p}.source`) }
+  })
+
+  const transitions: Transition[] = o.transitions.map((v, i) => {
+    const p = `${dance}.transitions[${i}]`
+    const t = obj(v, p)
+    const to = t.to === null ? null : str(t.to, `${p}.to`)
+    // 規則: 群参照など to を特定できない場合だけ null。そのときは原文の転記が要る
+    if (to === null && typeof t.note_ja !== 'string') fail(`${p}.note_ja`, 'to が null のときは教本の原文を note_ja に転記する')
+    return {
+      from: str(t.from, `${p}.from`),
+      ...(t.fromSteps !== undefined ? { fromSteps: stepRange(t.fromSteps, `${p}.fromSteps`) } : {}),
+      ...(t.viaFigure !== undefined ? { viaFigure: str(t.viaFigure, `${p}.viaFigure`) } : {}),
+      to,
+      ...(t.toSteps !== undefined ? { toSteps: stepRange(t.toSteps, `${p}.toSteps`) } : {}),
+      ...(t.conditions !== undefined
+        ? { conditions: (Array.isArray(t.conditions) ? t.conditions : fail(`${p}.conditions`, '配列が必要'))
+            .map((c, j) => oneOf(c, TRANSITION_CONDITIONS, `${p}.conditions[${j}]`)) }
+        : {}),
+      ...(t.note_ja !== undefined ? { note_ja: str(t.note_ja, `${p}.note_ja`) } : {}),
+      ...(t.note_en !== undefined ? { note_en: str(t.note_en, `${p}.note_en`) } : {}),
+      source: str(t.source, `${p}.source`),  // 規則4: 検収可能性の担保
+    }
+  })
+
+  return { stubs, transitions }
+}
+
+/** transitions と figures.json の突き合わせ（規則1・2・5） */
+export function checkTransitionsAgainstFigures(data: TransitionData, figureIds: readonly string[]): void {
+  const stubIds = new Set(data.stubs.map((s) => s.id))
+  const known = new Set([...figureIds, ...stubIds])
+  for (const id of stubIds) {
+    if (figureIds.includes(id)) fail(`stubs.${id}`, 'figures.json に実体があるので stub にしない')
+  }
+  const usedStub = new Set<string>()
+  const seen = new Map<string, number>()
+  data.transitions.forEach((t, i) => {
+    const p = `transitions[${i}]`
+    for (const [field, id] of [['from', t.from], ['to', t.to], ['viaFigure', t.viaFigure]] as const) {
+      if (id == null) continue
+      if (!known.has(id)) fail(`${p}.${field}`, `figures.json にも stub にも無い id: ${id}`)
+      if (stubIds.has(id)) usedStub.add(id)
+    }
+    // 規則2: (from, fromSteps, viaFigure, to, toSteps, conditions) が同一の重複を禁止
+    const key = JSON.stringify([t.from, t.fromSteps ?? null, t.viaFigure ?? null, t.to, t.toSteps ?? null, [...(t.conditions ?? [])].sort(), t.note_ja ?? null])
+    const prev = seen.get(key)
+    if (prev !== undefined) fail(p, `transitions[${prev}] と重複（source をまとめること）`)
+    seen.set(key, i)
+  })
+  // 規則5: どこからも参照されない stub を禁止（不要な骨の混入防止）
+  for (const id of stubIds) {
+    if (!usedStub.has(id)) fail(`stubs.${id}`, 'transitions のどこからも参照されていない stub')
+  }
 }
