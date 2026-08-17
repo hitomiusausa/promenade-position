@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import type { AmalgamationSegment, Figure, Role, ViewRole } from '../types'
+import { useEffect, useState, type ReactNode } from 'react'
+import type { AmalgamationSegment, Figure, FigureIndexEntry, Role, ViewRole } from '../types'
 import { DANCE_BPM } from '../types'
-import { loadFigure } from '../data/loader'
+import { loadFigure, loadFigureIndex } from '../data/loader'
 import { localized, useI18n } from '../i18n'
 import { segmentOf } from '../data/amalgamation'
 import { totalBeats } from '../animation/interpolate'
@@ -11,10 +11,13 @@ import { RoleToggle } from '../components/RoleToggle'
 import { PlaybackBar } from '../components/PlaybackBar'
 import { StepTable } from '../components/StepTable'
 import { StepDetailPanel } from '../components/StepDetailPanel'
+import { TransitionLists } from '../components/TransitionLists'
+import { hasTransitionData } from '../data/transitions'
 
 export function FigureDetail({ dance, figureId }: { dance: string; figureId: string }) {
   const { dict } = useI18n()
   const [figure, setFigure] = useState<Figure | null>(null)
+  const [figures, setFigures] = useState<FigureIndexEntry[]>([])
   const [error, setError] = useState(false)
   const [retryKey, setRetryKey] = useState(0)
 
@@ -26,6 +29,8 @@ export function FigureDetail({ dance, figureId }: { dance: string; figureId: str
       (f) => active && setFigure(f),
       () => active && setError(true),
     )
+    // 先行・後続リストの表示名に使う。失敗しても本体は出す
+    loadFigureIndex(dance).then((list) => active && setFigures(list), () => {})
     return () => { active = false }
   }, [dance, figureId, retryKey])
 
@@ -38,10 +43,16 @@ export function FigureDetail({ dance, figureId }: { dance: string; figureId: str
     )
   }
   if (!figure) return <p className="status">{dict.ui.loading}</p>
-  return <FigureDetailView figure={figure} backHref={`#/figures/${dance}`} />
+  return (
+    <FigureDetailView figure={figure} backHref={`#/figures/${dance}`}>
+      {hasTransitionData(dance) && figures.length > 0 && (
+        <TransitionLists dance={dance} figureId={figure.id} figures={figures} />
+      )}
+    </FigureDetailView>
+  )
 }
 
-export function FigureDetailView({ figure, backHref, segments, subtitle }: { figure: Figure; backHref: string; segments?: AmalgamationSegment[]; subtitle?: string }) {
+export function FigureDetailView({ figure, backHref, segments, subtitle, children }: { figure: Figure; backHref: string; segments?: AmalgamationSegment[]; subtitle?: string; children?: ReactNode }) {
   const { dict, locale } = useI18n()
   const [view, setView] = useState<ViewRole>('man')
   const [selectedStep, setSelectedStep] = useState<number | null>(null)
@@ -99,6 +110,7 @@ export function FigureDetailView({ figure, backHref, segments, subtitle }: { fig
           )}
         </div>
       </div>
+      {children}
     </section>
   )
 }
