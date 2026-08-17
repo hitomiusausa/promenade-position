@@ -25,12 +25,14 @@ export interface FootProps {
   variant?: FootVariant
   /** 歩番号バッジ。両方表示で男性=ink（塗りつぶし）/女性=outline（白抜き） */
   badgeStyle?: 'ink' | 'outline'
+  /** 体重を移さない歩（クローズ・ブラシ等）。フットワーク色は保ったまま点線で描く */
+  noWeight?: boolean
   onClick?: () => void
 }
 
-export function Foot({ side, position, footwork, label, ghost = false, selected = false, dimmed = false, variant = 'man', badgeStyle = 'outline', onClick }: FootProps) {
+export function Foot({ side, position, footwork, label, ghost = false, selected = false, dimmed = false, variant = 'man', badgeStyle = 'outline', noWeight = false, onClick }: FootProps) {
   const colors = footworkColors(footwork, variant)
-  const dash = colors.dashed ? '4 3' : undefined
+  const dash = colors.dashed || noWeight ? '4 3' : undefined
   return (
     <g
       transform={`translate(${position.x},${position.y}) rotate(${position.angle})`}

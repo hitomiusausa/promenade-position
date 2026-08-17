@@ -11,7 +11,7 @@ export type UiKey =
   | 'man' | 'lady' | 'both' | 'step' | 'footColumn' | 'count' | 'footwork'
   | 'alignment' | 'amountOfTurn' | 'riseAndFall' | 'sway' | 'cbm' | 'yes' | 'no'
   | 'note' | 'back' | 'loading' | 'loadError' | 'retry' | 'comingSoon' | 'steps'
-  | 'language' | 'modOpen' | 'modClose' | 'viewRole' | 'playbackPosition' | 'reset'
+  | 'language' | 'modOpen' | 'modClose' | 'modSep' | 'viewRole' | 'playbackPosition' | 'reset'
 
 export interface Dictionary {
   ui: Record<UiKey, string>
@@ -47,7 +47,8 @@ export function formatAlignment(a: FigureStep['alignment'], d: Dictionary): stri
 
 export function formatStepDescription(foot: FootSide, sd: FigureStep['stepDescription'], d: Dictionary): string {
   const base = d.move[sd.move].replace('{foot}', d.foot[foot])
-  return sd.modifier ? `${base}${d.ui.modOpen}${d.modifier[sd.modifier]}${d.ui.modClose}` : base
+  const mods = sd.modifiers ?? []
+  return mods.length > 0 ? `${base}${d.ui.modOpen}${mods.map((m) => d.modifier[m]).join(d.ui.modSep)}${d.ui.modClose}` : base
 }
 
 export function formatTurn(t: FigureStep['amountOfTurn'], d: Dictionary): string {
@@ -62,7 +63,7 @@ export function formatTurn(t: FigureStep['amountOfTurn'], d: Dictionary): string
 }
 
 export function formatFootwork(fw: Footwork, d: Dictionary): string {
-  if (fw === 'flat' || fw === 'none') return d.footwork[fw]
+  if (!/^[HT]+$/.test(fw)) return d.footwork[fw]
   return fw.split('').map((c) => d.footworkPart[c as 'H' | 'T']).join('→')
 }
 

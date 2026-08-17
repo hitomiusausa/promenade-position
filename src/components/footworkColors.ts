@@ -26,6 +26,10 @@ export function footworkColors(fw: Footwork, variant: FootVariant = 'man'): Foot
   const palette = variant === 'lady' ? WEIGHT_COLORS_LADY : WEIGHT_COLORS
   if (fw === 'none') return { toe: 'transparent', heel: 'transparent', dashed: true }
   if (fw === 'flat') return { toe: palette.flat, heel: palette.flat, dashed: false }
+  // 教本の複合表記: H→足のIE→WF は「ヒールから全体へ」、TのIE はトー、H次いで両足のT はヒール→トー
+  if (fw === 'H_IE_WF') return { toe: palette.flat, heel: palette.heel, dashed: false }
+  if (fw === 'T_IE') return { toe: palette.toe, heel: palette.neutral, dashed: false }
+  if (fw === 'H_then_both_T') return { toe: palette.toe, heel: palette.heel, dashed: false }
   if (!/^[HT]+$/.test(fw)) return { toe: palette.neutral, heel: palette.neutral, dashed: false }
   return {
     toe: fw.includes('T') ? palette.toe : palette.neutral,

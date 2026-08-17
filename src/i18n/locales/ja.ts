@@ -11,7 +11,7 @@ export const ja: Dictionary = {
     back: '戻る', loading: '読み込み中…', loadError: 'データを読み込めませんでした',
     retry: '再試行', comingSoon: '準備中', steps: '歩', language: '言語',
     viewRole: '表示パート', playbackPosition: '再生位置', reset: 'はじめに戻る',
-    modOpen: '（', modClose: '）',
+    modOpen: '（', modClose: '）', modSep: '・',
   },
   dance: {
     waltz: 'ワルツ', tango: 'タンゴ', slow_foxtrot: 'スローフォックストロット',
@@ -21,7 +21,10 @@ export const ja: Dictionary = {
   },
   level: { beginner: '初級', intermediate: '中級', advanced: '上級' },
   foot: { L: '左足', R: '右足' },
-  footwork: { H: 'ヒール', T: 'トー', TH: 'トー→ヒール', HT: 'ヒール→トー', THT: 'トー→ヒール→トー', flat: 'フラット', none: '体重なし' },
+  footwork: {
+    H: 'ヒール', T: 'トー', TH: 'トー→ヒール', HT: 'ヒール→トー', THT: 'トー→ヒール→トー', flat: 'フラット', none: '体重なし',
+    H_IE_WF: 'H・足のIE・WF', T_IE: 'TのIE', H_then_both_T: 'H、次いで両足のT',
+  },
   footworkPart: { H: 'ヒール', T: 'トー' },
   relation: { facing: '{dir}に面して', backing: '{dir}に背面して', pointing: '{dir}に向けて' },
   direction: {
@@ -34,17 +37,18 @@ export const ja: Dictionary = {
     cross_behind: '{foot}後ろにクロス', cross_front: '{foot}前にクロス',
     forward_PP: '{foot}PPで前進', side_in_PP: '{foot}PPで横へ',
     replace_weight: '{foot}に体重を戻す', brush: '{foot}ブラシ',
+    close_no_weight: '{foot}体重を移さないでクローズ', hold_position: 'ポジションを保つ（{foot}）',
   },
   modifier: {
     slightly_back: '少し後ろに', slightly_forward: '少し前に', small_step: '小さく',
-    outside_partner: 'アウトサイドパートナー', in_PP: 'PPで', rightward: '右方向に', leftward: '左方向に', slightly_side: '少し横に',
+    outside_partner: 'アウトサイドパートナー', in_PP: 'PPで', rightward: '少し右方に', leftward: '少し左方に', slightly_side: '少し横に', in_CBMP: 'CBMPに',
   },
   riseFall: {
     commence_rise_eo_1: '1の終わりにライズ開始', commence_rise_eo_2: '2の終わりにライズ開始',
     continue_rise: 'ライズ継続', up: 'アップ', up_lower_eo_3: 'アップ、3の終わりにロア',
     no_rise_fall: 'ライズ＆フォールなし', rise_slightly: 'わずかにライズ', lower_eo_3: '3の終わりにロア',
     commence_rise_eo_1_nfr: '1の終わりにライズ開始（NFR）', commence_rise_eo_2_nfr: '2の終わりにライズ開始（NFR）',
-    continue_rise_lower_eo_3: 'ライズ継続、3の終わりにロア',
+    continue_rise_lower_eo_3: 'ライズ継続、3の終わりにロア', down: 'ダウン', rise: 'ライズ',
   },
   sway: { straight: 'なし（ストレート）', L: '左', R: '右' },
   turn: { none: '回転なし', withBetween: '{dir}へ{amount}（{from}-{to}歩間）', noBetween: '{dir}へ{amount}' },

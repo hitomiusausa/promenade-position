@@ -14,7 +14,8 @@ const lines = [
 const warn = JSON.parse(readFileSync('scripts/data-check-warnings.json', 'utf8'))
 const fmtStep = (s) => {
   const base = d.move[s.stepDescription.move].replace('{foot}', '').replace(/^を/, '')
-  return s.stepDescription.modifier ? `${base}（${d.modifier[s.stepDescription.modifier]}）` : base
+  const mods = s.stepDescription.modifiers ?? []
+  return mods.length ? `${base}（${mods.map((m) => d.modifier[m]).join('・')}）` : base
 }
 const fmtTurn = (t) => {
   if (t.direction === 'none' || t.amount === '0') return 'なし'
@@ -30,7 +31,7 @@ for (const e of idx) {
     lines.push('|---|---|---|---|---|---|---|---|---|---|---|')
     for (const s of f.parts[role].steps) {
       const al = d.relation[s.alignment.relation].replace('{dir}', d.direction[s.alignment.direction])
-      lines.push(`| ${s.stepNo} | ${s.foot} | ${fmtStep(s)} | ${s.count} | ${s.footwork === 'flat' || s.footwork === 'none' ? d.footwork[s.footwork] : s.footwork} | ${al} | ${fmtTurn(s.amountOfTurn)} | ${d.riseFall[s.riseAndFall]} | ${s.sway === 'straight' ? 'ｰ' : d.sway[s.sway]} | ${s.cbm ? '○' : ''} | ${s.note?.ja ?? ''} |`)
+      lines.push(`| ${s.stepNo} | ${s.foot} | ${fmtStep(s)} | ${s.count} | ${/^[HT]+$/.test(s.footwork) ? s.footwork : d.footwork[s.footwork]} | ${al} | ${fmtTurn(s.amountOfTurn)} | ${d.riseFall[s.riseAndFall]} | ${s.sway === 'straight' ? 'ｰ' : d.sway[s.sway]} | ${s.cbm ? '○' : ''} | ${s.note?.ja ?? ''} |`)
     }
   }
   lines.push('')

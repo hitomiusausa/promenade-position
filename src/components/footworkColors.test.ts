@@ -36,4 +36,12 @@ describe('footworkColors', () => {
     // 体重なしはバリアントによらず点線・無色
     expect(footworkColors('none', 'lady').dashed).toBe(true)
   })
+  it('教本の複合表記: H_IE_WF はヒール→全体、T_IE はトー、H_then_both_T はヒール＋トー', () => {
+    expect(footworkColors('H_IE_WF').heel).toBe(WEIGHT_COLORS.heel)
+    expect(footworkColors('H_IE_WF').toe).toBe(WEIGHT_COLORS.flat)
+    expect(footworkColors('T_IE').toe).toBe(WEIGHT_COLORS.toe)
+    expect(footworkColors('T_IE').heel).toBe(WEIGHT_COLORS.neutral)
+    expect(footworkColors('H_then_both_T').heel).toBe(WEIGHT_COLORS.heel)
+    expect(footworkColors('H_then_both_T').toe).toBe(WEIGHT_COLORS.toe)
+  })
 })

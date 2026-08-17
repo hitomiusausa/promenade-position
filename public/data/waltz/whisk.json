@@ -1,43 +1,44 @@
 {
   "id": "whisk",
-  "name": { "ja": "ウィスク", "en": "Whisk" },
+  "name": {"ja": "ウィスク", "en": "Whisk"},
   "dance": "waltz",
   "timeSignature": "3/4",
   "parts": {
     "man": {
       "steps": [
-        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
-          "footwork": "HT", "alignment": { "relation": "facing", "direction": "DW" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
           "sway": "straight", "cbm": true,
-          "note": { "ja": "わずかなCBM", "en": "Slight CBM" } },
-        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side", "modifier": "slightly_forward" }, "count": "2", "beats": 1,
-          "footwork": "T", "alignment": { "relation": "facing", "direction": "DW" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "continue_rise",
+          "note": {"ja": "1で少しCBM", "en": "Slight CBM on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side", "modifiers": ["slightly_forward"]}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "continue_rise",
           "sway": "L", "cbm": false },
-        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "cross_behind" }, "count": "3", "beats": 1,
-          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DW" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "cross_behind", "modifiers": ["in_PP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
           "sway": "L", "cbm": false,
-          "note": { "ja": "左足を右足の後ろにクロスし、PP（プロムナードポジション）で終わる", "en": "LF crosses behind RF, finishing in Promenade Position (PP)" } }
+          "note": {"ja": "体は右に回転して。PPで終わる", "en": "Body turns to R. Finish in PP"} }
       ]
     },
     "lady": {
       "steps": [
-        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
-          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DW" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
-          "sway": "straight", "cbm": true,
-          "note": { "ja": "わずかなCBM", "en": "Slight CBM" } },
-        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "side", "modifier": "slightly_back" }, "count": "2", "beats": 1,
-          "footwork": "T", "alignment": { "relation": "pointing", "direction": "DC" },
-          "amountOfTurn": { "direction": "right", "amount": "1/4", "between": [1, 2] }, "riseAndFall": "continue_rise",
-          "sway": "R", "cbm": false },
-        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "cross_behind" }, "count": "3", "beats": 1,
-          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DC" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DW"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1_nfr",
+          "sway": "straight", "cbm": false,
+          "note": {"ja": "1で回転なし", "en": "No turn on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "diag_back"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "pointing", "direction": "DC"},
+          "amountOfTurn": {"direction": "right", "amount": "1/4", "between": [1, 2]}, "riseAndFall": "continue_rise",
           "sway": "R", "cbm": false,
-          "note": { "ja": "右足を左足の後ろにクロスし、PP（プロムナードポジション）で終わる", "en": "RF crosses behind LF, finishing in Promenade Position (PP)" } }
+          "note": {"ja": "ボディの回転は少なめ", "en": "Body turns less"} },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "cross_behind", "modifiers": ["in_PP"]}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
+          "sway": "R", "cbm": false,
+          "note": {"ja": "3で体の回転を完了。PPで終わる", "en": "Body completes turn on 3. Finish in PP"} }
       ]
     }
   }

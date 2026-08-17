@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { feetAt, totalBeats, lerpAngle } from './interpolate'
+import { feetAt, isNoWeight, totalBeats, lerpAngle } from './interpolate'
 import type { FigurePart, FigureStep } from '../types'
 
 function makeStep(stepNo: number, foot: 'L' | 'R', x: number, y: number, angle: number, beats = 1): FigureStep {
@@ -73,5 +73,9 @@ describe('lerpAngle', () => {
   })
   it('逆方向（10°→350°）も最短経路', () => {
     expect(lerpAngle(10, 350, 0.5)).toBeCloseTo(0)
+  })
+  it('体重を移さない歩は landedNoWeight が true', () => {
+    expect(isNoWeight('close_no_weight')).toBe(true)
+    expect(isNoWeight('close')).toBe(false)
   })
 })

@@ -46,7 +46,7 @@ const r1 = (n: number) => Math.round(n * 10) / 10
  */
 function bodyOffset(step: Pick<FigureStep, 'foot' | 'stepDescription'>, role: Role): { lateral: number; ahead: number; travelAngleOffset: number } {
   const s = step.foot === 'R' ? 1 : -1
-  const { move, modifier } = step.stepDescription
+  const { move, modifiers = [] } = step.stepDescription
   let lateral = 0
   let ahead = 0
   let travelAngleOffset = 0 // PPでの前進は体の向きと進行方向が45°ずれる（男性は左手側、女性は右手側がLOD）
@@ -63,12 +63,19 @@ function bodyOffset(step: Pick<FigureStep, 'foot' | 'stepDescription'>, role: Ro
     case 'side_in_PP': lateral = s * SIDE; ahead = 0; travelAngleOffset = role === 'man' ? -45 : 45; break
     case 'brush': lateral = s * 2 * HALF_TRACK; ahead = 0; break
     case 'replace_weight': lateral = 0; ahead = 0; break
+    case 'close_no_weight': lateral = s * 2 * HALF_TRACK; ahead = 0; break
+    case 'hold_position': lateral = 0; ahead = 0; break
   }
-  switch (modifier) {
-    case 'slightly_forward': ahead += SLIGHT; break
-    case 'slightly_back': ahead -= SLIGHT; break
-    case 'small_step': lateral *= 0.6; ahead *= 0.5; break
-    default: break
+  for (const modifier of modifiers) {
+    switch (modifier) {
+      case 'slightly_forward': ahead += SLIGHT; break
+      case 'slightly_back': ahead -= SLIGHT; break
+      case 'slightly_side': lateral += s * SLIGHT; break
+      case 'leftward': lateral -= SLIGHT; break
+      case 'rightward': lateral += SLIGHT; break
+      case 'small_step': lateral *= 0.6; ahead *= 0.5; break
+      default: break
+    }
   }
   return { lateral, ahead, travelAngleOffset }
 }
@@ -100,8 +107,8 @@ export function derivePartPositions(
     const standing: FootSide = step.foot === 'L' ? 'R' : 'L'
     const { lateral, ahead, travelAngleOffset } = bodyOffset(step, role)
     let pos: StepPosition
-    if (step.stepDescription.move === 'replace_weight') {
-      // 体重を戻すだけ。足はその場（向きだけ更新）
+    if (step.stepDescription.move === 'replace_weight' || step.stepDescription.move === 'hold_position') {
+      // 体重を戻す／ポジションを保つ: 足はその場（向きだけ更新）
       pos = { ...feet[step.foot], angle }
     } else {
       const f = forwardOf(angle + travelAngleOffset)

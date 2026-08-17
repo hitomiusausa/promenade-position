@@ -65,7 +65,11 @@ function step(v: unknown, index: number, path: string) {
     foot: oneOf(o.foot, ['L', 'R'] as const, `${path}.foot`),
     stepDescription: {
       move: oneOf(sd.move, MOVES, `${path}.stepDescription.move`),
-      ...(sd.modifier !== undefined ? { modifier: oneOf(sd.modifier, MODIFIERS, `${path}.stepDescription.modifier`) } : {}),
+      ...(sd.modifier !== undefined ? fail(`${path}.stepDescription.modifier`, '`modifiers`（配列）を使う') : {}),
+      ...(sd.modifiers !== undefined
+        ? { modifiers: (Array.isArray(sd.modifiers) ? sd.modifiers : fail(`${path}.stepDescription.modifiers`, '配列が必要'))
+            .map((m, i) => oneOf(m, MODIFIERS, `${path}.stepDescription.modifiers[${i}]`)) }
+        : {}),
     },
     count: str(o.count, `${path}.count`),
     beats,

@@ -1,5 +1,5 @@
 import type { FigurePart, Role, StepPosition } from '../types'
-import { feetAt } from '../animation/interpolate'
+import { feetAt, isNoWeight } from '../animation/interpolate'
 import { Foot } from './Foot'
 
 export interface FloorDiagramProps {
@@ -60,8 +60,8 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
             feet.movingFoot === side ? 'none' : (feet.landedFootwork[side] ?? 'none')
           return (
             <g key={role}>
-              <Foot side="L" position={feet.L} footwork={fw('L')} variant={variant} />
-              <Foot side="R" position={feet.R} footwork={fw('R')} variant={variant} />
+              <Foot side="L" position={feet.L} footwork={fw('L')} variant={variant} noWeight={feet.landedNoWeight.L} />
+              <Foot side="R" position={feet.R} footwork={fw('R')} variant={variant} noWeight={feet.landedNoWeight.R} />
             </g>
           )
         }
@@ -80,6 +80,7 @@ export function FloorDiagram({ parts, selectedStep, onSelectStep, animTime, labe
                 dimmed={selectedStep !== null && selectedStep !== s.stepNo}
                 variant={variant}
                 badgeStyle={badgeStyle}
+                noWeight={isNoWeight(s.stepDescription.move)}
                 onClick={() => onSelectStep(s.stepNo)}
               />
             ))}

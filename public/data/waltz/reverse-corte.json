@@ -1,44 +1,42 @@
 {
   "id": "reverse-corte",
-  "name": { "ja": "リバースコルテ", "en": "Reverse Corte" },
+  "name": {"ja": "リバースコルテ", "en": "Reverse Corte"},
   "dance": "waltz",
   "timeSignature": "3/4",
   "parts": {
     "man": {
       "steps": [
-        { "stepNo": 1, "foot": "R", "stepDescription": { "move": "back" }, "count": "1", "beats": 1,
-          "footwork": "TH", "alignment": { "relation": "backing", "direction": "LOD" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "no_rise_fall",
+        { "stepNo": 1, "foot": "R", "stepDescription": {"move": "back"}, "count": "1", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "down",
           "sway": "straight", "cbm": true,
-          "note": { "ja": "リバースターン1〜3の後など、LODに背面して開始。左回転を開始", "en": "Commences backing LOD, e.g. after steps 1-3 of a Reverse Turn. Commence to turn left" } },
-        { "stepNo": 2, "foot": "L", "stepDescription": { "move": "close" }, "count": "2", "beats": 1,
-          "footwork": "T", "alignment": { "relation": "backing", "direction": "DC_against_LOD" },
-          "amountOfTurn": { "direction": "left", "amount": "3/8", "between": [1, 2] }, "riseAndFall": "rise_slightly",
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "L", "stepDescription": {"move": "close_no_weight"}, "count": "2", "beats": 1,
+          "footwork": "H_then_both_T", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "left", "amount": "3/8", "between": [1, 2]}, "riseAndFall": "rise",
+          "sway": "R", "cbm": false },
+        { "stepNo": 3, "foot": "R", "stepDescription": {"move": "hold_position"}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "backing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "up_lower_eo_3",
           "sway": "R", "cbm": false,
-          "note": { "ja": "左足を右足に寄せ、膝を緩めたままわずかにライズ", "en": "LF closes to RF, rising slightly with knees flexed" } },
-        { "stepNo": 3, "foot": "R", "stepDescription": { "move": "replace_weight" }, "count": "3", "beats": 1,
-          "footwork": "TH", "alignment": { "relation": "backing", "direction": "DC_against_LOD" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "up_lower_eo_3",
-          "sway": "R", "cbm": false,
-          "note": { "ja": "ポジションを保ち、体重を右足へ。次は左足から（ナチュラルターン4〜6など）", "en": "Position held, weight to RF. Next figure starts with LF (e.g. 4-6 of Natural Turn)" } }
+          "note": {"ja": "3で回転なし", "en": "No turn on 3"} }
       ]
     },
     "lady": {
       "steps": [
-        { "stepNo": 1, "foot": "L", "stepDescription": { "move": "forward" }, "count": "1", "beats": 1,
-          "footwork": "HT", "alignment": { "relation": "facing", "direction": "LOD" },
-          "amountOfTurn": { "direction": "none", "amount": "0" }, "riseAndFall": "commence_rise_eo_1",
+        { "stepNo": 1, "foot": "L", "stepDescription": {"move": "forward"}, "count": "1", "beats": 1,
+          "footwork": "HT", "alignment": {"relation": "facing", "direction": "LOD"},
+          "amountOfTurn": {"direction": "none", "amount": "0"}, "riseAndFall": "commence_rise_eo_1",
           "sway": "straight", "cbm": true,
-          "note": { "ja": "左回転を開始する", "en": "Commence to turn left" } },
-        { "stepNo": 2, "foot": "R", "stepDescription": { "move": "side" }, "count": "2", "beats": 1,
-          "footwork": "T", "alignment": { "relation": "facing", "direction": "centre" },
-          "amountOfTurn": { "direction": "left", "amount": "1/4", "between": [1, 2] }, "riseAndFall": "continue_rise",
+          "note": {"ja": "1で左回転を始める", "en": "Commence to turn L on 1"} },
+        { "stepNo": 2, "foot": "R", "stepDescription": {"move": "side"}, "count": "2", "beats": 1,
+          "footwork": "T", "alignment": {"relation": "facing", "direction": "centre"},
+          "amountOfTurn": {"direction": "left", "amount": "1/4", "between": [1, 2]}, "riseAndFall": "continue_rise",
           "sway": "L", "cbm": false },
-        { "stepNo": 3, "foot": "L", "stepDescription": { "move": "close" }, "count": "3", "beats": 1,
-          "footwork": "TH", "alignment": { "relation": "facing", "direction": "DC_against_LOD" },
-          "amountOfTurn": { "direction": "left", "amount": "1/8", "between": [2, 3] }, "riseAndFall": "up_lower_eo_3",
-          "sway": "L", "cbm": false,
-          "note": { "ja": "次は右足から（ナチュラルターン4〜6など）", "en": "Next figure starts with RF (e.g. 4-6 of Natural Turn)" } }
+        { "stepNo": 3, "foot": "L", "stepDescription": {"move": "close"}, "count": "3", "beats": 1,
+          "footwork": "TH", "alignment": {"relation": "facing", "direction": "DC_against_LOD"},
+          "amountOfTurn": {"direction": "left", "amount": "1/8", "between": [2, 3]}, "riseAndFall": "continue_rise_lower_eo_3",
+          "sway": "L", "cbm": false }
       ]
     }
   }

@@ -3,7 +3,7 @@ import { alignmentAngle, derivePartPositions, DIRECTION_ANGLE, forwardOf, rightO
 
 const step = (foot: 'L' | 'R', move: string, relation: string, direction: string, modifier?: string) => ({
   foot,
-  stepDescription: { move, ...(modifier ? { modifier } : {}) } as any,
+  stepDescription: { move, ...(modifier ? { modifiers: [modifier] } : {}) } as any,
   alignment: { relation, direction } as any,
 })
 

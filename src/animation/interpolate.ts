@@ -1,4 +1,9 @@
-import type { FigurePart, FigureStep, FootSide, Footwork, StepPosition } from '../types'
+import type { FigurePart, FigureStep, FootSide, Footwork, Move, StepPosition } from '../types'
+
+/** 体重を移さない歩（点線で描く） */
+export function isNoWeight(move: Move): boolean {
+  return move === 'close_no_weight' || move === 'brush'
+}
 
 export function totalBeats(steps: FigureStep[]): number {
   return steps.reduce((sum, s) => sum + s.beats, 0)
@@ -26,17 +31,21 @@ export interface FeetState {
   currentStepNo: number | null
   /** 各足が直近に完了した歩のフットワーク。まだ踏んでいない足は null */
   landedFootwork: Record<FootSide, Footwork | null>
+  /** 各足が直近に完了した歩が体重なしなら true */
+  landedNoWeight: Record<FootSide, boolean>
 }
 
 export function feetAt(part: FigurePart, tBeats: number): FeetState {
   const pos: Record<FootSide, StepPosition> = { L: part.startPositions.L, R: part.startPositions.R }
   const landed: Record<FootSide, Footwork | null> = { L: null, R: null }
+  const noWeight: Record<FootSide, boolean> = { L: false, R: false }
   let cursor = 0
   for (const step of part.steps) {
     const end = cursor + step.beats
     if (tBeats >= end) {
       pos[step.foot] = step.position
       landed[step.foot] = step.footwork
+      noWeight[step.foot] = isNoWeight(step.stepDescription.move)
       cursor = end
       continue
     }
@@ -48,9 +57,10 @@ export function feetAt(part: FigurePart, tBeats: number): FeetState {
         movingFoot: step.foot,
         currentStepNo: step.stepNo,
         landedFootwork: landed,
+        landedNoWeight: noWeight,
       } as FeetState
     }
     break
   }
-  return { ...pos, movingFoot: null, currentStepNo: null, landedFootwork: landed }
+  return { ...pos, movingFoot: null, currentStepNo: null, landedFootwork: landed, landedNoWeight: noWeight }
 }

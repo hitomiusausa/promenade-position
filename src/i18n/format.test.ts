@@ -11,7 +11,7 @@ describe('i18n formatters', () => {
     expect(formatAlignment({ relation: 'facing', direction: 'DW' }, en)).toBe('Facing DW')
   })
   it('足の位置: ja（修飾語つき）', () => {
-    expect(formatStepDescription('L', { move: 'side', modifier: 'slightly_back' }, ja)).toBe('左足横へ（少し後ろに）')
+    expect(formatStepDescription('L', { move: 'side', modifiers: ['slightly_back'] }, ja)).toBe('左足横へ（少し後ろに）')
   })
   it('足の位置: en', () => {
     expect(formatStepDescription('R', { move: 'forward' }, en)).toBe('RF forward')
@@ -31,7 +31,7 @@ describe('i18n formatters', () => {
     expect(localized({ en: 'Waltz' }, 'ko')).toBe('Waltz')
   })
   it('足の位置: en（修飾語つき・ASCII括弧）', () => {
-    expect(formatStepDescription('R', { move: 'side', modifier: 'small_step' }, en)).toBe('RF to side (small step)')
+    expect(formatStepDescription('R', { move: 'side', modifiers: ['small_step'] }, en)).toBe('RF to side (small step)')
   })
   it('回転量: 区間なし', () => {
     expect(formatTurn({ direction: 'left', amount: '1/8' }, ja)).toBe('左へ1/8')
@@ -40,5 +40,10 @@ describe('i18n formatters', () => {
   it('教本語: 「向けて」「逆壁斜め」', () => {
     expect(formatAlignment({ relation: 'pointing', direction: 'DC' }, ja)).toBe('中央斜めに向けて')
     expect(formatAlignment({ relation: 'backing', direction: 'DW_against_LOD' }, ja)).toBe('逆壁斜めに背面して')
+  })
+  it('修飾子は複数を「・」で連結（例: OPでCBMPに）', () => {
+    expect(formatStepDescription('R', { move: 'forward', modifiers: ['outside_partner', 'in_CBMP'] }, ja)).toBe('右足前進（アウトサイドパートナー・CBMPに）')
+    expect(formatFootwork('H_IE_WF', ja)).toBe('H・足のIE・WF')
+    expect(formatFootwork('TH', ja)).toBe('トー→ヒール')
   })
 })
